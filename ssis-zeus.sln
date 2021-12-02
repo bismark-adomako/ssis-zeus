@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ssis-zeus", "ssis-zeus\ssis-zeus.dtproj", "{0071A80A-3CE7-4EEF-9EF6-6491E53A6092}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "flexcube", "flexcube\flexcube.dtproj", "{23613204-E599-4F3A-80E4-813B4ACF6212}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "obdx", "obdx\obdx.dtproj", "{8328703B-5E38-4CBE-AD64-C3B2C5597501}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0071A80A-3CE7-4EEF-9EF6-6491E53A6092}.Development|Default.ActiveCfg = Development
+		{0071A80A-3CE7-4EEF-9EF6-6491E53A6092}.Development|Default.Build.0 = Development
+		{23613204-E599-4F3A-80E4-813B4ACF6212}.Development|Default.ActiveCfg = Development
+		{23613204-E599-4F3A-80E4-813B4ACF6212}.Development|Default.Build.0 = Development
+		{8328703B-5E38-4CBE-AD64-C3B2C5597501}.Development|Default.ActiveCfg = Development
+		{8328703B-5E38-4CBE-AD64-C3B2C5597501}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4924EA82-D72A-4F6B-A7A2-6EBFA25CBDCE}
+	EndGlobalSection
+EndGlobal
