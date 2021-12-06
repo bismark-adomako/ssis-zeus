@@ -7,12 +7,13 @@
   DTS:CreatorName="GBLO02UAT0CAEXD\opc"
   DTS:DTSID="{225D9D6A-1BF9-4CB3-8FD6-FF99BFEC6A53}"
   DTS:ExecutableType="Microsoft.Package"
+  DTS:ForceExecValue="True"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="snapshot"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{5CA94EE9-3F61-4EE7-99EA-EB686211EF0C}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{4BCC7F36-1E4E-401D-9DF0-5CB458911DAF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +40,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DUMMY"
-              DTS:DTSID="{E7FF60E0-795B-4065-931D-82A6303A11D0}"
+              DTS:DTSID="{70A8F878-20F5-4CF4-B886-90FF32FC2E42}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -73,7 +74,7 @@
       DTS:CreationName=""
       DTS:DTSID="{36963CF1-A2CB-48AE-90CC-053CB21DA7BF}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;DUAL&quot;"
+      DTS:Expression="@[User::varTableName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varTableName">
@@ -131,12 +132,13 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Foreach Loop Container">
       <DTS:ForEachEnumerator
-        DTS:CreationName="Microsoft.ForEachFromVarEnumerator"
-        DTS:DTSID="{FB8F1484-C80E-42ED-B14D-0B0CC83C51C2}"
-        DTS:ObjectName="{FB8F1484-C80E-42ED-B14D-0B0CC83C51C2}">
+        DTS:CreationName="Microsoft.ForEachADOEnumerator"
+        DTS:DTSID="{7C931EA7-FC5D-4517-9DFE-53DB3557E235}"
+        DTS:ObjectName="{7C931EA7-FC5D-4517-9DFE-53DB3557E235}">
         <DTS:ObjectData>
-          <FEEFVE
-            VariableName="User::varTableNameList" />
+          <FEEADO
+            EnumType="EnumerateAllRows"
+            VarName="User::varTableNameList" />
         </DTS:ObjectData>
       </DTS:ForEachEnumerator>
       <DTS:Variables />
@@ -217,6 +219,7 @@
                   description="OLE DB Source"
                   name="OLE DB Source"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="7">
                   <properties>
                     <property
@@ -439,6 +442,7 @@ FROM
           DTS:refId="Package\Foreach Loop Container\File System Task"
           DTS:CreationName="Microsoft.FileSystemTask"
           DTS:Description="File System Task"
+          DTS:Disabled="True"
           DTS:DTSID="{4F437660-D33B-4B10-9165-5A7FBBEAA43D}"
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
@@ -469,8 +473,8 @@ FROM
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{08B7BB65-00BE-466A-BA39-74B71447BA65}"
-          DTS:ObjectName="{08B7BB65-00BE-466A-BA39-74B71447BA65}"
+          DTS:DTSID="{5E6A6EE4-C822-490D-9494-F19D3DDAC716}"
+          DTS:ObjectName="{5E6A6EE4-C822-490D-9494-F19D3DDAC716}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varTableName" />
       </DTS:ForEachVariableMappings>
