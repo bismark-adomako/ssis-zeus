@@ -26,11 +26,11 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">GBLO02UAT0CAEXD</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAACAAAAAAAQZgAAAAEAACAAAABSj6ZkgOOyS1ztaRBaV/qJ4rUiojDq1IPpcZ6ePx9HDwAAAAAOgAAAAAIAACAAAABy/mGJ0zSxAF/etX8zDVRwBJyUVGGf2o56URU4zsWhRJAAAAALLdN513mqPhkWqtRrC1HWIkfMKjV1A+d4/QDYFXd2XsPSW5Ws8umjZ74Fxceh3rqCrQq+0fobberi6lCmPY0Bp9r3jeg5xMDtvTRr1qFLBOVsexokkMgvh1WpINHj9+srCaUDix0L9WC3Bw1YNQcYiQNj44h38t7zo0G3GGtCRl3YYlL6uicze7wmPXrEQxJAAAAAcNI8l1rATF3D5p+tb1X8hmtWGl/+SEredXrVF/XPBMPF6Ro2If6TJgMdZXn48f4bb4AQEGBTGQGjv2jqxJDTMQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAACAAAAAAAQZgAAAAEAACAAAAD7/+jmNSm9IMT0olWD7uGsDv+JEdNxv6t6COD81c4SyQAAAAAOgAAAAAIAACAAAADmSccQpS62RAHapGMUYOFL2Ju69iRdcYY8vzqsmEXfcZAAAAD79VJHU3EB+BcG3iOAeYjeZK6zRmd7dnOKNBvLL9ynVKaheSWUsNgUU8k3z0ubFoZZV1btcFxBHfuu1v1GOEEstC84hKpyvJkNhq7DVKEbGPRmFMBHgwxsPASV9pdT8TKanQyCDy+INFkvnCcr8wX+OCUSA1nIF7eZUskdCJkDR9XgcmfqciR5xwOLH+B/ps5AAAAAS206go2nQcK2coeiBjrLa7E3vXwOLJtyq/holHD3SrmKrtiJdh0/0y1Y4cg/NJoLHm90kK4uY2nWqLyP8U1Ldw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="snapshot.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="MALI_FCUBE_UAT.EDA_READONLY.conmgr" />
@@ -187,16 +187,16 @@
             </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="snapshot.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="DWH.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{225D9D6A-1BF9-4CB3-8FD6-FF99BFEC6A53}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">snapshot</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{661D8146-3D5C-472E-9F48-AFB6F4CCCC22}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5CA94EE9-3F61-4EE7-99EA-EB686211EF0C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -364,6 +364,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
