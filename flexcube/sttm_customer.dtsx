@@ -1,0 +1,530 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/6/2021 11:27:55 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="GBLO02UAT0CAEXD"
+  DTS:CreatorName="GBLO02UAT0CAEXD\opc"
+  DTS:DTSID="{3D42367B-DB99-4D2B-9EA4-7393315531DD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="sttm_customer"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{CE086F73-60D3-4A99-972C-F97F7F637B80}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C83D3875-7CCC-4952-95C1-66B800B26C08}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;SELECT &#xA;TO_CHAR(MAX(DEXEC_DATE), 'DD MON YYYY') applicable_date, &#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number&#xA;FROM DWH_&quot; +  UPPER(@[System::PackageName])"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="scrApplicableDate">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT 
+TO_CHAR(MAX(DEXEC_DATE), 'DD MON YYYY') applicable_date, 
+TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,
+TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,
+TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,
+TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number
+FROM DWH_STTM_CUSTOMER</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B2267E28-5B75-4D85-AAE1-6F550FE02324}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;&#xA;IF EXISTS (&#xA;&#x9;&#x9;SELECT [ssis_exec_status_id]&#xA;&#x9;&#x9;FROM [EDADataRegistry].[dbo].[ExecutionRegistry]&#xA;&#x9;&#x9;WHERE [file_name] = '&quot; + @[User::varDestinationFileName] + &quot;'&#xA;&#x9;&#x9;&#x9;AND [ssis_exec_status_id] = 1&#xA;&#x9;&#x9;)&#xA;&#x9;SELECT 1 AS ExecutionStatus&#xA;ELSE&#xA;&#x9;SELECT 0 AS ExecutionStatus&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="scrCheckFileStatus">
+      <DTS:VariableValue
+        DTS:DataType="8">
+IF EXISTS (
+		SELECT [ssis_exec_status_id]
+		FROM [EDADataRegistry].[dbo].[ExecutionRegistry]
+		WHERE [file_name] = 'DUAL_1111_11_11.csv'
+			AND [ssis_exec_status_id] = 1
+		)
+	SELECT 1 AS ExecutionStatus
+ELSE
+	SELECT 0 AS ExecutionStatus</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6A03C157-9CEC-4C6F-AE0B-A57DC5BFCCCA}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;SELECT [table_id], [table_name], [application_name]&#xA;    ,CONVERT(VARCHAR(10), GETDATE(), 112) AS load_date&#xA;    FROM [EDADataRegistry].[dbo].[SourceTableRegistry] A&#xA;&#x9;LEFT JOIN [EDADataRegistry].[dbo].[SourceApplicationRegistry] B&#xA;&#x9;ON A.application_id=B.application_id&#xA;&#x9;WHERE A.[status_id] = 1 and [ssis_package_name] = '&quot; +  @[System::PackageName] + &quot;'&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="scrPackageMetaData">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT [table_id], [table_name], [application_name]
+    ,CONVERT(VARCHAR(10), GETDATE(), 112) AS load_date
+    FROM [EDADataRegistry].[dbo].[SourceTableRegistry] A
+	LEFT JOIN [EDADataRegistry].[dbo].[SourceApplicationRegistry] B
+	ON A.application_id=B.application_id
+	WHERE A.[status_id] = 1 and [ssis_package_name] = 'sttm_customer'</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8FE1EACA-63C9-4B24-BDA3-B9B05CA1B8BC}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]&#xA;&#x9;&#x9;@ssis_load_datekey = &quot; + @[User::varLoadDate] + &quot;,&#xA;&#x9;&#x9;@ssis_exec_start_time = '&quot; + (DT_WSTR, 50) @[System::StartTime] + &quot;',&#xA;&#x9;&#x9;@file_name = '&quot; + @[User::varDestinationFileName]  + &quot;',&#xA;&#x9;&#x9;@table_id = &quot; + (DT_WSTR, 50) @[User::varTableID]  + &quot;,&#xA;&#x9;&#x9;@applicable_datakey = &quot; + @[User::varApplicableDatekey]  + &quot;&#xA;&#xA;SELECT&#x9;'Return Value' = @return_value&#xA;&#xA;GO&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="scrRegisterExecution">
+      <DTS:VariableValue
+        DTS:DataType="8">DECLARE	@return_value int
+
+EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
+		@ssis_load_datekey = 11111111,
+		@ssis_exec_start_time = '12/6/2021 11:28:32 AM',
+		@file_name = 'DUAL_1111_11_11.csv',
+		@table_id = 0,
+		@applicable_datakey = 11111111
+
+SELECT	'Return Value' = @return_value
+
+GO</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{782F9141-084D-4420-906E-C13D107F5922}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varApplicableDate">
+      <DTS:VariableValue
+        DTS:DataType="8">11 Nov 1111</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{527A56BD-DE22-4648-9E91-A79AE0DF3B69}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varApplicableDatekey">
+      <DTS:VariableValue
+        DTS:DataType="8">11111111</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BB30E620-3AF9-4A80-BC73-A5D26F5FE8D8}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varApplicationName">
+      <DTS:VariableValue
+        DTS:DataType="8">dummy</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{74FC65BD-9F09-4201-8330-FB41A90F9914}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varDayNumber">
+      <DTS:VariableValue
+        DTS:DataType="8">11</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CFDCE603-153F-4D9A-9855-C90877F3214E}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varTableName] + &quot;_&quot; +  @[User::varYearNumber]  + &quot;_&quot; +  @[User::varMonthNumber] + &quot;_&quot; +  @[User::varDayNumber] +  @[User::varFileExtension]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varDestinationFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">DUAL_1111_11_11.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E18069B9-0B06-4B67-886C-B67C895640C7}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varLandingPath] +  @[User::varDestinationFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varDestinationFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\DUAL\DUAL_1111_11_11.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EE1706CE-16C2-4C48-8E4D-08B37ECBA305}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFileExtension">
+      <DTS:VariableValue
+        DTS:DataType="8">.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C802E288-3F96-4676-83B0-B6258EA0CA04}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;D:\\Development\\rawdatastore\\&quot; +  @[User::varApplicationName] + &quot;\\&quot; +  @[User::varTableName] + &quot;\\&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varLandingPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\DUAL\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7D770240-8ADE-4711-9B88-0AFFF0117BAA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varLoadDate">
+      <DTS:VariableValue
+        DTS:DataType="8">11111111</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F725AA20-5FC5-4FA3-82CA-ADFE431DD4B5}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varMonthNumber">
+      <DTS:VariableValue
+        DTS:DataType="8">11</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9BBF2529-E1B5-4CA3-A913-8BB43C16E142}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varTableName] +  @[User::varFileExtension]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSourceFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">DUAL.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{51A7EC96-8539-4FD9-B416-0338902186E6}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varLandingPath] +  @[User::varSourceFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSourceFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\DUAL\DUAL.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EE50AA35-E530-4742-A136-FA1145FB6A1A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSsisExecStatus">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EABC9871-AAD6-4034-AF36-6EB5DEBC2639}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varTableID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F92B1CF5-49C5-4311-A76C-15B34EBBBFAB}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;DUAL&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varTableName">
+      <DTS:VariableValue
+        DTS:DataType="8">DUAL</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{762158F7-65E6-4F45-AF55-485469E3B159}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varYearNumber">
+      <DTS:VariableValue
+        DTS:DataType="8">1111</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\get applicable date"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{7C5F506B-852A-4AD9-805E-706E6FF02BA7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="get applicable date"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C0F31C28-B350-4BC3-A91A-7568CB5B03CF}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::scrApplicableDate"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="applicable_date"
+            SQLTask:DtsVariableName="User::varApplicableDate" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="applicable_datekey"
+            SQLTask:DtsVariableName="User::varApplicableDatekey" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="year_number"
+            SQLTask:DtsVariableName="User::varYearNumber" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="month_number"
+            SQLTask:DtsVariableName="User::varMonthNumber" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="day_number"
+            SQLTask:DtsVariableName="User::varDayNumber" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\get package meta data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{4841D946-7648-4453-B412-D879A9D8E73B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="get package meta data"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0B40F252-191E-44A9-B543-94B74D62A699}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::scrPackageMetaData"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="table_name"
+            SQLTask:DtsVariableName="User::varTableName" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="load_date"
+            SQLTask:DtsVariableName="User::varLoadDate" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="application_name"
+            SQLTask:DtsVariableName="User::varApplicationName" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="table_id"
+            SQLTask:DtsVariableName="User::varTableID" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\sttm_customer"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{3A18FAF6-A8D3-4711-B013-F018396FE949}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="sttm_customer">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\sttm_customer\check file execution status"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{56F5252D-F35D-47AA-B183-EB4ABAE34892}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="check file execution status"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{0B40F252-191E-44A9-B543-94B74D62A699}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::scrCheckFileStatus"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="ExecutionStatus"
+                SQLTask:DtsVariableName="User::varSsisExecStatus" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\sttm_customer\update or insert execution registry"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{ED2CF77B-E6A8-49E1-987C-7A4380B3D265}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="update or insert execution registry"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\sttm_customer.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{64AA767A-6EDB-4AFA-988C-7BA9BC500C41}"
+          DTS:From="Package\sttm_customer\check file execution status"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\sttm_customer\update or insert execution registry" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5F0DD72E-FB23-4D22-A389-14618B6EBA47}"
+      DTS:From="Package\get package meta data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\get applicable date" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{490FBF16-9B12-459F-AFFF-8E0C58D409A0}"
+      DTS:From="Package\get applicable date"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\sttm_customer" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\get package meta data"
+          TopLeft="216,70" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\get applicable date"
+          TopLeft="214,168" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="311.5,112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12,56"
+              Start="0,0"
+              End="-12,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="-4,28" />
+                  <mssgle:LineSegment
+                    End="-8,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8,28"
+                    Point2="-12,28"
+                    Point3="-12,32" />
+                  <mssgle:LineSegment
+                    End="-12,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="207,42"
+          Id="Package\sttm_customer\check file execution status"
+          TopLeft="114,38" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\sttm_customer\update or insert execution registry"
+          TopLeft="91,124" />
+        <EdgeLayout
+          Id="Package\sttm_customer.PrecedenceConstraints[Constraint]"
+          TopLeft="215.25,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="387,307"
+          Size="387,350"
+          Id="Package\sttm_customer"
+          TopLeft="172,285" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="299.5,210">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66,75"
+              Start="0,0"
+              End="66,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.5"
+                    Point2="0,37.5"
+                    Point3="4,37.5" />
+                  <mssgle:LineSegment
+                    End="62,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="62,37.5"
+                    Point2="66,37.5"
+                    Point3="66,41.5" />
+                  <mssgle:LineSegment
+                    End="66,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
