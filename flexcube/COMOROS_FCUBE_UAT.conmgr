@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
-  DTS:ObjectName="COMOROS_FCUBE_UAT"
+  DTS:ObjectName="DynamicFlexcubeConnection"
   DTS:DTSID="{C0F31C28-B350-4BC3-A91A-7568CB5B03CF}"
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
@@ -10,7 +10,7 @@
       DTS:ConnectionString="Data Source=COMOROS_FCUBE_UAT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAACAAAAAAAQZgAAAAEAACAAAADSGjPP+DaL7QxFXqYJPLIL0nTl4Ha2FWjDv3TiHKEqTgAAAAAOgAAAAAIAACAAAACPJgxRjGaR9lmvFf+RYqtAFX19AC8hK2VINTVivAHpvYAAAADS2peYdU3APEI7ZBVmh5OACts3vwQVq62oSDftRGcn6zMnLFXC0GlH1JzbS3iOMVs/2WYm/7NobWi7fScq4nrrgyY9lCiB97JBkYDVrTe8n1O2kBs72V67I3avD0TzBc4/ASegyE045ojkBuIAKUPVtIWrjda3WtAlL13c8haRIUAAAACbHa3LHc/mYImZ9hM+bwSyABPyrHjEmqOC4/Q4ypI2SnhGNPZUSAHpMzTae5vdZiVmb5HN3kopeDqakLFN/Rao</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAACAAAAAAAQZgAAAAEAACAAAAB99NT38Bqj0Zs+vb0w4pjOrBL+lVsIuzvNlZpBRU9jFQAAAAAOgAAAAAIAACAAAACI9RjPIZnnStWrck/qQN1fnig4SInBK+2xPx4tRTEEFIAAAAD4CA/LRQXm83N9a0O7QqRfU0lXT2ZmSLbmC9L++9gbzECUJrD0bakps97lO1xDo0sEuvC2nuSDo1B+GrG82l9HhKy6wJVqj6mtH3esW6FBsdihPWOXeQ/PWyWrGvYKzfbQqpv/uhsK043Gp3EYoZna82OXMg93Ow5j+qIwLI5VR0AAAAAgqooP6iNmtJ6FxJfkjW9BnUo2is1+zxCk/IXVwu8/Tv6lSzeeFUJFUhxhvedrMdM8R9kigkn1lLMpykm6WpZH</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
