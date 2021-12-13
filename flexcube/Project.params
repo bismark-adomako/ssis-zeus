@@ -1,2 +1,25 @@
 ﻿<?xml version="1.0"?>
-<SSIS:Parameters xmlns:SSIS="www.microsoft.com/SqlServer/SSIS" />
+<SSIS:Parameters xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+  <SSIS:Parameter
+    SSIS:Name="varAdomakoBismark">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{6fb090a5-82cd-42d1-a89b-95a4c96d9ae8}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">1</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">1</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value"
+        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAACAAAAAAAQZgAAAAEAACAAAABGZPmqSJkgw+Y0dFOQ58V4FEHzq/8KYPoFBgb9VuzsnwAAAAAOgAAAAAIAACAAAAA1e8gXuv2bzKPOxIhMDrz7zGVx+zl0pysga94wDoCMOYAAAACE1Jq2PNx8A11O5SGhdE8t0OF1nW1cTar2NCd2+11y8Vs62eYUQG7mu2F2aGQYcP4mtIw3k8IpWPBCr1Q1kXq7FOcQuqJMeGH4zgjxOQmFSPX90jvht4s2CGxz2VeieEC2rN1qDX+5xSFRYNWDc/3Pcs0kyJqvsJF4Yt32V2jZ8UAAAAAdpcnwwC4vRWjpbGofmbkE9gA7O83pGYTrczaLDwpltHQ+4ZOcXZoYwFA0Sgd1DNkHq+fN7lmX2UcQcz5a3tZi</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+</SSIS:Parameters>
