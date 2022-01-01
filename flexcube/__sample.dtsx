@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="GBLO02UAT0CAEXD"
   DTS:CreatorName="GBLO02UAT0CAEXD\opc"
-  DTS:DTSID="{3D42367B-DB99-4D2B-9EA4-7393315531DD}"
+  DTS:DTSID="{F518045E-0E05-4731-9673-823BCD1FA877}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="sttm_customer"
+  DTS:ObjectName="sample"
   DTS:PackageType="5"
-  DTS:VersionBuild="88"
-  DTS:VersionGUID="{6BE335B1-7D9C-4BD7-B50E-342C76848F7A}">
+  DTS:VersionBuild="89"
+  DTS:VersionGUID="{281DA059-46E9-4707-A5F1-F65C63BE2E5A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DynamicFlexcubeConnection]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{C0F31C28-B350-4BC3-A91A-7568CB5B03CF}"
+      DTS:DTSID="{AA4F9654-B464-445C-838C-D53EC22D8013}"
       DTS:ObjectName="DynamicFlexcubeConnection">
       <DTS:PropertyExpression
         DTS:Name="Password">@[User::varConnectionPassword]</DTS:PropertyExpression>
@@ -35,15 +35,15 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACM2QSui/xRFNeat92r9+5oBFMZuWbA1FFS8h8UM/HR2QAAAAAOgAAAAAIAACAAAADiV9I3PHUCGQ/qWMLOVMNpcJFXVyWLvmIh9gO1AsfIWzAAAACu7AzXWM93lABlCmgnw3zKZpCDDg+ye8G7C43F7uj6cYaY5OAx1xiD90N3TeKUB15AAAAAviEbhIB8uCqzOkJjjuDNcRmefr2QPqPnhDfqG1imH/EZ4+nmyWtkBuWYv2Qm1YtAVtjWsPEiO5VrJObFJXBzLQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABnqbdKgMmZkG5drC2pIKPzS+1IwnCexxyquBxfyyXkmQAAAAAOgAAAAAIAACAAAACIUJFGre+0nRZ4Zpho19MDyMq7oUItGSyuiWCyI1GNNzAAAADEgc21S1ptUSHsbQh/gm8reCETRBc15YqbzTl45yNoj5Bi6ojqTCLEbHZuLwokeYBAAAAAPghAxYd/+q9jI8VLgcXhWeLTjIUFWs2+qoveouvEFOd4pH0XImuf2NI1xqXvYZ0QH1Xi1qYa1D85+nSi1awMfQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[sttm_customer]"
+      DTS:refId="Package.ConnectionManagers[sample]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{40D16D21-07BB-4DC0-924E-61F136CC39DE}"
-      DTS:ObjectName="sttm_customer">
+      DTS:DTSID="{616F7F9E-2C8B-4041-A22E-1B204664B012}"
+      DTS:ObjectName="sample">
       <DTS:PropertyExpression
         DTS:Name="ColumnNamesInFirstDataRow">1</DTS:PropertyExpression>
       <DTS:PropertyExpression
@@ -63,7 +63,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Development\rawdatastore\sttm_customer_AAA.csv">
+          DTS:ConnectionString="D:\Development\rawdatastore\sample_AAA.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -72,7 +72,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ACCESS_GROUP"
-              DTS:DTSID="{25FE2A11-7BAE-47F9-B8BD-FE5AB7118A35}"
+              DTS:DTSID="{5ACE4726-0BDC-41A8-92E3-9265850EFA53}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -81,7 +81,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ADDRESS_LINE1"
-              DTS:DTSID="{FC722520-A4DB-46C1-8298-90CF18EE234D}"
+              DTS:DTSID="{BF06C973-46DE-473C-A5D0-2FD91189514F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -90,7 +90,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ADDRESS_LINE2"
-              DTS:DTSID="{817A1AC7-C042-421C-AADB-3233ED69C974}"
+              DTS:DTSID="{2D1F4968-44AB-4782-85F8-D3E9B211C137}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -99,7 +99,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ADDRESS_LINE3"
-              DTS:DTSID="{D2114A7C-E09E-4B22-AA59-3305851C8A31}"
+              DTS:DTSID="{5B9343FA-4D9C-4C92-82A4-651D0D2CDC00}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -108,7 +108,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ADDRESS_LINE4"
-              DTS:DTSID="{49C787F4-A151-4BA5-9352-F97B4B979F9F}"
+              DTS:DTSID="{70175E5B-F4A9-48B6-B1C1-722DD224AA20}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -117,7 +117,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ALG_ID"
-              DTS:DTSID="{A4A9BECB-8C9D-426D-982F-72BB28E253F9}"
+              DTS:DTSID="{ECD79B97-5451-49F8-89AD-7F7767758089}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -126,7 +126,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ALLOW_VRTL_ACCNTS"
-              DTS:DTSID="{E407FAC0-DE22-456A-9F3E-157EA858A292}"
+              DTS:DTSID="{9AB83A5D-F733-4655-9E7A-15638F66E40A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -135,7 +135,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AML_CUSTOMER_GRP"
-              DTS:DTSID="{6BB8ECE6-A882-4AEB-B543-608BFA4FF8DD}"
+              DTS:DTSID="{A787E901-6639-4118-A497-9111A9B7844C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -144,7 +144,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AML_REQUIRED"
-              DTS:DTSID="{B7717683-A662-4F16-A4EA-6FFE63C1FD58}"
+              DTS:DTSID="{DA56F7AB-FC1D-40C4-B1F4-0DD684171744}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -153,7 +153,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AR_AP_TRACKING"
-              DTS:DTSID="{1D0AD698-74B3-4FD7-90A1-DF7CECABCE0E}"
+              DTS:DTSID="{6F6984E9-33B1-4358-BC8E-ADA1A16C290A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -162,7 +162,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AUTH_STAT"
-              DTS:DTSID="{B0D04751-CFFE-4540-8C87-3395578209C1}"
+              DTS:DTSID="{22882640-C6D8-41ED-92B8-EB3939E0D9B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -171,7 +171,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AUTOGEN_STMTPLAN"
-              DTS:DTSID="{0F7A4678-DEEE-4F6C-BAD5-622DF3182A14}"
+              DTS:DTSID="{FB0C4D07-0294-481A-9FD7-67CA88D77BF6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -180,7 +180,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AUTO_CREATE_ACCOUNT"
-              DTS:DTSID="{7DB1B3E2-C847-421E-A77F-1810F87DF05F}"
+              DTS:DTSID="{6D1DC36C-DEBA-48AF-BDE6-19CFFB5EA603}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -189,7 +189,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AUTO_CUST_AC_NO"
-              DTS:DTSID="{1330C104-9667-4F9A-BA81-3A4CF3F336FD}"
+              DTS:DTSID="{65B4462B-85DB-4C6A-8238-5409FC7844D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -198,7 +198,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AUTO_LIAB"
-              DTS:DTSID="{8FB0E290-EC31-4B1B-B045-2CC4250506DA}"
+              DTS:DTSID="{88C1868C-3B68-4B29-B39B-6A6910ACEA69}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -207,7 +207,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CAS_CUST"
-              DTS:DTSID="{38022BDB-75B6-4530-8154-09343335C5D9}"
+              DTS:DTSID="{F03E80EA-D07B-4BFE-9AAE-C9CB5AD7ECD4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -216,7 +216,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CHARGE_GROUP"
-              DTS:DTSID="{34EBAD66-9D15-4888-9A55-2C13F6ECECCA}"
+              DTS:DTSID="{5E7D153E-3E18-4733-A54C-40389F1E335F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -224,7 +224,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="CHECKER_DT_STAMP"
-              DTS:DTSID="{93DD766A-0477-4B77-A116-86D1E66A542F}"
+              DTS:DTSID="{426146D6-D69E-4E64-BA94-297A6AD757B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -233,7 +233,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CHECKER_ID"
-              DTS:DTSID="{1E740D5C-4055-4F2B-BA66-3697A4217046}"
+              DTS:DTSID="{C06B8C9D-EA53-41F2-8A7B-7B64FC11E38A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -242,7 +242,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CHK_DIGIT_VALID_REQD"
-              DTS:DTSID="{E888B177-A1F0-404E-8509-25A8718390AE}"
+              DTS:DTSID="{1FD90817-32B0-478A-BC7A-38C37791E5C5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -250,7 +250,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="CIF_CREATION_DATE"
-              DTS:DTSID="{59DC70A1-7A0B-4185-9176-4BAA6902D306}"
+              DTS:DTSID="{DAB4CBFF-150D-4C6F-A255-9957F74855FB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -259,7 +259,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CIF_STATUS"
-              DTS:DTSID="{A62BE129-E863-43BD-8417-9CB08A78DCB8}"
+              DTS:DTSID="{8DC03001-CD86-4354-B3F8-D47AE579785A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -267,7 +267,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="CIF_STATUS_SINCE"
-              DTS:DTSID="{BCF96DD2-9B31-426C-8B93-9942482E5215}"
+              DTS:DTSID="{060EAC46-0FAA-49A1-8132-9D712D72C184}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -276,7 +276,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CLS_CCY_ALLOWED"
-              DTS:DTSID="{5BA9CFE5-4F1A-4396-A301-47E2F1A13C43}"
+              DTS:DTSID="{22C94F15-CAD1-402F-B58E-77F0F4CB7297}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -285,7 +285,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CLS_PARTICIPANT"
-              DTS:DTSID="{576F9217-A409-4714-9A2D-9ED86CA78E37}"
+              DTS:DTSID="{3A7BEB38-6C6B-4064-9F0F-DCEC001ED395}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -294,7 +294,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CONSOL_TAX_CERT_REQD"
-              DTS:DTSID="{BB672C96-E190-46A4-AB95-A32B5B689A6B}"
+              DTS:DTSID="{1DEC78C1-63F6-4D5F-8FD4-6B3A6C988E1C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -303,7 +303,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="COUNTRY"
-              DTS:DTSID="{97863891-DBC3-4242-9F58-8D4AB70848CA}"
+              DTS:DTSID="{2A7F2981-6942-4916-9EB6-73269EE2E2F4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -312,7 +312,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CREDIT_RATING"
-              DTS:DTSID="{33281A2C-8B29-4338-A55D-21B2633D0D05}"
+              DTS:DTSID="{6D0FBD5B-8F5C-4FF5-9D5F-F8D3038075DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -321,7 +321,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CRM_CUSTOMER"
-              DTS:DTSID="{0E9A304B-E682-48E3-B8B4-228A0A7308ED}"
+              DTS:DTSID="{04A895C9-0749-4C38-9B52-8C441FEEA61C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -330,7 +330,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CRS_TYPE"
-              DTS:DTSID="{D0871666-50BF-4E21-9645-6187E302D409}"
+              DTS:DTSID="{27758C1E-3E6B-4730-ACFB-BB8CAD694E8D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -339,7 +339,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CUSTOMER_CATEGORY"
-              DTS:DTSID="{4E70E999-B942-4A73-A29D-B68EA70C8D2D}"
+              DTS:DTSID="{96242408-EE6F-41FF-900B-038DD5CE8630}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -348,7 +348,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CUSTOMER_NAME1"
-              DTS:DTSID="{A1B058F0-D939-460A-BF9C-46DD3105DEE9}"
+              DTS:DTSID="{532D366E-AC9C-4AB9-A66A-102D41378D7B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -357,7 +357,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CUSTOMER_NO"
-              DTS:DTSID="{3038E8F2-DB6B-4CF1-B001-1696F99A82FB}"
+              DTS:DTSID="{A0F415AA-585B-45A8-9273-554274703984}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -366,7 +366,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CUSTOMER_TYPE"
-              DTS:DTSID="{ACF4D687-3CEF-4242-A7FD-D95A5EBA5AA1}"
+              DTS:DTSID="{954CFBCF-962A-44D3-AEAF-CE0B62E6883E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -375,7 +375,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CUST_CLASSIFICATION"
-              DTS:DTSID="{AA46C928-7A25-461D-BC31-89C2918119E3}"
+              DTS:DTSID="{F95D1C1E-E056-4B07-9826-4F9861BB469F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -384,7 +384,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CUST_CLG_GROUP"
-              DTS:DTSID="{42B9669B-C560-4053-B471-7078CAA046B7}"
+              DTS:DTSID="{E8FA521A-9B34-4C60-873A-18A0631BFC21}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -393,7 +393,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DEBTOR_CATEGORY"
-              DTS:DTSID="{813F8003-15E5-4C41-A3B2-EB146E981AA7}"
+              DTS:DTSID="{1772E1E3-FDCD-492C-8444-8DD6A0B4CC1B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -402,7 +402,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DECEASED"
-              DTS:DTSID="{4C3504AC-8075-45BC-AD66-BEC15CA681B3}"
+              DTS:DTSID="{C6607765-028F-44A1-BE50-F500177C631E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -411,7 +411,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DEFAULT_MEDIA"
-              DTS:DTSID="{8A9BCE3A-5CAF-4D02-B1D7-CC4FE8EA4AFE}"
+              DTS:DTSID="{DCE46A26-6C64-484C-810B-0C40270BE7E6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -419,7 +419,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="DEXEC_DATE"
-              DTS:DTSID="{39BF54C4-D532-4E33-A6F1-F126FA2308FF}"
+              DTS:DTSID="{9CA88C2A-9A0E-40F5-B623-6500C8BDEE15}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -428,7 +428,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ELCM_CUSTOMER"
-              DTS:DTSID="{2E0D2A0E-93D7-4074-A749-158B828797F4}"
+              DTS:DTSID="{6FE38B9E-7DA6-46C1-B9CE-46CB201C2A51}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -437,7 +437,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ELCM_CUSTOMER_NO"
-              DTS:DTSID="{AE0F0244-0E1E-4248-96A7-FFCC17145AFF}"
+              DTS:DTSID="{37AB239F-69F6-49AC-8A4D-63D6423D06BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -446,7 +446,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="EXPOSURE_CATEGORY"
-              DTS:DTSID="{25D60795-4683-49B0-8AAE-5AF4AE0A58B7}"
+              DTS:DTSID="{3BE764B1-3269-4C57-A61F-A21100575E33}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -455,7 +455,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="EXPOSURE_COUNTRY"
-              DTS:DTSID="{1D55C13C-6343-4D49-952C-C4FB30A397B2}"
+              DTS:DTSID="{ECFB3184-636F-4872-96BC-5B959566408F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -464,7 +464,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="EXT_REF_NO"
-              DTS:DTSID="{CC1EE182-639F-4982-9D5B-E2D1893E19C5}"
+              DTS:DTSID="{B176F4E4-24A7-4F4B-AE1D-84940558784F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -473,7 +473,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FAX_NUMBER"
-              DTS:DTSID="{D54F4F9D-8E3F-4281-B74D-400F7F24E259}"
+              DTS:DTSID="{344FDA7A-4D69-47A7-AF6E-91A59E47F1AA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -482,7 +482,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FI_CUSTOMER"
-              DTS:DTSID="{28A01479-8B3F-4A91-AC45-D44C5F19A173}"
+              DTS:DTSID="{B7F5C587-E21B-4156-8E7A-27DD4ECC4503}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -491,7 +491,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FREQUENCY"
-              DTS:DTSID="{5E466DC1-EE33-47F5-BB6F-D3741FE99A3A}"
+              DTS:DTSID="{13A27E58-B5DF-4A03-9365-91E4978A637D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -500,7 +500,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FROZEN"
-              DTS:DTSID="{6E1D6310-9484-464C-9734-99DDE2BC26AB}"
+              DTS:DTSID="{E75E744D-F0B0-4A0B-A0AB-E83A63882499}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -509,7 +509,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FT_ACCTING_AS_OF"
-              DTS:DTSID="{F9C1926C-5336-4BB6-B400-0D31EF7BDF82}"
+              DTS:DTSID="{518A439D-44BA-49F8-82E9-508DC7709179}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -518,7 +518,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FULL_NAME"
-              DTS:DTSID="{45AF8CB8-E9E2-4081-8186-5D4FD83871F0}"
+              DTS:DTSID="{AC02B8D0-E4D7-4202-A337-1E1BD9326B12}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -528,7 +528,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="FX_CLEAN_RISK_LIMIT"
-              DTS:DTSID="{E129209E-AC8C-4CFC-820A-E92A676D510A}"
+              DTS:DTSID="{E09228E5-8F02-43CD-A058-C86AAF012A2F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -538,7 +538,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="FX_CUST_CLEAN_RISK_LIMIT"
-              DTS:DTSID="{229FF5D1-DAF4-4557-860F-50301AB6217D}"
+              DTS:DTSID="{158AB3A7-E233-4DE7-9C0F-830CEBF9E8CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -547,7 +547,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FX_NETTING_CUSTOMER"
-              DTS:DTSID="{A2EB089E-410D-41EC-9B37-777F0063D763}"
+              DTS:DTSID="{EAF788C8-8618-41A9-AA96-DA8A556DEA12}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -556,7 +556,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="GENERATE_MT920"
-              DTS:DTSID="{4F09DF22-A206-406B-A2B4-F132A86C73C9}"
+              DTS:DTSID="{02C770C4-5A3F-4915-ABEA-D8B595349F94}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -565,7 +565,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="GROUP_CODE"
-              DTS:DTSID="{850AECE4-8DCC-43A5-9F3C-E131BAAAEB56}"
+              DTS:DTSID="{3B3CE41F-ABFD-4F17-8D03-80813871D2DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -574,7 +574,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="HO_AC_NO"
-              DTS:DTSID="{BA740494-D21A-408F-8CBA-FF4AE03B8BDE}"
+              DTS:DTSID="{5F77BBEE-891A-4603-B963-75FC676D3CAB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -583,7 +583,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="INDIVIDUAL_TAX_CERT_REQD"
-              DTS:DTSID="{1AF808D5-690B-4B89-AF2A-E4ACA267554C}"
+              DTS:DTSID="{938180BC-9D00-41F8-AFC9-3608D400EC50}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -592,7 +592,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="INTRODUCER"
-              DTS:DTSID="{0D61FD9F-FB6D-409C-9211-D581DC74F1E3}"
+              DTS:DTSID="{619165A9-54FA-4F04-862B-AA481AEAADCC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -601,7 +601,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="INVEST_CUST"
-              DTS:DTSID="{FB6C5360-E768-4B60-BAA2-F8A01C5FD862}"
+              DTS:DTSID="{9556FDF4-2D3D-4323-8074-137069C7D001}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -610,7 +610,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ISSUER_CUSTOMER"
-              DTS:DTSID="{0FD0F2DE-CBE4-4D4A-B710-C92A6F084C66}"
+              DTS:DTSID="{4A04D25C-5685-4F7F-B28B-2D7D6B0BF517}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -619,7 +619,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="IS_FORGOTTEN"
-              DTS:DTSID="{D3C6C39A-CB83-425D-A9E9-104DC9703DD3}"
+              DTS:DTSID="{81BD8C43-C91E-450C-8F70-7E52EB7FBBE8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -628,7 +628,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="JOINT_VENTURE"
-              DTS:DTSID="{148088E1-EC87-45EC-8B92-7F87D8226BF1}"
+              DTS:DTSID="{9E1DB15F-597D-4141-BA51-75624DAC08B1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -637,7 +637,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="JV_LIMIT_TRACKING"
-              DTS:DTSID="{43CFA0DB-41E6-47E4-A5CF-EA61778E9ADC}"
+              DTS:DTSID="{5FB50522-15BC-45F1-B51E-CEA14BF1E5DF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -646,7 +646,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="KYC_DETAILS"
-              DTS:DTSID="{7BA135E1-9B2E-4C40-A014-8C638AA68A48}"
+              DTS:DTSID="{C539CB4A-0322-42C3-B6BC-0E37D0710D56}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -655,7 +655,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="KYC_REF_NO"
-              DTS:DTSID="{F0CBE563-0A46-4A28-985F-EAC03B386B0C}"
+              DTS:DTSID="{DE93B042-D9B0-499F-BA9E-432C05FCF8BE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -664,7 +664,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="LANGUAGE"
-              DTS:DTSID="{DEFDBEAC-FA30-4A4A-A3E2-1CE9E4D25E93}"
+              DTS:DTSID="{DAB8DD12-2AD0-4DEB-AEF1-28B7F53946EA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -674,7 +674,7 @@
               DTS:DataScale="4"
               DTS:TextQualified="True"
               DTS:ObjectName="LC_COLLATERAL_PCT"
-              DTS:DTSID="{83CD659B-89D7-484F-868A-EA0DA52F61FF}"
+              DTS:DTSID="{E04629B4-A535-4B52-AC39-0BCDB6A0C566}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -683,7 +683,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="LIABILITY_NO"
-              DTS:DTSID="{3258F0E5-7030-427E-871B-45090479F6A1}"
+              DTS:DTSID="{7783495A-793F-4E5E-BBC8-70CDB4EC339A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -692,7 +692,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="LIAB_BR"
-              DTS:DTSID="{323FAA61-B25F-447B-BD26-6F29D2671A75}"
+              DTS:DTSID="{96C258EF-27D5-429D-A729-8A357D4C3A1C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -701,7 +701,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="LIAB_NODE"
-              DTS:DTSID="{FC2003A2-51FF-4652-8C42-1697939E7156}"
+              DTS:DTSID="{A00177EE-B03C-4AB8-A704-A0E5C936FCE6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -710,7 +710,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="LIMIT_CCY"
-              DTS:DTSID="{19F98EE3-BD20-4E79-8C9C-F352B8B211F7}"
+              DTS:DTSID="{29A5A087-A068-4A51-AB6A-4C3541FF433D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -719,7 +719,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="LOCAL_BRANCH"
-              DTS:DTSID="{A11039BD-D0D8-4508-879A-726631700F9B}"
+              DTS:DTSID="{6DD4B31D-D11F-4FC5-8D4B-68E8883AA6EC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -728,7 +728,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="LOC_CODE"
-              DTS:DTSID="{AB7D0073-9D30-4FD6-B2E8-3D83BAE490B8}"
+              DTS:DTSID="{8BECF82C-DFA0-48AE-BB8B-D80FBCFB2CD1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -737,7 +737,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MAILERS_REQUIRED"
-              DTS:DTSID="{1EF7CB3F-F8D3-496B-8401-EE8DBED11004}"
+              DTS:DTSID="{97B2F56A-01A6-4857-9ABE-3ADC96122C92}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -745,7 +745,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="MAKER_DT_STAMP"
-              DTS:DTSID="{1C44B454-5C3B-442A-BF32-EC4FDDEF6613}"
+              DTS:DTSID="{3D9C40EF-907C-45C2-AA3C-103F8A440059}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -754,7 +754,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MAKER_ID"
-              DTS:DTSID="{D81CC341-B32C-44DA-BA28-CEE6A24E354A}"
+              DTS:DTSID="{36EA19DE-5112-46C3-9567-752B469263F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -763,7 +763,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MFI_CUSTOMER"
-              DTS:DTSID="{5226EB5F-DDF6-4ED1-BEBF-112F8A46ED49}"
+              DTS:DTSID="{C5FD41DB-3291-4EE8-9A48-04CD0FE9B705}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -772,7 +772,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MOD_NO"
-              DTS:DTSID="{C8F0F9F6-C0C3-4321-AB20-7BC23C394CD3}"
+              DTS:DTSID="{0EBFFB72-443E-4E9B-9E42-6F9312C2E9EA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -781,7 +781,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="NATIONALITY"
-              DTS:DTSID="{F4E5FA4E-73BF-49C7-A386-15AA7CC21205}"
+              DTS:DTSID="{C03AFBBD-78A9-47A9-8980-F3C7B3C0DBC6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -790,7 +790,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ONCE_AUTH"
-              DTS:DTSID="{F573C856-936D-4DF7-BA01-5F14A139FB50}"
+              DTS:DTSID="{0F158E3C-3E65-4698-81CF-BB7EAE08869E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -800,7 +800,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="OVERALL_LIMIT"
-              DTS:DTSID="{6327B711-F7D9-453C-80E7-76A897563A4E}"
+              DTS:DTSID="{F6344E39-67F9-4BCB-8610-BEE3CB4E90ED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -809,7 +809,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="PAST_DUE_FLAG"
-              DTS:DTSID="{67565055-188E-43C1-A7CE-478851917B24}"
+              DTS:DTSID="{47143E4A-9E22-4953-BA76-4A849540396E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -818,7 +818,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="PINCODE"
-              DTS:DTSID="{F2B07BEE-BCB7-4D8B-B8E2-39763FF02BA1}"
+              DTS:DTSID="{7A99C918-C1E8-4298-A4C0-5FB40A08075B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -827,7 +827,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="PRIVATE_CUSTOMER"
-              DTS:DTSID="{0DE37CDD-CBB8-4200-886B-0BEEAABC95DB}"
+              DTS:DTSID="{308986F3-0410-4140-9DB3-297102A3F399}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -836,7 +836,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="RECORD_STAT"
-              DTS:DTSID="{26184254-ADD6-4B01-97E8-B736E50215BA}"
+              DTS:DTSID="{9FC6675B-FB1C-4BC9-B88D-B59B91E7788F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -844,7 +844,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="REVISION_DATE"
-              DTS:DTSID="{C6CA8153-82E5-4937-9DB5-0F225DE4E2E2}"
+              DTS:DTSID="{165A0972-2994-4A2E-BA06-616B43132AF2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -853,7 +853,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="RISK_CATEGORY"
-              DTS:DTSID="{432436E3-EECF-4153-A615-EA96B88BA693}"
+              DTS:DTSID="{1E776814-EA67-4AFD-920D-40DAC5D88E3B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -862,7 +862,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="RISK_PROFILE"
-              DTS:DTSID="{AB331155-D70E-4B69-B07C-C57E4D6C8F27}"
+              DTS:DTSID="{E223D166-0D9F-4295-AFB2-177E11B857E1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -871,7 +871,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="RM_ID"
-              DTS:DTSID="{5FC17B21-D36B-43F4-91CA-C171DA2AF4A8}"
+              DTS:DTSID="{BF794671-532B-4554-AD06-FCC736917B40}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -880,7 +880,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="RP_CUSTOMER"
-              DTS:DTSID="{1A9D0240-9A4B-43CF-95DF-CBCABFEAF504}"
+              DTS:DTSID="{F450B813-3482-415F-ABD8-42C4A310B059}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -889,7 +889,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SANCTIONS_CHECKS_REQUIRED"
-              DTS:DTSID="{A4A56C3C-DAC3-47EC-87A4-E8E225A71C3F}"
+              DTS:DTSID="{C9AEA663-B01E-40C3-A453-F3A93AB3E13C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -899,7 +899,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="SEC_CLEAN_RISK_LIMIT"
-              DTS:DTSID="{5692A061-CB0B-4516-A863-7F4EF8E2C6D3}"
+              DTS:DTSID="{580A030E-A8DC-4567-9174-BA15E72A8A59}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -909,7 +909,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="SEC_CUST_CLEAN_RISK_LIMIT"
-              DTS:DTSID="{5640195A-0488-4157-A375-E54A0E5E318A}"
+              DTS:DTSID="{E8ABAA43-71B5-4059-9410-E83FF70072EB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -919,7 +919,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="SEC_CUST_PSTL_RISK_LIMIT"
-              DTS:DTSID="{88E7D33B-5198-46FC-A5D3-E99259F55BFA}"
+              DTS:DTSID="{CFD1841C-4254-4C76-B0AF-E506D3E1475B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -929,7 +929,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="SEC_PSTL_RISK_LIMIT"
-              DTS:DTSID="{1F2B21F2-BC51-42B3-A5C8-D5A3E2097F4F}"
+              DTS:DTSID="{E74D712C-3640-47F4-9304-19614EAC910F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -938,7 +938,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SHORT_NAME"
-              DTS:DTSID="{13DA770B-E8BD-47CF-B4B3-0C929B1FE253}"
+              DTS:DTSID="{DB30B6A6-317D-484E-8985-C0E10C6404B2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -947,7 +947,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SHORT_NAME2"
-              DTS:DTSID="{B42C4628-B57E-42EC-A3B0-876254268062}"
+              DTS:DTSID="{EA5C7671-897F-4F61-B859-13982705CD34}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -956,7 +956,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SPECIAL_CUST"
-              DTS:DTSID="{54EDD6D7-8B2E-4EBD-852D-6BA0D7CEC2D6}"
+              DTS:DTSID="{F6EBF739-35F5-4062-A109-7EFDAC4C0108}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -965,7 +965,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SSN"
-              DTS:DTSID="{DC669428-1372-42C8-93D5-38BEEE18F55D}"
+              DTS:DTSID="{4DD0B3B3-7A2B-471E-A8F5-6F658ACE95A8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -974,7 +974,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="STAFF"
-              DTS:DTSID="{EA1D19DD-A9B6-4251-B76E-1B95943A777F}"
+              DTS:DTSID="{AE07C9C6-E563-4EEF-87EE-DC9F45C52820}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -983,7 +983,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="STMT_DAY"
-              DTS:DTSID="{72007C6D-EA5B-4D34-99A3-F7D997EE7F8E}"
+              DTS:DTSID="{A8AF3D2F-AE34-4915-A5ED-2F984A6440ED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -992,7 +992,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SWIFT_CODE"
-              DTS:DTSID="{0ACDD1AA-ED19-4592-8043-6FEF1EF1B090}"
+              DTS:DTSID="{2866AFD3-E915-40BA-AE75-94C284239DF2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1001,7 +1001,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="TAXID_NO"
-              DTS:DTSID="{DAB4CFDA-F7E5-4FF2-8C2C-A8B888CA9D5D}"
+              DTS:DTSID="{7E69D84C-4074-4CB0-B4DA-4320C0222E0A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1010,7 +1010,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="TAX_CNTRY"
-              DTS:DTSID="{36C4A17F-1FBF-4AC5-921A-5125DA38163E}"
+              DTS:DTSID="{A6DD1D17-0B89-48B3-A7CE-88BECD235DCE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1019,7 +1019,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="TAX_GROUP"
-              DTS:DTSID="{B5BDD96C-B140-4E14-8001-481C662970EF}"
+              DTS:DTSID="{C559ABF6-FAED-4021-9CC0-116670E33452}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1028,7 +1028,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="TRACK_LIMITS"
-              DTS:DTSID="{D4955F56-4763-49DC-943D-AF28A3E8F832}"
+              DTS:DTSID="{58A7A0D3-5E9B-412F-AA5A-E01521F725C5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1037,7 +1037,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="TREASURY_CUSTOMER"
-              DTS:DTSID="{3489CB37-9F2E-4832-9BA8-86F703EFB9EE}"
+              DTS:DTSID="{0608B986-E6B1-4B4F-A1A9-682A3AE95CD5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1046,7 +1046,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UDF_1"
-              DTS:DTSID="{906F2A07-D74C-401E-A275-1AB7CCFA6DA7}"
+              DTS:DTSID="{A7D38AA5-47C7-4B18-9D6E-A28DD64FFC57}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1055,7 +1055,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UDF_2"
-              DTS:DTSID="{42795AF1-401C-4400-B6A7-9991CB75B0F4}"
+              DTS:DTSID="{9048C39B-40D8-473B-AB4E-97A950EE1A0D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1064,7 +1064,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UDF_3"
-              DTS:DTSID="{0592506A-0A8D-4CF0-B0F9-1EEF5B16A80F}"
+              DTS:DTSID="{C11B504E-58AD-4163-A775-1A54EDCB2B71}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1073,7 +1073,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UDF_4"
-              DTS:DTSID="{EF4ECD08-A7B1-4391-BF0B-B7A6B43E3841}"
+              DTS:DTSID="{9F17109E-C30B-449D-9213-0F83AD66D651}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1082,7 +1082,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UDF_5"
-              DTS:DTSID="{AF6BCC40-8287-4616-AE3F-A47D56F21AB6}"
+              DTS:DTSID="{8DC1FCAE-63BA-4A4F-A097-0657879531BB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1091,7 +1091,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UNADVISED"
-              DTS:DTSID="{C1DDA0ED-573C-4A5D-A81D-A1BF6B7D3194}"
+              DTS:DTSID="{87F1CFA4-C3BC-4EC0-A6D2-B66FE2522509}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1100,7 +1100,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UNIQUE_ID_NAME"
-              DTS:DTSID="{E9C42983-0E55-46A9-8DB8-7E22510AD66A}"
+              DTS:DTSID="{6153277D-9FC6-4B0C-8C40-C783E44BC32A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1109,7 +1109,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UNIQUE_ID_VALUE"
-              DTS:DTSID="{D0259C8E-52EE-4B60-8FDB-8767139F340E}"
+              DTS:DTSID="{3970D9C6-A0A2-4530-BC3A-363CA710C5E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1118,7 +1118,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UTILITY_PROVIDER"
-              DTS:DTSID="{1285A356-A3FE-4C98-BE73-4C30218CEDDB}"
+              DTS:DTSID="{4EBBE63D-F86E-46C0-AE6C-79E042EF0EBD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1127,7 +1127,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UTILITY_PROVIDER_ID"
-              DTS:DTSID="{7170C313-0A81-4C33-BB86-3DDD84E7880A}"
+              DTS:DTSID="{41816B28-4496-42D3-AA6A-7AA787026FC4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1136,7 +1136,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="UTILITY_PROVIDER_TYPE"
-              DTS:DTSID="{0C58C6A5-E5C1-4D00-B3E9-DE4A93DBD813}"
+              DTS:DTSID="{1D1C7B85-211D-4176-847B-65B412C123E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1145,7 +1145,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="VRTL_CUSTOMER_ID"
-              DTS:DTSID="{DF644675-EA2A-400E-B464-823726A740DB}"
+              DTS:DTSID="{4856A735-681B-4202-884D-D83196E635B1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1154,7 +1154,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="WHEREABOUTS_UNKNOWN"
-              DTS:DTSID="{74C0F1DD-020F-4221-9C87-13C4B6FB8631}"
+              DTS:DTSID="{112AD476-EA3F-4F73-A940-265B4F56A09B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1163,7 +1163,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="WHT_PCT"
-              DTS:DTSID="{DF6CB963-1979-4464-9E9E-9FD646277A96}"
+              DTS:DTSID="{B2E5BCE3-1EEE-4CF5-90CB-B966ADC67D6E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1172,7 +1172,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="WITHHOLDING_TAX"
-              DTS:DTSID="{88124863-D8CC-48CB-9212-A30DE784AC20}"
+              DTS:DTSID="{D6F59819-222E-4118-BE62-056939C2D4FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1181,7 +1181,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="applicable_datekey"
-              DTS:DTSID="{232D66D7-E634-4696-AA2B-5E218917F511}"
+              DTS:DTSID="{740C667E-188E-4217-9144-FED42A51331F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1190,7 +1190,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="load_datekey"
-              DTS:DTSID="{D4DA5303-8D39-4D29-9BD0-51D7A9D347B3}"
+              DTS:DTSID="{AF6C5939-9D5A-465E-B764-51ECEE8F1F23}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1199,7 +1199,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="country_code"
-              DTS:DTSID="{AE366656-A196-4863-B452-EC3A44A6CEA4}"
+              DTS:DTSID="{24178C94-01BB-4343-88D3-D017B8E2C896}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1209,7 +1209,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{6A03C157-9CEC-4C6F-AE0B-A57DC5BFCCCA}"
+      DTS:DTSID="{E9562111-8E74-4C1E-B2B9-3E86A234B612}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;&#xA;&#xA;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_GetPackageMetadata]&#xA;&#x9;&#x9;@ssis_package_name = '&quot; + @[System::PackageName]  + &quot;'&#xA;&#xA;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -1221,14 +1221,14 @@
 DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
-		@ssis_package_name = 'sttm_customer'
+		@ssis_package_name = 'sample'
 
 
 </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{8FE1EACA-63C9-4B24-BDA3-B9B05CA1B8BC}"
+      DTS:DTSID="{E5F77B24-51E9-49F8-BB79-853993D7EAD1}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]&#xA;&#x9;&#x9;@ssis_load_datekey = &quot; + @[User::varLoadDate]  + &quot;,&#xA;&#x9;&#x9;@ssis_exec_start_time =  '&quot; + (DT_WSTR, 50) @[System::StartTime] + &quot;',&#xA;&#x9;&#x9;@local_file_path =  '&quot; +  @[User::varSourceFilePath]  + &quot;',&#xA;&#x9;&#x9;@source_file_name =  '&quot; + @[User::varSourceFileName]   + &quot;',&#xA;&#x9;&#x9;@destination_file_name = '&quot;+ @[User::varDestinationFileName]  +&quot;',&#xA;&#x9;&#x9;@table_id =  &quot; + (DT_WSTR, 50) @[User::varTableID]  + &quot;,&#xA;&#x9;&#x9;@applicable_datakey =  &quot; + @[User::varApplicableDatekey]  + &quot;&#xA;&#xA;SELECT&#x9;'Return Value' = @return_value&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -1239,10 +1239,10 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/1/2022 10:51:55 AM',
-		@local_file_path =  'D:\Development\rawdatastore\sttm_customer_AAA.csv',
-		@source_file_name =  'sttm_customer_AAA.csv',
-		@destination_file_name = 'sttm_customer_1111_11_11_AAA.csv',
+		@ssis_exec_start_time =  '1/1/2022 12:30:28 PM',
+		@local_file_path =  'D:\Development\rawdatastore\sample_AAA.csv',
+		@source_file_name =  'sample_AAA.csv',
+		@destination_file_name = 'sample_1111_11_11_AAA.csv',
 		@table_id =  0,
 		@applicable_datakey =  11111111
 
@@ -1250,7 +1250,7 @@ SELECT	'Return Value' = @return_value</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{58F9AF9B-F99D-44C1-93A4-DE2FE381D1DA}"
+      DTS:DTSID="{B4FE101F-1A8C-4287-B083-396D4A0E511E}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;USE [EDADataRegistry]&#xA;GO&#xA;&#xA;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_UpdateExecutionRegistry]&#xA;&#x9;&#x9;@ssis_row_count = &quot; + (DT_WSTR, 1000)  @[User::varRowCount] + &quot;,&#xA;&#x9;&#x9;@destination_file_path = '&quot; + @[User::varDestinationFilePath]  + &quot;',&#xA;&#x9;&#x9;@destination_file_name = '&quot; + @[User::varDestinationFileName]  + &quot;',&#xA;&#x9;&#x9;@source_file_name = '&quot; +  @[User::varSourceFileName] + &quot;'&#xA;&#xA;SELECT&#x9;'Return Value' = @return_value&#xA;&#xA;GO&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -1264,9 +1264,9 @@ DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_UpdateExecutionRegistry]
 		@ssis_row_count = 0,
-		@destination_file_path = 'D:\Development\rawdatastore\dummy\sttm_customer\sttm_customer_1111_11_11_AAA.csv',
-		@destination_file_name = 'sttm_customer_1111_11_11_AAA.csv',
-		@source_file_name = 'sttm_customer_AAA.csv'
+		@destination_file_path = 'D:\Development\rawdatastore\dummy\sample\sample_1111_11_11_AAA.csv',
+		@destination_file_name = 'sample_1111_11_11_AAA.csv',
+		@source_file_name = 'sample_AAA.csv'
 
 SELECT	'Return Value' = @return_value
 
@@ -1274,7 +1274,7 @@ GO</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C83D3875-7CCC-4952-95C1-66B800B26C08}"
+      DTS:DTSID="{8D53C9B6-C022-4B56-A5D3-684282DCE7AE}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;SELECT &#xA;TO_CHAR(MAX(DEXEC_DATE), 'DD MON YYYY') applicable_date, &#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number&#xA; FROM &quot; + @[User::varSchemaName]  +&quot;.DWH_&quot; +  UPPER(@[System::PackageName])"
       DTS:IncludeInDebugDump="2345"
@@ -1287,11 +1287,11 @@ TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,
 TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,
 TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,
 TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number
- FROM EDA_READONLY.DWH_STTM_CUSTOMER</DTS:VariableValue>
+ FROM EDA_READONLY.DWH_SAMPLE</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{B2267E28-5B75-4D85-AAE1-6F550FE02324}"
+      DTS:DTSID="{C2EC8308-B681-4034-8B98-E1708256B942}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;&#xA;IF EXISTS (&#xA;&#x9;&#x9;SELECT [ssis_exec_status_id]&#xA;&#x9;&#x9;FROM [EDADataRegistry].[dbo].[ExecutionRegistry]&#xA;&#x9;&#x9;WHERE [file_name] = '&quot; + @[User::varDestinationFileName] + &quot;'&#xA;&#x9;&#x9;&#x9;AND [ssis_exec_status_id] = 1&#xA;&#x9;&#x9;)&#xA;&#x9;SELECT 1 AS ExecutionStatus&#xA;ELSE&#xA;&#x9;SELECT 0 AS ExecutionStatus&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -1302,7 +1302,7 @@ TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number
 IF EXISTS (
 		SELECT [ssis_exec_status_id]
 		FROM [EDADataRegistry].[dbo].[ExecutionRegistry]
-		WHERE [file_name] = 'sttm_customer_1111_11_11_AAA.csv'
+		WHERE [file_name] = 'sample_1111_11_11_AAA.csv'
 			AND [ssis_exec_status_id] = 1
 		)
 	SELECT 1 AS ExecutionStatus
@@ -1311,18 +1311,18 @@ ELSE
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{2D9656DD-9F9E-40B7-8665-0CA2AC589C11}"
+      DTS:DTSID="{F13142EF-E976-468C-8C3E-EE89E88B70B8}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;SELECT * FROM &quot; + @[User::varSchemaName] + &quot;.DWH_&quot; +  UPPER( @[User::varTableName] )"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="scrDataLoad">
       <DTS:VariableValue
-        DTS:DataType="8">SELECT * FROM EDA_READONLY.DWH_STTM_CUSTOMER</DTS:VariableValue>
+        DTS:DataType="8">SELECT * FROM EDA_READONLY.DWH_SAMPLE</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{0BBF21BA-A490-4A01-A71B-AA701C24A661}"
+      DTS:DTSID="{F5CB0A8E-C1FF-47EA-8322-C705765817B5}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;select OWNER as schema_name from all_tables &#xA;where table_name = 'DWH_&quot; + UPPER( @[User::varTableName]  )  + &quot;' and OWNER &lt;&gt; 'BICCSIT'&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -1330,11 +1330,11 @@ ELSE
       DTS:ObjectName="scrGetSourceSchemaName">
       <DTS:VariableValue
         DTS:DataType="8">select OWNER as schema_name from all_tables 
-where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:VariableValue>
+where table_name = 'DWH_SAMPLE' and OWNER &lt;&gt; 'BICCSIT'</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{8C29F943-E4F3-4E69-A156-30FAE7E314F0}"
+      DTS:DTSID="{554F8776-C56D-43B0-8BD0-EFB37357E412}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;&#x9;SELECT col.*&#xA;&#x9;FROM sys.all_tab_columns col&#xA;&#x9;INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER&#xA;&#x9;&#x9;AND col.table_name = t.table_name&#xA;&#x9;WHERE col.OWNER = '&quot; +  @[User::varSchemaName]  + &quot;'&#xA;&#x9;&#x9;AND col.table_name = 'DWH_&quot; + UPPER( @[User::varTableName])  +&quot;'&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -1346,11 +1346,11 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
 	INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER
 		AND col.table_name = t.table_name
 	WHERE col.OWNER = 'EDA_READONLY'
-		AND col.table_name = 'DWH_STTM_CUSTOMER'</DTS:VariableValue>
+		AND col.table_name = 'DWH_SAMPLE'</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{782F9141-084D-4420-906E-C13D107F5922}"
+      DTS:DTSID="{A4662D57-2C9B-4BBE-BF13-3300D1E28F6F}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varApplicableDate">
@@ -1359,7 +1359,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{527A56BD-DE22-4648-9E91-A79AE0DF3B69}"
+      DTS:DTSID="{FE646968-11F6-41D1-ACAB-49F2F8640D4A}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varApplicableDatekey">
@@ -1368,7 +1368,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{BB30E620-3AF9-4A80-BC73-A5D26F5FE8D8}"
+      DTS:DTSID="{BCFF9337-5DD7-4B86-9419-9EA0D060D95C}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varApplicationName">
@@ -1377,7 +1377,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{10C5F263-AB9D-4D5E-96BB-DD5EECC960FA}"
+      DTS:DTSID="{2CC0E669-2E0C-45A7-9D18-6D31E7DCB350}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varTnsOrServerName]"
       DTS:IncludeInDebugDump="2345"
@@ -1388,7 +1388,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{702FE23D-B3F7-4288-91E8-77E00C3C9D8D}"
+      DTS:DTSID="{6D0F5F7B-C53B-43AC-A5E7-FA494A0CAE1C}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionPassword">
@@ -1397,7 +1397,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{F4D11897-7885-474B-88E4-693F32F4F3C2}"
+      DTS:DTSID="{BC58179C-4237-4F56-949B-6584086F5751}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionString">
@@ -1407,7 +1407,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{0B229BA8-6318-4D3A-B3BB-C60F594E13A2}"
+      DTS:DTSID="{C095990C-9599-4F2F-9371-B6E55D27A77B}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varCountryCode">
@@ -1416,7 +1416,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{74FC65BD-9F09-4201-8330-FB41A90F9914}"
+      DTS:DTSID="{E54A4CDD-C62B-4C5E-A4DC-6A16BD9E1F17}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDayNumber">
@@ -1425,40 +1425,40 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{0B49A45E-E6ED-48B2-831E-66CF17E6E229}"
+      DTS:DTSID="{76CC9C14-16F3-40DE-A6BC-D40EBB3005C5}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varLandingPath] +   @[User::varApplicationName] + &quot;\\&quot; + @[User::varTableName] + &quot;\\&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileDirectory">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\sttm_customer\</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\sample\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{CFDCE603-153F-4D9A-9855-C90877F3214E}"
+      DTS:DTSID="{7AE1FB30-F21F-4824-A640-E88C7EB636A0}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varTableName] + &quot;_&quot; +  @[User::varYearNumber]  + &quot;_&quot; +  @[User::varMonthNumber] + &quot;_&quot; +  @[User::varDayNumber] + &quot;_&quot; + @[User::varCountryCode]  +  @[User::varFileExtension]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileName">
       <DTS:VariableValue
-        DTS:DataType="8">sttm_customer_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">sample_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{E18069B9-0B06-4B67-886C-B67C895640C7}"
+      DTS:DTSID="{48AD64A7-4C8E-47EA-B164-A25ADAF398C8}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varLandingPath] +   @[User::varApplicationName] + &quot;\\&quot; + @[User::varTableName] + &quot;\\&quot; +  @[User::varDestinationFileName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\sttm_customer\sttm_customer_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\sample\sample_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{EE50AA35-E530-4742-A136-FA1145FB6A1A}"
+      DTS:DTSID="{D75E9B63-AEB8-4A8D-9D8F-33FED522A966}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFileExecStatus">
@@ -1467,7 +1467,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{EE1706CE-16C2-4C48-8E4D-08B37ECBA305}"
+      DTS:DTSID="{E9F7DEC9-CC5E-4A37-AA0C-38AA9AB6F440}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFileExtension">
@@ -1476,18 +1476,18 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{2CDF6A41-D2AC-47E6-AA8F-C908EFF9B4E9}"
+      DTS:DTSID="{54338891-33ED-47E0-A8A2-B5CEC07CA189}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;D:\\Development\\rawdatastore\\&quot; +   @[User::varApplicationName] + &quot;\\&quot; + @[User::varTableName] + &quot;\\&quot; + @[User::varDestinationFileName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFinalFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\sttm_customer\sttm_customer_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\sample\sample_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C802E288-3F96-4676-83B0-B6258EA0CA04}"
+      DTS:DTSID="{4245CE4A-C280-4952-8A69-519618A2C3D2}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;D:\\Development\\rawdatastore\\&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -1498,7 +1498,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{7D770240-8ADE-4711-9B88-0AFFF0117BAA}"
+      DTS:DTSID="{9D95EAFA-ECD7-4B41-9390-42740D86B0C6}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varLoadDate">
@@ -1507,7 +1507,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{F725AA20-5FC5-4FA3-82CA-ADFE431DD4B5}"
+      DTS:DTSID="{B51BA800-5666-419F-95FA-29DBA961270D}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varMonthNumber">
@@ -1516,7 +1516,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{9F400B9C-244D-459D-BD67-DA7483B4BD88}"
+      DTS:DTSID="{3DBC45A8-F47D-4AB9-9243-F70F8388A6C4}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varPackageMetadata">
@@ -1534,7 +1534,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C90A69C0-05F5-45DD-8876-8F659C57E3A5}"
+      DTS:DTSID="{E28F57DC-944E-421B-9A8A-78E938D93A42}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varRowCount">
@@ -1543,7 +1543,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{5A77E4BD-0636-4CE9-8DE7-167C09E7FAFC}"
+      DTS:DTSID="{E466FFE9-E560-4800-AEB6-4986E6E3F31E}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSchemaName">
@@ -1552,7 +1552,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{1CAA2622-0948-449A-9839-0B7BC6D354DC}"
+      DTS:DTSID="{78440C0D-8367-461C-B21C-C5B88A63D892}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSchemaOrUserName">
@@ -1561,29 +1561,29 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{9BBF2529-E1B5-4CA3-A913-8BB43C16E142}"
+      DTS:DTSID="{E4DFFB7F-0AE5-4FA9-B9A1-0F6876035CF1}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varTableName] + &quot;_&quot; + @[User::varCountryCode] +  @[User::varFileExtension]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSourceFileName">
       <DTS:VariableValue
-        DTS:DataType="8">sttm_customer_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">sample_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{51A7EC96-8539-4FD9-B416-0338902186E6}"
+      DTS:DTSID="{121CB72E-CDDE-4299-90F7-9B29E252F19E}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varLandingPath] +  @[User::varSourceFileName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSourceFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\sttm_customer_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\sample_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{EABC9871-AAD6-4034-AF36-6EB5DEBC2639}"
+      DTS:DTSID="{70095A87-EE53-4578-B8AC-6B92A9EE3091}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varTableID">
@@ -1592,18 +1592,18 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{F92B1CF5-49C5-4311-A76C-15B34EBBBFAB}"
+      DTS:DTSID="{61029B4B-9CE3-437F-940A-9F273B10EA7B}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[System::PackageName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varTableName">
       <DTS:VariableValue
-        DTS:DataType="8">sttm_customer</DTS:VariableValue>
+        DTS:DataType="8">sample</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{5325B0E9-652A-4BC8-ABC2-CB2889AD7BCB}"
+      DTS:DTSID="{EE2DCA61-9DCB-42B7-BB44-2D22E4C37B8F}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varTnsOrServerName">
@@ -1612,7 +1612,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{EB2A1649-709B-419C-8985-EE7705A8CCA1}"
+      DTS:DTSID="{747D4E97-E422-49ED-939C-34438D6D8396}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varYearNumber">
@@ -1625,14 +1625,14 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
       DTS:refId="Package\Foreach Loop Container"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{7DE09618-06E9-4FFB-AE20-8AB510074C17}"
+      DTS:DTSID="{FF64182F-4396-42B9-B63A-BE0C97460C6B}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Foreach Loop Container">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachADOEnumerator"
-        DTS:DTSID="{CB1478B0-7FFA-4D1F-93F2-C11CBF2E9635}"
-        DTS:ObjectName="{CB1478B0-7FFA-4D1F-93F2-C11CBF2E9635}">
+        DTS:DTSID="{52D8E896-B4EC-4752-A63C-29310482B1BF}"
+        DTS:ObjectName="{52D8E896-B4EC-4752-A63C-29310482B1BF}">
         <DTS:ObjectData>
           <FEEADO
             EnumType="EnumerateAllRows"
@@ -1645,7 +1645,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
           DTS:refId="Package\Foreach Loop Container\data load"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Sequence Container"
-          DTS:DTSID="{3A18FAF6-A8D3-4711-B013-F018396FE949}"
+          DTS:DTSID="{BCAFEAAE-14FC-4C59-9158-6AC0FEBE8E1D}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
           DTS:ObjectName="data load">
@@ -1655,7 +1655,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
               DTS:refId="Package\Foreach Loop Container\data load\check file execution status"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Execute SQL Task"
-              DTS:DTSID="{56F5252D-F35D-47AA-B183-EB4ABAE34892}"
+              DTS:DTSID="{458A903C-1EC5-4C24-BED8-9B34E6110417}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="check file execution status"
@@ -1679,7 +1679,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
               DTS:refId="Package\Foreach Loop Container\data load\create directory if not exist"
               DTS:CreationName="Microsoft.FileSystemTask"
               DTS:Description="File System Task"
-              DTS:DTSID="{15A342F1-ED26-417C-9F12-8BE6634BCFBD}"
+              DTS:DTSID="{CFE9140A-CD3D-4FF0-AC8F-E06D372CB3AC}"
               DTS:ExecutableType="Microsoft.FileSystemTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="create directory if not exist"
@@ -1698,7 +1698,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
               DTS:refId="Package\Foreach Loop Container\data load\load data"
               DTS:CreationName="Microsoft.Pipeline"
               DTS:Description="Data Flow Task"
-              DTS:DTSID="{F564A0AB-E585-4CF1-8A0A-959FC9B947F7}"
+              DTS:DTSID="{DCED6A5D-E904-40D0-9E0A-E7E3055A1C5F}"
               DTS:ExecutableType="Microsoft.Pipeline"
               DTS:LocaleID="-1"
               DTS:ObjectName="load data"
@@ -1856,8 +1856,8 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
                       <connections>
                         <connection
                           refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Connections[FlatFileConnection]"
-                          connectionManagerID="Package.ConnectionManagers[sttm_customer]"
-                          connectionManagerRefId="Package.ConnectionManagers[sttm_customer]"
+                          connectionManagerID="Package.ConnectionManagers[sample]"
+                          connectionManagerRefId="Package.ConnectionManagers[sample]"
                           name="FlatFileConnection" />
                       </connections>
                       <inputs>
@@ -6245,7 +6245,7 @@ FROM            DWH_STTM_CUSTOMER</property>
               DTS:refId="Package\Foreach Loop Container\data load\Move File"
               DTS:CreationName="Microsoft.FileSystemTask"
               DTS:Description="move file to final destination on local folder"
-              DTS:DTSID="{056EE9E5-995D-4DB7-AFB9-8D5C5D22D306}"
+              DTS:DTSID="{9A4558E9-0F63-4239-8893-DA1236D3E70E}"
               DTS:ExecutableType="Microsoft.FileSystemTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Move File"
@@ -6266,7 +6266,7 @@ FROM            DWH_STTM_CUSTOMER</property>
               DTS:refId="Package\Foreach Loop Container\data load\update or insert execution registry"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Execute SQL Task"
-              DTS:DTSID="{ED2CF77B-E6A8-49E1-987C-7A4380B3D265}"
+              DTS:DTSID="{FE9BFB1C-44D3-4DF0-90D0-F6AB62D9518C}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="update or insert execution registry"
@@ -6285,7 +6285,7 @@ FROM            DWH_STTM_CUSTOMER</property>
               DTS:refId="Package\Foreach Loop Container\data load\update registry upon completion"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Execute SQL Task"
-              DTS:DTSID="{68ED9022-974B-4551-9896-48F33A7E00EB}"
+              DTS:DTSID="{7C9E6BAE-7B4A-4C2F-B527-3AF7B08FCD2F}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="update registry upon completion"
@@ -6305,7 +6305,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint]"
               DTS:CreationName=""
-              DTS:DTSID="{64AA767A-6EDB-4AFA-988C-7BA9BC500C41}"
+              DTS:DTSID="{0828F180-C05F-448F-88D2-069C1E45C69A}"
               DTS:EvalOp="1"
               DTS:Expression="@[User::varFileExecStatus] ==0"
               DTS:From="Package\Foreach Loop Container\data load\check file execution status"
@@ -6315,7 +6315,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint 1]"
               DTS:CreationName=""
-              DTS:DTSID="{241A04DB-0AB8-4984-8E52-00F28DCBFA69}"
+              DTS:DTSID="{630E167C-54E1-4BA7-9A93-DF21F6B3DA78}"
               DTS:From="Package\Foreach Loop Container\data load\update or insert execution registry"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 1"
@@ -6323,7 +6323,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint 2]"
               DTS:CreationName=""
-              DTS:DTSID="{509B4B03-700E-419D-B8B4-9FCA9076AEAE}"
+              DTS:DTSID="{18FAF827-D2C4-4B1B-94E8-7E9C4B125BC6}"
               DTS:From="Package\Foreach Loop Container\data load\load data"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 2"
@@ -6331,7 +6331,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint 3]"
               DTS:CreationName=""
-              DTS:DTSID="{8A4684AE-1388-4EEC-8438-21E286719A7A}"
+              DTS:DTSID="{44CA8073-866E-4804-AAC9-EC22761FB85C}"
               DTS:From="Package\Foreach Loop Container\data load\Move File"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 3"
@@ -6339,7 +6339,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint 4]"
               DTS:CreationName=""
-              DTS:DTSID="{725F6499-166A-42E2-B1BA-2CF92CA4F994}"
+              DTS:DTSID="{B6B78FE7-E448-4C1F-BF69-991AF5B5239D}"
               DTS:From="Package\Foreach Loop Container\data load\create directory if not exist"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 4"
@@ -6350,7 +6350,7 @@ FROM            DWH_STTM_CUSTOMER</property>
           DTS:refId="Package\Foreach Loop Container\get applicable date"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{7C5F506B-852A-4AD9-805E-706E6FF02BA7}"
+          DTS:DTSID="{180D57CE-5242-4C80-B66E-4F6EE447BC3C}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="get applicable date"
@@ -6359,7 +6359,7 @@ FROM            DWH_STTM_CUSTOMER</property>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{C0F31C28-B350-4BC3-A91A-7568CB5B03CF}"
+              SQLTask:Connection="{AA4F9654-B464-445C-838C-D53EC22D8013}"
               SQLTask:BypassPrepare="False"
               SQLTask:SqlStmtSourceType="Variable"
               SQLTask:SqlStatementSource="User::scrApplicableDate"
@@ -6386,7 +6386,7 @@ FROM            DWH_STTM_CUSTOMER</property>
           DTS:refId="Package\Foreach Loop Container\get source schema name"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{9895A3DB-D972-474F-984B-B91A7934655E}"
+          DTS:DTSID="{B8DB95E5-BAAB-404A-AD0B-5FDC7E6CA117}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="get source schema name"
@@ -6395,7 +6395,7 @@ FROM            DWH_STTM_CUSTOMER</property>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{C0F31C28-B350-4BC3-A91A-7568CB5B03CF}"
+              SQLTask:Connection="{AA4F9654-B464-445C-838C-D53EC22D8013}"
               SQLTask:BypassPrepare="False"
               SQLTask:SqlStmtSourceType="Variable"
               SQLTask:SqlStatementSource="User::scrGetSourceSchemaName"
@@ -6411,7 +6411,7 @@ FROM            DWH_STTM_CUSTOMER</property>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{56CC564D-AFAD-495C-8037-ABB78DB66435}"
+          DTS:DTSID="{C24736F9-A3B0-4B79-9234-A3EF13B78596}"
           DTS:From="Package\Foreach Loop Container\get source schema name"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
@@ -6419,7 +6419,7 @@ FROM            DWH_STTM_CUSTOMER</property>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
-          DTS:DTSID="{490FBF16-9B12-459F-AFFF-8E0C58D409A0}"
+          DTS:DTSID="{6873F101-63CD-4687-82BE-D69015CF3FAA}"
           DTS:From="Package\Foreach Loop Container\get applicable date"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
@@ -6428,56 +6428,56 @@ FROM            DWH_STTM_CUSTOMER</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{5229FA48-E66F-4B0A-84C8-29026F89F1AB}"
-          DTS:ObjectName="{5229FA48-E66F-4B0A-84C8-29026F89F1AB}"
+          DTS:DTSID="{D89E4A9E-D44B-40C8-A409-FF45A5A7E94B}"
+          DTS:ObjectName="{D89E4A9E-D44B-40C8-A409-FF45A5A7E94B}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varTableID" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{3F182138-EA57-410B-B241-1985F8D05D45}"
-          DTS:ObjectName="{3F182138-EA57-410B-B241-1985F8D05D45}"
+          DTS:DTSID="{3CDB0038-E832-415F-9161-B87E3EC46E94}"
+          DTS:ObjectName="{3CDB0038-E832-415F-9161-B87E3EC46E94}"
           DTS:ValueIndex="1"
           DTS:VariableName="User::varTableName" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{CB88E514-188E-4D30-9D70-C233E73DD2EC}"
-          DTS:ObjectName="{CB88E514-188E-4D30-9D70-C233E73DD2EC}"
+          DTS:DTSID="{F18B632F-3DA1-4DAB-B440-CE22A92C2E30}"
+          DTS:ObjectName="{F18B632F-3DA1-4DAB-B440-CE22A92C2E30}"
           DTS:ValueIndex="2"
           DTS:VariableName="User::varApplicationName" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{D41C0133-9B19-4AC0-94DB-BCD375F86B20}"
-          DTS:ObjectName="{D41C0133-9B19-4AC0-94DB-BCD375F86B20}"
+          DTS:DTSID="{AB3EF630-3170-4F82-BA70-101803559C0A}"
+          DTS:ObjectName="{AB3EF630-3170-4F82-BA70-101803559C0A}"
           DTS:ValueIndex="3"
           DTS:VariableName="User::varConnectionString" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{2A145E69-4936-48ED-A2DC-848DB27A2DE6}"
-          DTS:ObjectName="{2A145E69-4936-48ED-A2DC-848DB27A2DE6}"
+          DTS:DTSID="{A45E7C0F-B0AA-439D-8D8A-7CDCCC37CBEC}"
+          DTS:ObjectName="{A45E7C0F-B0AA-439D-8D8A-7CDCCC37CBEC}"
           DTS:ValueIndex="4"
           DTS:VariableName="User::varTnsOrServerName" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{F32FA60B-C976-4554-A9AF-C15E191A40AC}"
-          DTS:ObjectName="{F32FA60B-C976-4554-A9AF-C15E191A40AC}"
+          DTS:DTSID="{46BD3197-59C4-44E7-85B8-97F239B87CD7}"
+          DTS:ObjectName="{46BD3197-59C4-44E7-85B8-97F239B87CD7}"
           DTS:ValueIndex="5"
           DTS:VariableName="User::varSchemaOrUserName" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{8DD7BCEC-6614-4291-A197-E81F8825623F}"
-          DTS:ObjectName="{8DD7BCEC-6614-4291-A197-E81F8825623F}"
+          DTS:DTSID="{28E30DB3-7C54-4251-A07C-E411A36254F6}"
+          DTS:ObjectName="{28E30DB3-7C54-4251-A07C-E411A36254F6}"
           DTS:ValueIndex="6"
           DTS:VariableName="User::varCountryCode" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{712F34F4-528B-4954-9BEF-3F06BC12A9ED}"
-          DTS:ObjectName="{712F34F4-528B-4954-9BEF-3F06BC12A9ED}"
+          DTS:DTSID="{ECDFB1DE-2337-4B2B-B24D-4B446C508BD9}"
+          DTS:ObjectName="{ECDFB1DE-2337-4B2B-B24D-4B446C508BD9}"
           DTS:ValueIndex="7"
           DTS:VariableName="User::varConnectionPassword" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{9F00A2E5-4F21-463C-A8A7-FD0273F623DF}"
-          DTS:ObjectName="{9F00A2E5-4F21-463C-A8A7-FD0273F623DF}"
+          DTS:DTSID="{36D0D787-C9E2-4E1B-828B-A696E3BD93C8}"
+          DTS:ObjectName="{36D0D787-C9E2-4E1B-828B-A696E3BD93C8}"
           DTS:ValueIndex="8"
           DTS:VariableName="User::varLoadDate" />
       </DTS:ForEachVariableMappings>
@@ -6486,7 +6486,7 @@ FROM            DWH_STTM_CUSTOMER</property>
       DTS:refId="Package\get package meta data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{eb4c5a8f-975b-4c8c-8720-352933a21e85}"
+      DTS:DTSID="{846DC7F8-A14B-4C36-B278-786BC61B3CED}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="get package meta data"
@@ -6511,7 +6511,7 @@ FROM            DWH_STTM_CUSTOMER</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{008791FE-F450-40EF-89E8-C66CB5EC9816}"
+      DTS:DTSID="{B0DC9492-8BFA-496B-A115-5782C7A6A443}"
       DTS:From="Package\get package meta data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
