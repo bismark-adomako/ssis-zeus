@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sttm_cust_account"
   DTS:PackageType="5"
-  DTS:VersionBuild="90"
-  DTS:VersionGUID="{4B5F198E-4658-414F-9A74-C1171902BCBE}">
+  DTS:VersionBuild="96"
+  DTS:VersionGUID="{FD268ACE-637E-42E9-AA3D-C3E12F228E55}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,12 +31,24 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=COMOROS_FCUBE_UAT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
+          DTS:ConnectionString="Data Source=COMOROS_FCUBE_RPT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABLWzd1omESsi/jDdl7Wsu+cp8xZAqOned5CcAZosOLigAAAAAOgAAAAAIAACAAAABEG53beXczhHT3kFrGmtVjrYn9SQ63UJSAdPj4gO0bwDAAAAD0TaG2RBInvt6RBtqk20cEX9BDODc4cIpXfmHF5+CQuZ8i2wfjC0LKv1lv/RPnmGJAAAAAG3G/7Ut4SLF73SQ42i3+RUJ+nCtTeMyFAL7r0KKiHLXPwsgriXkLg8e9dLZbnWMOVluTd/WiZD/9V3hYgFdYVg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAglU8+WpKjx2/snHLoJPZUNbXF4LOSuTwXQsqiC4LMqwAAAAAOgAAAAAIAACAAAABsDtSTwwKVHrZLLKzx2dmXwb/YBsCbfvtEjYJI88E+XSAAAAC1nHxNi8KvfsDXhr30UNm17yrED5PNCs8M5WvnPVC6DEAAAADpkUTAPdUyRM03UOY8rqBmaQ38fbzgF7k5zx2Y7TOoIpQOmuY5Zm+oP19lua5ynLJVIWZJBjgPYAKurbkQ0t0r</DTS:Password>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[GBLO02UAT0CAEXD_EDA_DEV]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0B40F252-191E-44A9-B543-94B74D62A699}"
+      DTS:ObjectName="GBLO02UAT0CAEXD_EDA_DEV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -2648,7 +2660,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/1/2022 11:00:40 AM',
+		@ssis_exec_start_time =  '1/7/2022 4:25:44 PM',
 		@local_file_path =  'D:\Development\rawdatastore\sttm_cust_account_AAA.csv',
 		@source_file_name =  'sttm_cust_account_AAA.csv',
 		@destination_file_name = 'sttm_cust_account_1111_11_11_AAA.csv',
@@ -2793,7 +2805,7 @@ where table_name = 'DWH_STTM_CUST_ACCOUNT' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -2802,7 +2814,7 @@ where table_name = 'DWH_STTM_CUST_ACCOUNT' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionPassword">
       <DTS:VariableValue
-        DTS:DataType="8">KIu76#45#90YmnhG</DTS:VariableValue>
+        DTS:DataType="8">UyThf#6#7TYnhg</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -3017,7 +3029,7 @@ where table_name = 'DWH_STTM_CUST_ACCOUNT' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
       DTS:Namespace="User"
       DTS:ObjectName="varTnsOrServerName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -13363,11 +13375,15 @@ FROM            DWH_STTM_CUSTOMER</property>
     design-time-name="Package\Foreach Loop Container\data load\load data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="185,42"
           Id="Package\Foreach Loop Container\data load\load data\load data from source"
           TopLeft="219,94" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Foreach Loop Container\data load\load data\Flat File Destination"
+          TopLeft="532,360" />
         <NodeLayout
           Size="158,42"
           Id="Package\Foreach Loop Container\data load\load data\Derived Column"
@@ -13376,6 +13392,42 @@ FROM            DWH_STTM_CUSTOMER</property>
           Size="133,42"
           Id="Package\Foreach Loop Container\data load\load data\Row Count"
           TopLeft="440,265" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\data load\load data.Paths[Row Count Output 1]"
+          TopLeft="506.5,307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="113.5,53"
+              Start="0,0"
+              End="113.5,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5"
+                    Point2="0,26.5"
+                    Point3="4,26.5" />
+                  <mssgle:LineSegment
+                    End="109.5,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="109.5,26.5"
+                    Point2="113.5,26.5"
+                    Point3="113.5,30.5" />
+                  <mssgle:LineSegment
+                    End="113.5,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\data load\load data.Paths[OLE DB Source Output]"
           TopLeft="311.5,136">
@@ -13407,7 +13459,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13441,45 +13495,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Foreach Loop Container\data load\load data\Flat File Destination"
-          TopLeft="532,360" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\data load\load data.Paths[Row Count Output 1]"
-          TopLeft="506.5,307">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="113.5,53"
-              Start="0,0"
-              End="113.5,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.5"
-                    Point2="0,26.5"
-                    Point3="4,26.5" />
-                  <mssgle:LineSegment
-                    End="109.5,26.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="109.5,26.5"
-                    Point2="113.5,26.5"
-                    Point3="113.5,30.5" />
-                  <mssgle:LineSegment
-                    End="113.5,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="acvw_all_ac_entries"
   DTS:PackageType="5"
-  DTS:VersionBuild="95"
-  DTS:VersionGUID="{AB0CCF9C-F5AC-4962-8E32-82CF16080434}">
+  DTS:VersionBuild="98"
+  DTS:VersionGUID="{ACC3308B-6108-4E94-9B9A-26B2D6FB5D8F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -616,11 +616,28 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=COMOROS_FCUBE_UAT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
+          DTS:ConnectionString="Data Source=COMOROS_FCUBE_RPT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACBnCphqBMO4eU9XKj8BUiGF9XCxVXVbudZyYpiqiQydQAAAAAOgAAAAAIAACAAAAAUojQty8SjQgSw4J5AVuyqp+P9p+vwJd1p9QSoujhP3DAAAAC0i2vJVZavpj0Jy1M4Icj1v4mUGnv8cznoUvNhBnIy+N5JJ6pzBui99AmP5Mw+fFNAAAAAuUfUw5REdhk5ssl+bLGPr/GHSRiGo1PkHHdRa5XXsy01qCVIGPUeajDxJgkvu2+Zo0iVrG1FcomGMPGx3LLZzg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAotUC4SHfqPAIb1U/wihsjluN4sNnQP8kd0FR6amFd5AAAAAAOgAAAAAIAACAAAAC9p2nd9StSjQZUoVo/zpnJt//8MUHmX8mHVPwR1TdkaSAAAAAHI+odAYI4ZMxvL5XMO3A9EMIQlqY2/SmtwBQhr6HcjUAAAABpkySCzf6nSOAwkijrESKO56/2h5kIau8TVxLqqF8LxssnFVMbZSNSxqrovWf9HU46To7/rfceJRgj8jRCaK/W</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[GBLO02UAT0CAEXD_EDA_DEV]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0B40F252-191E-44A9-B543-94B74D62A699}"
+      DTS:ObjectName="GBLO02UAT0CAEXD_EDA_DEV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB41X/wryMhoGrJ75+NI+GjJ+Pz5tq5ZsWvjXeY7FGYxwAAAAAOgAAAAAIAACAAAAAnI8Cp8G2Qd1eB9NzRiCDTL4ZfAbXev4A+NkS2+xplLyAAAAC3lT2SJUQscvwv3JgqXZnBNt9hQrWyvSvWHZtLJegpUkAAAAAaacW2uAx9DaMdMbFL6d6O75pYLYl7fjEPvWkj+7taj5bAqSVQKWX7ARRIHtgseiP0oLL/GURwixh7fKLt0b//</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -658,7 +675,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/1/2022 12:08:20 PM',
+		@ssis_exec_start_time =  '1/7/2022 4:19:56 PM',
 		@local_file_path =  'D:\Development\rawdatastore\acvw_all_ac_entries_AAA.csv',
 		@source_file_name =  'acvw_all_ac_entries_AAA.csv',
 		@destination_file_name = 'acvw_all_ac_entries_1111_11_11_AAA.csv',
@@ -803,7 +820,7 @@ where table_name = 'DWH_ACVW_ALL_AC_ENTRIES' and OWNER &lt;&gt; 'BICCSIT'</DTS:V
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -812,7 +829,7 @@ where table_name = 'DWH_ACVW_ALL_AC_ENTRIES' and OWNER &lt;&gt; 'BICCSIT'</DTS:V
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionPassword">
       <DTS:VariableValue
-        DTS:DataType="8">KIu76#45#90YmnhG</DTS:VariableValue>
+        DTS:DataType="8">UyThf#6#7TYnhg</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1027,7 +1044,7 @@ where table_name = 'DWH_ACVW_ALL_AC_ENTRIES' and OWNER &lt;&gt; 'BICCSIT'</DTS:V
       DTS:Namespace="User"
       DTS:ObjectName="varTnsOrServerName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
