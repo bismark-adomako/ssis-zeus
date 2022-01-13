@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sttm_customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="97"
-  DTS:VersionGUID="{CBC36300-FEBE-403B-A8C2-6440A480C8CE}">
+  DTS:VersionBuild="98"
+  DTS:VersionGUID="{2E9D1897-041D-4BFC-9D08-4DCCF73BABF7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -35,7 +35,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAb8Z9SMao4TdHLbmHciC0kFnAafGHnQ1a3/oMkm+3NAwAAAAAOgAAAAAIAACAAAACxN+9BYN/yiQVE5hGEhqYjb1BgyePrAc23A34HXmt2PjAAAABevnu23ClazC5e6p9NBOXbtKmov8TI2tJK4WZBN2MG42ESQJBt8a7kvMc5wlmmcVdAAAAAm3rjtaNlQcE6R0c1CTXdZVtgGVlK0NRGsEuRkVtbhwSoI3D2o6Vk9ZEDgQNHIceaE6ey18DuFuReLTWHPXspQw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC4KOSSdAwG9U/W+XHoFs1FJM5FlgeOwUrtzsxL3G5O7gAAAAAOgAAAAAIAACAAAAAjdLdEu8SxwqLJ9jYPNNgxyjWPiw/SurUBjBOZafne7jAAAAAzurINeVQLwdwK/nCanALQ3ue7AeJZJ7k9e9+4FQmPVx1tJoEAp++xa2MXnxZYEghAAAAA8mY/vX0lCsEgrJYn6oDctHM8gXlkdZREdq/0ZD+ezUcX501jeV9VicVFIlbEQvMT8fgRHI7jqPaGJvL7P9VBug</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -52,7 +52,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACl3RwPlce55R8LBnpuBj+dGzo2/Eb550MJnfEqRDzFowAAAAAOgAAAAAIAACAAAACzdCXYxiBDymuLTKU3tUckwUtoINPIpGuzuWUCAhRQLjAAAAAaDyiwwVNRUn/A9HQJ+dbSMlZlZHa/bILSKXu6yuKpHDw8wFe44E+JhAaU7FnbG9FAAAAAHn4DaJeTQb4cVobYnQZ+fgHAMvIoHgwP3OHsdKb5FDkZOtNtdvZUulX00FPNCVvAg4xnah8NZXIULB5EVc5N8A</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACQz7kLnOQSAA6f7k/4JkqpbsYYLbAI9fdgcBh0obOXewAAAAAOgAAAAAIAACAAAADAr4og1C+OGJbEpnTfrIM/I+k4Wjqd2nPaA6wOaoRehTAAAABTyeZ6tUDmizHWUbQaLLmpuDxdyQll6pvmUNKihtc5BWio876HV2THM6K5jPva3XpAAAAA6dstc0PjhZ2aIVAzB8HWr7zOMeF7JwbOM6Lcf73P9w7VNMbh8xHw98RsnlJ66FWr3yJnX7NI5pE1tGBYpIKqEg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -563,7 +563,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/13/2022 9:04:50 PM',
+		@ssis_exec_start_time =  '1/13/2022 11:08:40 PM',
 		@local_file_path =  'D:\Development\rawdatastore\sttm_customer_AAA.csv',
 		@source_file_name =  'sttm_customer_AAA.csv',
 		@destination_file_name = 'sttm_customer_1111_11_11_AAA.csv',
@@ -6584,6 +6584,10 @@ FROM            DWH_STTM_CUSTOMER</property>
           Size="191,42"
           Id="Package\get package meta data"
           TopLeft="443.636363636364,64.090909090909" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\load meta data"
+          TopLeft="509,1258" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="539.136363636364,106.090909090909">
@@ -6618,10 +6622,6 @@ FROM            DWH_STTM_CUSTOMER</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\load meta data"
-          TopLeft="509,1258" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="700.5,1178">
@@ -6805,13 +6805,13 @@ FROM            DWH_STTM_CUSTOMER</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,42"
-          Id="Package\load meta data\load meta data"
-          TopLeft="229,213" />
-        <NodeLayout
           Size="176,42"
           Id="Package\load meta data\Flat File Destination"
           TopLeft="298,314" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\load meta data\load meta data"
+          TopLeft="229,213" />
         <EdgeLayout
           Id="Package\load meta data.Paths[OLE DB Source Output]"
           TopLeft="305,255">
