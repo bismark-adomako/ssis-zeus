@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="actb_daily_log"
   DTS:PackageType="5"
-  DTS:VersionBuild="93"
-  DTS:VersionGUID="{C07694F2-9E55-423E-93B7-9A91F94E28BA}">
+  DTS:VersionBuild="95"
+  DTS:VersionGUID="{7669497D-7C59-4A18-83BB-654D81086E1F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -763,28 +763,140 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=COMOROS_FCUBE_RPT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
+          DTS:ConnectionString="Data Source=COMOROS_FCUBE_UAT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADYBgLdya+VGwUY4y5ndqqy+OrOYvS665hoEOcI+/qoNwAAAAAOgAAAAAIAACAAAAD/kgEOb9DZ+LqHJbPpx+WIR/qFxj8e8IGRXmHLomOWtyAAAAAlOVsMHAHIeuPXmp1C3At9+UIVZmqopzvy2fsgBiBw2UAAAAA+C9baFZXD6OkRYw2bjD32xx7rPVVNobqL52Z/Tgf7m1kjUmXzg5Dj38LLHEvpJmVsRKIOjjkvNaBig0ilrGo4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADNcmaRPNgTU9X/zQQwWjERjijhO5tUBgYpVSxcAi6dHgAAAAAOgAAAAAIAACAAAAAi+5Nqq4i/sD8T2g3Lv6wvQwGiqPScQZoWTlg0NGOlJDAAAAA+2W6kNdXOt/pI4cm3DrMPN1s/y9GwzoWAxo/5YZYejTxiT7CZsDdwSkWfgH2L4YtAAAAALROmDv2k8d6LKyi+chojgfCHyXCDe+gBhQ9rnxP2n4oB3VgFUtGodk70uZ3xUxMkVj2AHpJoCS6i2AsUbwnAZg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[GBLO02UAT0CAEXD_EDA_DEV]"
+      DTS:refId="Package.ConnectionManagers[EDADataRegistry]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{0B40F252-191E-44A9-B543-94B74D62A699}"
-      DTS:ObjectName="GBLO02UAT0CAEXD_EDA_DEV">
+      DTS:ObjectName="EDADataRegistry">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=GBLO02UAT0CAEXD\EDA_DEV;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACa2SiofmjAvKWaAWe/iN19vCzvc44dvoZG0SW44/m0lAAAAAAOgAAAAAIAACAAAAAbD0KigzslcBYHSTVAEuvE8Iwghu89iB1vAkEWpOIRDSAAAADXONjImf/H5f3MXaoRAbLoKiQDzh01IM3vRFVRbWYeUEAAAADBQJ7WGMMkaCBr15pB5LvJwxey6U1tqmcdA1PtskX9/SVLREyOJ7izKp01y2dwQ0DFWvE0YbT9Nr1Z2fxFM8qz</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADIPrVF6+uON7ti++nCa+GYD+X3hX+yCNYhmiodCZ9dyAAAAAAOgAAAAAIAACAAAACnL+cx8whDWOnGNdfBqHFFi/+R3bmlANI6ptj/uXrXZTAAAACoLNc0J/xDuAzXopgGrH7iV2rd1wfo9pLUcPEq3L2zVwCd1vZMi1ztJEO4lKgBy15AAAAAi+O55kAuUAmI3uYiL9+GrEWNGPEfnHH8cd7riJdYa0tkQn6y3UHssE09ORBZziROMg3OGXJb2/r5xrgSBXmiNA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[metadata]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B3127F5E-EC20-4322-9E14-EDE5BF52715E}"
+      DTS:ObjectName="metadata">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::varMetadataPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Development\rawdatastore\dummy\actb_daily_log\actb_daily_log_table_info.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OWNER"
+              DTS:DTSID="{8A056750-6C20-4586-841E-A8F107D02144}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TABLE_NAME"
+              DTS:DTSID="{ED84BC69-8F0D-429D-856E-7E8C04947E79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COLUMN_NAME"
+              DTS:DTSID="{7D6FB682-5534-4A8E-9879-A0C446661FDC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_TYPE"
+              DTS:DTSID="{16578BA4-9F53-456B-A843-4C50616F5B52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_LENGTH"
+              DTS:DTSID="{824BC4EA-62B7-492C-8F04-3E6EC809864A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_PRECISION"
+              DTS:DTSID="{597AD58F-710A-4302-B577-3561BCA8006E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_SCALE"
+              DTS:DTSID="{4901298D-033E-4B5E-A1F0-E30AC4034D24}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NULLABLE"
+              DTS:DTSID="{855903D4-3BA5-4A47-90E1-563C15AAF78D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEFAULT_LENGTH"
+              DTS:DTSID="{888EFB09-A455-4CDD-B410-41747732190D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COLLATION"
+              DTS:DTSID="{C1B1586F-AF97-4181-A7EF-B4DC13D976DD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -822,7 +934,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/7/2022 4:57:55 PM',
+		@ssis_exec_start_time =  '1/13/2022 10:29:16 PM',
 		@local_file_path =  'D:\Development\rawdatastore\actb_daily_log_AAA.csv',
 		@source_file_name =  'actb_daily_log_AAA.csv',
 		@destination_file_name = 'actb_daily_log_1111_11_11_AAA.csv',
@@ -919,12 +1031,21 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
       DTS:CreationName=""
       DTS:DTSID="{8280D13D-CC8A-4F0C-BC7A-32E673CF9402}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#x9;SELECT col.*&#xA;&#x9;FROM sys.all_tab_columns col&#xA;&#x9;INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER&#xA;&#x9;&#x9;AND col.table_name = t.table_name&#xA;&#x9;WHERE col.OWNER = '&quot; +  @[User::varSchemaName]  + &quot;'&#xA;&#x9;&#x9;AND col.table_name = 'DWH_&quot; + UPPER( @[User::varTableName])  +&quot;'&quot;"
+      DTS:Expression="&quot;&#x9;SELECT     col.OWNER&#xA;    ,col.TABLE_NAME&#xA;    ,col.COLUMN_NAME&#xA;    ,col.DATA_TYPE&#xA;    ,col.DATA_LENGTH&#xA;    ,col.DATA_PRECISION&#xA;    ,col.DATA_SCALE&#xA;    ,col.NULLABLE&#xA;    ,col.DEFAULT_LENGTH&#xA;    ,col.COLLATION&#xA;&#x9;FROM sys.all_tab_columns col&#xA;&#x9;INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER&#xA;&#x9;&#x9;AND col.table_name = t.table_name&#xA;&#x9;WHERE col.OWNER = '&quot; +  @[User::varSchemaName]  + &quot;'&#xA;&#x9;&#x9;AND col.table_name = 'DWH_&quot; + UPPER( @[User::varTableName])  +&quot;'&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="scrGetTableMetadata">
       <DTS:VariableValue
-        DTS:DataType="8">	SELECT col.*
+        DTS:DataType="8">	SELECT     col.OWNER
+    ,col.TABLE_NAME
+    ,col.COLUMN_NAME
+    ,col.DATA_TYPE
+    ,col.DATA_LENGTH
+    ,col.DATA_PRECISION
+    ,col.DATA_SCALE
+    ,col.NULLABLE
+    ,col.DEFAULT_LENGTH
+    ,col.COLLATION
 	FROM sys.all_tab_columns col
 	INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER
 		AND col.table_name = t.table_name
@@ -967,7 +1088,7 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -976,7 +1097,7 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionPassword">
       <DTS:VariableValue
-        DTS:DataType="8">UyThf#6#7TYnhg</DTS:VariableValue>
+        DTS:DataType="8">KIu76#45#90YmnhG</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1090,6 +1211,17 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{3CF31E29-E7F3-4CBB-BBC7-F4339E28C88B}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varDestinationFileDirectory] +  @[User::varTableName] + &quot;_table_info.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varMetadataPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\actb_daily_log\actb_daily_log_table_info.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{AF65824F-BE66-44C8-8EBA-EE39D3CC34C3}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
@@ -1191,7 +1323,7 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
       DTS:Namespace="User"
       DTS:ObjectName="varTnsOrServerName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -4512,6 +4644,492 @@ FROM            DWH_STTM_CUSTOMER</property>
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\load meta data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{ee7452b6-126f-4527-aa73-1057df7fbeaa}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="load meta data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\load meta data\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load meta data\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[metadata]"
+                  connectionManagerRefId="Package.ConnectionManagers[metadata]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[OWNER]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="OWNER"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OWNER]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[OWNER]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[TABLE_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="TABLE_NAME"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TABLE_NAME]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[TABLE_NAME]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[COLUMN_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="COLUMN_NAME"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COLUMN_NAME]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLUMN_NAME]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DATA_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="DATA_TYPE"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_TYPE]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_TYPE]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DATA_LENGTH]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="DATA_LENGTH"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_LENGTH]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_LENGTH]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DATA_PRECISION]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="DATA_PRECISION"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_PRECISION]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_PRECISION]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DATA_SCALE]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="DATA_SCALE"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_SCALE]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_SCALE]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[NULLABLE]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="NULLABLE"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NULLABLE]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[NULLABLE]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DEFAULT_LENGTH]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="DEFAULT_LENGTH"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DEFAULT_LENGTH]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DEFAULT_LENGTH]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[COLLATION]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="COLLATION"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COLLATION]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLLATION]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OWNER]"
+                      dataType="wstr"
+                      length="128"
+                      name="OWNER" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TABLE_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      name="TABLE_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COLUMN_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      name="COLUMN_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_TYPE]"
+                      dataType="wstr"
+                      length="128"
+                      name="DATA_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_LENGTH" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_PRECISION]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_PRECISION" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_SCALE]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_SCALE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NULLABLE]"
+                      dataType="wstr"
+                      length="1"
+                      name="NULLABLE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DEFAULT_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      name="DEFAULT_LENGTH" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COLLATION]"
+                      dataType="wstr"
+                      length="100"
+                      name="COLLATION" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\load meta data\load meta data"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="load meta data"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::scrGetTableMetadata</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load meta data\load meta data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DynamicFlexcubeConnection]"
+                  connectionManagerRefId="Package.ConnectionManagers[DynamicFlexcubeConnection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[OWNER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[OWNER]"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[OWNER]"
+                      name="OWNER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[TABLE_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[TABLE_NAME]"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[TABLE_NAME]"
+                      name="TABLE_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLUMN_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[COLUMN_NAME]"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLUMN_NAME]"
+                      name="COLUMN_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_TYPE]"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_TYPE]"
+                      name="DATA_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_LENGTH]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_LENGTH]"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_LENGTH]"
+                      name="DATA_LENGTH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_PRECISION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_PRECISION]"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_PRECISION]"
+                      name="DATA_PRECISION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_SCALE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_SCALE]"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_SCALE]"
+                      name="DATA_SCALE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[NULLABLE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[NULLABLE]"
+                      length="1"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[NULLABLE]"
+                      name="NULLABLE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DEFAULT_LENGTH]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DEFAULT_LENGTH]"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DEFAULT_LENGTH]"
+                      name="DEFAULT_LENGTH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLLATION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[COLLATION]"
+                      length="100"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLLATION]"
+                      name="COLLATION"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[OWNER]"
+                      dataType="wstr"
+                      length="128"
+                      name="OWNER" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[TABLE_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      name="TABLE_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[COLUMN_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      name="COLUMN_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_TYPE]"
+                      dataType="wstr"
+                      length="128"
+                      name="DATA_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_LENGTH" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_PRECISION]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_PRECISION" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_SCALE]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_SCALE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[NULLABLE]"
+                      dataType="wstr"
+                      length="1"
+                      name="NULLABLE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DEFAULT_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      name="DEFAULT_LENGTH" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[COLLATION]"
+                      dataType="wstr"
+                      length="100"
+                      name="COLLATION" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[OWNER]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[OWNER]"
+                      name="OWNER" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[TABLE_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[TABLE_NAME]"
+                      name="TABLE_NAME" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[COLUMN_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[COLUMN_NAME]"
+                      name="COLUMN_NAME" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_TYPE]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_TYPE]"
+                      name="DATA_TYPE" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_LENGTH]"
+                      name="DATA_LENGTH" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_PRECISION]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_PRECISION]"
+                      name="DATA_PRECISION" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_SCALE]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_SCALE]"
+                      name="DATA_SCALE" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[NULLABLE]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[NULLABLE]"
+                      name="NULLABLE" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DEFAULT_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DEFAULT_LENGTH]"
+                      name="DEFAULT_LENGTH" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[COLLATION]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[COLLATION]"
+                      name="COLLATION" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\load meta data.Paths[OLE DB Source Output]"
+              endId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\load meta data\load meta data.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -4522,6 +5140,14 @@ FROM            DWH_STTM_CUSTOMER</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Foreach Loop Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{6E85FE76-6CA4-4626-B237-2D921B21072B}"
+      DTS:From="Package\Foreach Loop Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\load meta data" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -4748,7 +5374,7 @@ FROM            DWH_STTM_CUSTOMER</property>
           PanelSize="585,921"
           Size="585,964"
           Id="Package\Foreach Loop Container"
-          TopLeft="408,214" />
+          TopLeft="405,214" />
         <NodeLayout
           Size="191,42"
           Id="Package\get package meta data"
@@ -4759,9 +5385,9 @@ FROM            DWH_STTM_CUSTOMER</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="161.363636363636,107.909090909091"
+              EndConnector="158.363636363636,107.909090909091"
               Start="0,0"
-              End="161.363636363636,100.409090909091">
+              End="158.363636363636,100.409090909091">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4772,13 +5398,51 @@ FROM            DWH_STTM_CUSTOMER</property>
                     Point2="0,53.9545454545455"
                     Point3="4,53.9545454545455" />
                   <mssgle:LineSegment
-                    End="157.363636363636,53.9545454545455" />
+                    End="154.363636363636,53.9545454545455" />
                   <mssgle:CubicBezierSegment
-                    Point1="157.363636363636,53.9545454545455"
-                    Point2="161.363636363636,53.9545454545455"
-                    Point3="161.363636363636,57.9545454545455" />
+                    Point1="154.363636363636,53.9545454545455"
+                    Point2="158.363636363636,53.9545454545455"
+                    Point3="158.363636363636,57.9545454545455" />
                   <mssgle:LineSegment
-                    End="161.363636363636,100.409090909091" />
+                    End="158.363636363636,100.409090909091" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152,42"
+          Id="Package\load meta data"
+          TopLeft="405,1238" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="697.5,1178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-216.5,60"
+              Start="0,0"
+              End="-216.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-212.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-212.5,30"
+                    Point2="-216.5,30"
+                    Point3="-216.5,34" />
+                  <mssgle:LineSegment
+                    End="-216.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4918,6 +5582,64 @@ FROM            DWH_STTM_CUSTOMER</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach Loop Container\data load\load data\load data from source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\load meta data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\load meta data\Flat File Destination"
+          TopLeft="298,314" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\load meta data\load meta data"
+          TopLeft="229,213" />
+        <EdgeLayout
+          Id="Package\load meta data.Paths[OLE DB Source Output]"
+          TopLeft="305,255">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81,59"
+              Start="0,0"
+              End="81,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="77,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77,29.5"
+                    Point2="81,29.5"
+                    Point3="81,33.5" />
+                  <mssgle:LineSegment
+                    End="81,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\load meta data\load meta data">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

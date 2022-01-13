@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sttm_customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="93"
-  DTS:VersionGUID="{361B09FE-BDFE-49DB-A48C-617609749418}">
+  DTS:VersionBuild="97"
+  DTS:VersionGUID="{CBC36300-FEBE-403B-A8C2-6440A480C8CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,11 +31,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=COMOROS_FCUBE_RPT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
+          DTS:ConnectionString="Data Source=COMOROS_FCUBE_UAT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACwp5P6EIgaqkhukjrrkzQQZ6940pXm9xMeMAJK5VvkXgAAAAAOgAAAAAIAACAAAADAQPj3IqrIV+loKbvWO+fWZabdKM0sp2PFS4cmCSU5WiAAAAAaNXF8Fux+5bp9VKzl5TguPgdRHP4r1pH+a+mvPw6ko0AAAAByJDCZDnr5tsvOalhBqdvXIFZArrG0T5r6kCHD5jKuIBTkjdsZKsGuF6vwgyucY0xCYj0z0zzd0p+0jHa7cAO5</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAb8Z9SMao4TdHLbmHciC0kFnAafGHnQ1a3/oMkm+3NAwAAAAAOgAAAAAIAACAAAACxN+9BYN/yiQVE5hGEhqYjb1BgyePrAc23A34HXmt2PjAAAABevnu23ClazC5e6p9NBOXbtKmov8TI2tJK4WZBN2MG42ESQJBt8a7kvMc5wlmmcVdAAAAAm3rjtaNlQcE6R0c1CTXdZVtgGVlK0NRGsEuRkVtbhwSoI3D2o6Vk9ZEDgQNHIceaE6ey18DuFuReLTWHPXspQw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -48,11 +48,123 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=GBLO02UAT0CAEXD\EDA_DEV;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADZOOMzKS98ZLbiEAfuvsbU6+O6M8DsHEcnmsYzSl4DTgAAAAAOgAAAAAIAACAAAAD/7/004fG/1QPIUr0UV5VxSt6i+RGAwYRcT1eU4WuIhCAAAAAWDYZ5nirA1WKQpZbTGoULmW3vODpgNEr+SRsrhYfLdEAAAADdxzFg48WKySLiG7zWGzZA14Z2MijO14cMXWg4e9dY8fH3NOfCUUo8A5e06LMBA124teog7i3rZvpuVCsnBztG</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACl3RwPlce55R8LBnpuBj+dGzo2/Eb550MJnfEqRDzFowAAAAAOgAAAAAIAACAAAACzdCXYxiBDymuLTKU3tUckwUtoINPIpGuzuWUCAhRQLjAAAAAaDyiwwVNRUn/A9HQJ+dbSMlZlZHa/bILSKXu6yuKpHDw8wFe44E+JhAaU7FnbG9FAAAAAHn4DaJeTQb4cVobYnQZ+fgHAMvIoHgwP3OHsdKb5FDkZOtNtdvZUulX00FPNCVvAg4xnah8NZXIULB5EVc5N8A</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[metadata]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B3127F5E-EC20-4322-9E14-EDE5BF52715E}"
+      DTS:ObjectName="metadata">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::varMetadataPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Development\rawdatastore\dummy\sttm_customer\sttm_customer_table_info.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OWNER"
+              DTS:DTSID="{0F875150-C622-47C7-BD7A-1A3EF6D3F593}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TABLE_NAME"
+              DTS:DTSID="{C83CBD7D-FF96-4837-8B1A-F90BB02D7881}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COLUMN_NAME"
+              DTS:DTSID="{F5428B4D-4C3E-43D3-BA08-05D29C2110C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_TYPE"
+              DTS:DTSID="{2F7EA7ED-9D52-41A6-934A-888A950011A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_LENGTH"
+              DTS:DTSID="{2A390450-1235-483E-9C39-C0E0649E1168}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_PRECISION"
+              DTS:DTSID="{930103D4-79F3-427B-A4E7-337365631A91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_SCALE"
+              DTS:DTSID="{426A3577-C176-409B-A726-10DB528E6B7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NULLABLE"
+              DTS:DTSID="{CE7F9A75-3CC8-46D4-B1D7-1DBCF90D85BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEFAULT_LENGTH"
+              DTS:DTSID="{E66A735D-C709-4B39-89B6-54322BECB172}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COLLATION"
+              DTS:DTSID="{592E259D-4E36-45DA-9A98-CB7E7E2F46B2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -84,1139 +196,334 @@
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="10"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="ACCESS_GROUP"
-              DTS:DTSID="{E4AD9AFE-8D54-4F40-BE76-7C4E2E68E011}"
+              DTS:ObjectName="OWNER"
+              DTS:DTSID="{9967E8BA-67DE-46E9-8CAB-E64BB26D8F10}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="105"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="ADDRESS_LINE1"
-              DTS:DTSID="{A1320021-9D92-4281-9E91-04F1DBA00600}"
+              DTS:ObjectName="TABLE_NAME"
+              DTS:DTSID="{49025200-30E9-411C-B27B-E8C44C6B0CC3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="105"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="ADDRESS_LINE2"
-              DTS:DTSID="{13AEA954-C33C-4EC2-8173-408F00362D4B}"
+              DTS:ObjectName="COLUMN_NAME"
+              DTS:DTSID="{66B7C21F-F1F9-4114-9951-56DA5DE3541C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="105"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="ADDRESS_LINE3"
-              DTS:DTSID="{EF8136B5-FAE0-451B-927C-42267A1154AD}"
+              DTS:ObjectName="DATA_TYPE"
+              DTS:DTSID="{C429D7E5-C940-4319-82BC-F531ABE7E5CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="105"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ADDRESS_LINE4"
-              DTS:DTSID="{5A751E47-9984-4ED4-A55B-E5C73BC09EF4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ALG_ID"
-              DTS:DTSID="{8DDFD4E6-0AF8-4469-9476-E0EAC80252BC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ALLOW_VRTL_ACCNTS"
-              DTS:DTSID="{4DBFB1CA-15AD-4D59-A763-76AFDAC3DD5B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="9"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AML_CUSTOMER_GRP"
-              DTS:DTSID="{EAE5E5D8-AA23-4756-83BC-6885151773AB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AML_REQUIRED"
-              DTS:DTSID="{632D6DF5-56D7-42EA-A50B-CE42035E2BF4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AR_AP_TRACKING"
-              DTS:DTSID="{F5A4F7A1-B8C6-4944-8D4F-CF3CFEDB5CF5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AUTH_STAT"
-              DTS:DTSID="{03EAA76E-038A-4535-8020-4C66BD3074F0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AUTOGEN_STMTPLAN"
-              DTS:DTSID="{AAC8186B-3537-4151-A920-B38B2D1BF545}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AUTO_CREATE_ACCOUNT"
-              DTS:DTSID="{7FF7A289-9390-4696-A3A4-F001E2399D7B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AUTO_CUST_AC_NO"
-              DTS:DTSID="{2B150897-DA54-4611-9F31-8EA3A505F63E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AUTO_LIAB"
-              DTS:DTSID="{1C335578-AB5A-4C86-92FC-6440788946E4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CAS_CUST"
-              DTS:DTSID="{AF55D583-0B8D-4B19-A7FF-F27E084888E9}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CHARGE_GROUP"
-              DTS:DTSID="{59A852D3-5D90-4803-ABD2-9E5F5D4BBAD6}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CHECKER_DT_STAMP"
-              DTS:DTSID="{45E01BD0-6ADC-4D09-BCAC-6DD05958E449}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="12"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CHECKER_ID"
-              DTS:DTSID="{D63751A9-7C2B-4B56-8CE5-B988446436FE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CHK_DIGIT_VALID_REQD"
-              DTS:DTSID="{6E727ABC-03C2-4981-BA93-3333122F3386}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CIF_CREATION_DATE"
-              DTS:DTSID="{88405602-D21D-460C-AD6D-ED43A3B9823F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CIF_STATUS"
-              DTS:DTSID="{2DE9ECEC-9D7A-4957-8098-B63E540123DD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CIF_STATUS_SINCE"
-              DTS:DTSID="{CD58A788-486A-46BC-94FC-C824784E16D9}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CLS_CCY_ALLOWED"
-              DTS:DTSID="{34878961-1253-4449-BBC4-26E468AD4180}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CLS_PARTICIPANT"
-              DTS:DTSID="{6C33C8A6-E83C-4A11-9C10-2D67E3A5852E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CONSOL_TAX_CERT_REQD"
-              DTS:DTSID="{0A41035E-6A74-48A2-A28D-DE9A10C0263F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="3"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="COUNTRY"
-              DTS:DTSID="{0872FFBD-2AF2-42CE-8C55-DE07D94E2300}"
+              DTS:ObjectName="DATA_TYPE_MOD"
+              DTS:DTSID="{2B3AFE99-B09B-45D2-98EB-83B0C23B1A79}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="10"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="CREDIT_RATING"
-              DTS:DTSID="{725E3CF9-5504-472E-9AEC-0ECA2E90B08A}"
+              DTS:ObjectName="DATA_TYPE_OWNER"
+              DTS:DTSID="{E971F4CE-36E0-4852-B3F5-4529A4A75D05}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CRM_CUSTOMER"
-              DTS:DTSID="{ED02DB3D-6C6D-446A-AD55-3E9D7E10608B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CRS_TYPE"
-              DTS:DTSID="{D3A066CC-3A7A-4FF8-A0D4-6B5EFA5EECC2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CUSTOMER_CATEGORY"
-              DTS:DTSID="{83453A51-5AE5-45EB-B5B3-3F2C8816B533}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="105"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CUSTOMER_NAME1"
-              DTS:DTSID="{4C8E1A00-C252-4DD8-93BF-4478BAE21903}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="9"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CUSTOMER_NO"
-              DTS:DTSID="{41B4303B-6B07-4047-835C-E51B2DC8590E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CUSTOMER_TYPE"
-              DTS:DTSID="{3BD92F66-89A6-4122-AE8B-92282B6133F4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CUST_CLASSIFICATION"
-              DTS:DTSID="{7E5FCDF8-2B7A-48F2-A6C2-2D7F33B1487A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CUST_CLG_GROUP"
-              DTS:DTSID="{E9E840D8-7F4F-4F46-8196-7510937FFA7C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DEBTOR_CATEGORY"
-              DTS:DTSID="{D8AAFBC0-23F8-448D-978B-4F9250753E35}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DECEASED"
-              DTS:DTSID="{AB344113-97FD-4814-8592-B6BA38A672BC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="15"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DEFAULT_MEDIA"
-              DTS:DTSID="{6598B946-11AD-44EC-9015-F9ACFAAA751A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DEXEC_DATE"
-              DTS:DTSID="{D6889779-B7F1-45CC-ACCA-31F1DD151625}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ELCM_CUSTOMER"
-              DTS:DTSID="{7BE0D97E-B164-4547-AF79-1170E59C92B9}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ELCM_CUSTOMER_NO"
-              DTS:DTSID="{965F1F6F-7411-458C-94E9-C08AE1B13ED2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EXPOSURE_CATEGORY"
-              DTS:DTSID="{6ABEF123-DFE6-4BC4-B94A-C08134A05F3D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="3"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EXPOSURE_COUNTRY"
-              DTS:DTSID="{FCFE07E2-E718-4ECD-9053-48C6CAD29C61}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EXT_REF_NO"
-              DTS:DTSID="{9A746DAC-3BE5-4C4B-B1B8-C0248FA1AA4E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="105"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FAX_NUMBER"
-              DTS:DTSID="{20089031-0B47-4D85-A8BF-5945451F0913}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FI_CUSTOMER"
-              DTS:DTSID="{EF4FB44D-883C-4950-8C8D-D4E4D462B802}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FREQUENCY"
-              DTS:DTSID="{E87ADC05-D7B3-4D47-B554-4C2F432C73C9}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FROZEN"
-              DTS:DTSID="{1EDC8355-66D0-44D3-AA50-5C7C64D9AEFD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FT_ACCTING_AS_OF"
-              DTS:DTSID="{E0E86E97-F2CE-4E05-9AC6-169DE7297501}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="105"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FULL_NAME"
-              DTS:DTSID="{86ED82FD-19C0-444E-B24E-900D749CE896}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="131"
-              DTS:DataPrecision="24"
-              DTS:DataScale="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FX_CLEAN_RISK_LIMIT"
-              DTS:DTSID="{AAAC8323-9460-4918-A6DE-4555ECD78DE6}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="131"
-              DTS:DataPrecision="22"
-              DTS:DataScale="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FX_CUST_CLEAN_RISK_LIMIT"
-              DTS:DTSID="{9AED96CA-EAFB-4FA1-92C9-E0CE151DDAAF}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="9"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FX_NETTING_CUSTOMER"
-              DTS:DTSID="{F80439D6-4461-4F98-A86C-6B5E099AECED}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="GENERATE_MT920"
-              DTS:DTSID="{F98BF4F9-D0B5-490F-B40C-E632510F2C7C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="GROUP_CODE"
-              DTS:DTSID="{6CB043D8-21BB-4C4B-8CB4-D003AAD89820}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="105"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="HO_AC_NO"
-              DTS:DTSID="{F9C02D1D-3714-4A31-B04C-58649134A3CF}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="INDIVIDUAL_TAX_CERT_REQD"
-              DTS:DTSID="{CF27950C-30A7-469B-AABE-AF52028285FC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="9"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="INTRODUCER"
-              DTS:DTSID="{2BEF1EF9-3948-4D5A-915B-A5FBFF873BEA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="INVEST_CUST"
-              DTS:DTSID="{6959618D-F2C4-43CB-9065-1F93BA4F53D3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ISSUER_CUSTOMER"
-              DTS:DTSID="{E073F837-DD20-4096-B694-F8D73A58AD7F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="IS_FORGOTTEN"
-              DTS:DTSID="{CDB81FCF-6A9E-4AE0-B230-A3B752061FD8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="JOINT_VENTURE"
-              DTS:DTSID="{25A4CBCB-1704-4AAF-B91E-35B4271D03D5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="JV_LIMIT_TRACKING"
-              DTS:DTSID="{9BEE853E-4728-4062-BCFC-11C97320BB3C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="KYC_DETAILS"
-              DTS:DTSID="{028844AE-967F-44DB-AF85-643E8D30118C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="16"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="KYC_REF_NO"
-              DTS:DTSID="{5754DE08-6F9F-4869-A78F-3A060136E123}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="3"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="LANGUAGE"
-              DTS:DTSID="{275BDB1A-9417-4B9A-BEB7-7ECA3A89EABD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="131"
-              DTS:DataPrecision="7"
-              DTS:DataScale="4"
-              DTS:TextQualified="True"
-              DTS:ObjectName="LC_COLLATERAL_PCT"
-              DTS:DTSID="{8B8CAD0B-143E-4FD8-B864-2BA0523C9F4F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="9"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="LIABILITY_NO"
-              DTS:DTSID="{25E99867-CA31-4AA0-8F73-C5FFEC9D9E72}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="3"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="LIAB_BR"
-              DTS:DTSID="{89469F8A-EC04-45CF-A79C-DF5E64F6D8D8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="105"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="LIAB_NODE"
-              DTS:DTSID="{5E5457F0-6900-4BA6-BBC7-04AD551B2A95}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="3"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="LIMIT_CCY"
-              DTS:DTSID="{F591235E-5D19-4B2B-B8B4-90E8127C0002}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="3"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="LOCAL_BRANCH"
-              DTS:DTSID="{B307EC66-59B4-4198-83B9-CB2589E655A7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="3"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="LOC_CODE"
-              DTS:DTSID="{F6354939-E84B-4662-AC03-7776D204506A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="MAILERS_REQUIRED"
-              DTS:DTSID="{58E67CDD-0983-454C-A77B-846B716D25AF}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="MAKER_DT_STAMP"
-              DTS:DTSID="{7C4AA7F7-E199-44CF-B28A-2403B77D6097}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="12"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="MAKER_ID"
-              DTS:DTSID="{09BCDAB5-DD7F-445C-95A5-0D56DE2D966D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="MFI_CUSTOMER"
-              DTS:DTSID="{F34A8149-B1FE-4CF2-9496-0581FDF013E2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="38"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="MOD_NO"
-              DTS:DTSID="{CB104B79-0950-43F2-9F16-94DD6F226B57}"
+              DTS:ObjectName="DATA_LENGTH"
+              DTS:DTSID="{FAAAA55B-EDFD-4607-A5CB-F4EDA8297327}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="3"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="NATIONALITY"
-              DTS:DTSID="{08C1AF94-AC3B-4B1D-9BFA-1CCA7C62744F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ONCE_AUTH"
-              DTS:DTSID="{C44641C7-74F2-433B-8F32-4A2782BFAC86}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="131"
-              DTS:DataPrecision="24"
-              DTS:DataScale="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="OVERALL_LIMIT"
-              DTS:DTSID="{30FAFE6A-E498-49D3-A7BC-E31903D8031F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="PAST_DUE_FLAG"
-              DTS:DTSID="{B2C680FC-C576-4515-ABF0-7D320125BE31}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="15"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="PINCODE"
-              DTS:DTSID="{F136A0DA-CE79-46F1-BAB8-FC11D02C9103}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="PRIVATE_CUSTOMER"
-              DTS:DTSID="{78EDB16E-77AB-4C20-BF38-B32340B84402}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="RECORD_STAT"
-              DTS:DTSID="{E35EB5AE-2B06-49DF-9A7F-F825F556EDB8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="REVISION_DATE"
-              DTS:DTSID="{5BC3DD36-5D3A-4100-B98E-19FC07F9D791}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="4"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="RISK_CATEGORY"
-              DTS:DTSID="{081DD1AB-B6EF-4880-A6D0-1998EA440325}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="RISK_PROFILE"
-              DTS:DTSID="{73759877-5780-451C-87A8-15A1BAA44FE3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="12"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="RM_ID"
-              DTS:DTSID="{1CEF407F-C368-49C9-BB8C-44F7EF3768B1}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="RP_CUSTOMER"
-              DTS:DTSID="{93529288-2215-4842-8FA7-1A87D39DCF38}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SANCTIONS_CHECKS_REQUIRED"
-              DTS:DTSID="{87B5F505-073C-4EA2-A122-9D4BEF1ABFC6}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="131"
-              DTS:DataPrecision="22"
-              DTS:DataScale="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SEC_CLEAN_RISK_LIMIT"
-              DTS:DTSID="{57FACD0A-732A-4735-A094-E9C35AED7C49}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="131"
-              DTS:DataPrecision="22"
-              DTS:DataScale="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SEC_CUST_CLEAN_RISK_LIMIT"
-              DTS:DTSID="{4984F52F-CF4F-4B9B-9D2F-12DEABAD9094}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="131"
-              DTS:DataPrecision="22"
-              DTS:DataScale="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SEC_CUST_PSTL_RISK_LIMIT"
-              DTS:DTSID="{B3CAA52A-F0BC-4C09-BFEC-94F288554293}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:DataType="131"
-              DTS:DataPrecision="22"
-              DTS:DataScale="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SEC_PSTL_RISK_LIMIT"
-              DTS:DTSID="{3065EF05-8BD5-4C98-A34C-DFB2C52C4AED}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SHORT_NAME"
-              DTS:DTSID="{662C5185-71DB-4DBF-8583-0F1CF7956CCC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="23"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SHORT_NAME2"
-              DTS:DTSID="{7F282EBF-73D2-4362-9288-0391E2DA285E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SPECIAL_CUST"
-              DTS:DTSID="{33B08E28-3A72-4CF2-91C8-3AB80833F722}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SSN"
-              DTS:DTSID="{2EB01B2F-F54D-4E5B-8243-BFACDB3EF03A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="STAFF"
-              DTS:DTSID="{A617EBBC-8035-4EB0-A96E-730903E1AD20}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="2"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="STMT_DAY"
-              DTS:DTSID="{5AD34AC0-9691-4CA6-8471-8FFD74FE02CE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="12"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SWIFT_CODE"
-              DTS:DTSID="{8069E35D-C9C6-4662-B4CD-B0888AA3A98D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="30"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TAXID_NO"
-              DTS:DTSID="{3B623521-EF4C-403A-92B4-C7E1E860466F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="3"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TAX_CNTRY"
-              DTS:DTSID="{B7C3D154-405D-4663-9336-1FFCB358F9AD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TAX_GROUP"
-              DTS:DTSID="{00A5FD86-234D-4CD7-AECD-782A64C061B8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TRACK_LIMITS"
-              DTS:DTSID="{47BAEA99-7CA1-4191-BBA9-9BB4D3C431E7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TREASURY_CUSTOMER"
-              DTS:DTSID="{1BA12C66-C7F7-4CAF-8977-EDD9D893BF86}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UDF_1"
-              DTS:DTSID="{AB0BB57E-C004-405B-A652-5138B5000D00}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UDF_2"
-              DTS:DTSID="{C09E053E-6DCC-4179-A0A2-8FCD49D24E75}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UDF_3"
-              DTS:DTSID="{9E9A323B-7D2A-432E-A21A-D70CDBB9E1CA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UDF_4"
-              DTS:DTSID="{E10BDFB4-86FF-4A9B-92BB-CD7BF9013725}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UDF_5"
-              DTS:DTSID="{620791E1-6DE4-43CD-A141-2BB8020B3A32}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UNADVISED"
-              DTS:DTSID="{C2B657AF-3947-459B-B97B-C1891B1EB818}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UNIQUE_ID_NAME"
-              DTS:DTSID="{4BDC173C-39E8-4CE8-B4F0-FB2C517E4B90}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UNIQUE_ID_VALUE"
-              DTS:DTSID="{B5F1BA83-AE83-48B3-9001-A8838DF93F14}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UTILITY_PROVIDER"
-              DTS:DTSID="{1AEEAB7B-4120-4C46-885B-FD192E8537E9}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="35"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UTILITY_PROVIDER_ID"
-              DTS:DTSID="{1BF08005-8434-4E55-838D-C5C319251F26}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="35"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="UTILITY_PROVIDER_TYPE"
-              DTS:DTSID="{75825238-A313-49B3-A8FE-2900A6F5AE27}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="VRTL_CUSTOMER_ID"
-              DTS:DTSID="{0651685E-4554-4719-8DE2-8D136DE4B55C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="1"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="WHEREABOUTS_UNKNOWN"
-              DTS:DTSID="{D6FEBCEF-E52E-4C02-8B88-4804BA51CF87}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="38"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="WHT_PCT"
-              DTS:DTSID="{ED223E5F-F15D-4B8E-97D5-48058A23F4BF}"
+              DTS:ObjectName="DATA_PRECISION"
+              DTS:DTSID="{0F025984-48EB-4C86-BBF7-56B593ED83EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_SCALE"
+              DTS:DTSID="{932D43E1-81F4-451F-926B-7BE4CB74639F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="1"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="WITHHOLDING_TAX"
-              DTS:DTSID="{098F22E5-E9DF-4A74-9F5F-43C4E15ECE7F}"
+              DTS:ObjectName="NULLABLE"
+              DTS:DTSID="{764E04C2-FB86-4DEF-81D7-D919AB92BCE3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="8"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="applicable_datekey"
-              DTS:DTSID="{100FB7E9-BE4D-4F39-BF55-4579C84608A6}"
+              DTS:ObjectName="COLUMN_ID"
+              DTS:DTSID="{1FA0ADAA-0439-458F-904D-83ECADE35432}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="8"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="load_datekey"
-              DTS:DTSID="{E16A131F-A4BF-4230-96FB-D7C029479FCA}"
+              DTS:ObjectName="DEFAULT_LENGTH"
+              DTS:DTSID="{B0E702F4-6648-435B-A40D-8A46F13B77B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D_"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_DEFAULT"
+              DTS:DTSID="{6107EBDC-9EB6-4F07-AAD0-82F14623BEC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUM_DISTINCT"
+              DTS:DTSID="{4CC4F47A-A08E-433F-B3D4-C44D020215FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2000"
+              DTS:DataType="128"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LOW_VALUE"
+              DTS:DTSID="{7A7A7B90-E399-4FAD-94C0-EF09BCE0F2B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2000"
+              DTS:DataType="128"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HIGH_VALUE"
+              DTS:DTSID="{B157CB68-F8DF-45EF-8854-6B96F6F8D557}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DENSITY"
+              DTS:DTSID="{DA4E4293-E085-46A3-8EE2-6FF60A0E2D25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUM_NULLS"
+              DTS:DTSID="{772DFC2D-1B09-4785-8175-682A642A7F05}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUM_BUCKETS"
+              DTS:DTSID="{A24C4257-3131-4B9B-840B-1F1399EE919E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LAST_ANALYZED"
+              DTS:DTSID="{BBF11D9A-42B3-4F36-8F65-EA0FECCC85B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SAMPLE_SIZE"
+              DTS:DTSID="{7ED34CBC-760B-4F55-8F5A-37A6786BC6AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="44"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CHARACTER_SET_NAME"
+              DTS:DTSID="{51E7B7A5-27BB-4146-BFE5-280E960C1BF2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CHAR_COL_DECL_LENGTH"
+              DTS:DTSID="{AA8FB139-3F5F-40C8-AA34-FE05A952EA29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="3"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="country_code"
-              DTS:DTSID="{8CA1CA4E-4715-4103-BFF5-EC4F9A111B6C}"
+              DTS:ObjectName="GLOBAL_STATS"
+              DTS:DTSID="{483ED339-6BD6-47AD-9912-9B06A4B02741}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="USER_STATS"
+              DTS:DTSID="{6F7C1177-010A-4BB5-BF5F-437EB3F1D323}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AVG_COL_LEN"
+              DTS:DTSID="{1329B6E5-EC5C-4BBE-8CC5-8990850C4693}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CHAR_LENGTH"
+              DTS:DTSID="{0F22544C-F152-41DF-8B1A-5E87ED39D10A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CHAR_USED"
+              DTS:DTSID="{4493FA7F-7116-44A9-B8A0-A89104547F02}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="V80_FMT_IMAGE"
+              DTS:DTSID="{5CECC016-A0DE-4D6B-B988-E7C2C67E3628}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_UPGRADED"
+              DTS:DTSID="{FDBAF93B-C492-42B5-B70F-00FE9608C577}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HISTOGRAM"
+              DTS:DTSID="{FA9E56C5-5D3F-421A-A76E-9D7ADD7ADEDF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEFAULT_ON_NULL"
+              DTS:DTSID="{342936EF-CE49-4E33-9D71-E0CDEE449E1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IDENTITY_COLUMN"
+              DTS:DTSID="{345B8B3C-FB80-46EE-B969-13FE9F91F21D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EVALUATION_EDITION"
+              DTS:DTSID="{E9E37218-2DBE-4B94-AA16-00D01D2B662D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNUSABLE_BEFORE"
+              DTS:DTSID="{568D2A0D-D8EF-4AC7-B704-8DF2328C02A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNUSABLE_BEGINNING"
+              DTS:DTSID="{DEF34023-ACAF-440D-8BE5-B92CE072234C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COLLATION"
+              DTS:DTSID="{12F522AC-248B-470B-9C5A-61197E2B8FE6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1256,7 +563,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/7/2022 1:39:05 PM',
+		@ssis_exec_start_time =  '1/13/2022 9:04:50 PM',
 		@local_file_path =  'D:\Development\rawdatastore\sttm_customer_AAA.csv',
 		@source_file_name =  'sttm_customer_AAA.csv',
 		@destination_file_name = 'sttm_customer_1111_11_11_AAA.csv',
@@ -1353,13 +660,21 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
       DTS:CreationName=""
       DTS:DTSID="{8C29F943-E4F3-4E69-A156-30FAE7E314F0}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#x9;SELECT col.*&#xA;&#x9;FROM sys.all_tab_columns col&#xA;&#x9;INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER&#xA;&#x9;&#x9;AND col.table_name = t.table_name&#xA;&#x9;WHERE col.OWNER = '&quot; +  @[User::varSchemaName]  + &quot;'&#xA;&#x9;&#x9;AND col.table_name = 'DWH_&quot; + UPPER( @[User::varTableName])  +&quot;'&quot;"
+      DTS:Expression="&quot;&#x9;SELECT     col.OWNER&#xA;    ,col.TABLE_NAME&#xA;    ,col.COLUMN_NAME&#xA;    ,col.DATA_TYPE&#xA;    ,col.DATA_LENGTH&#xA;    ,col.DATA_PRECISION&#xA;    ,col.DATA_SCALE&#xA;    ,col.NULLABLE&#xA;    ,col.DEFAULT_LENGTH&#xA;    ,col.COLLATION&#x9;FROM sys.all_tab_columns col&#xA;&#x9;INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER&#xA;&#x9;&#x9;AND col.table_name = t.table_name&#xA;&#x9;WHERE col.OWNER = '&quot; +  @[User::varSchemaName]  + &quot;'&#xA;&#x9;&#x9;AND col.table_name = 'DWH_&quot; + UPPER( @[User::varTableName])  +&quot;'&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="scrGetTableMetadata">
       <DTS:VariableValue
-        DTS:DataType="8">	SELECT col.*
-	FROM sys.all_tab_columns col
+        DTS:DataType="8">	SELECT     col.OWNER
+    ,col.TABLE_NAME
+    ,col.COLUMN_NAME
+    ,col.DATA_TYPE
+    ,col.DATA_LENGTH
+    ,col.DATA_PRECISION
+    ,col.DATA_SCALE
+    ,col.NULLABLE
+    ,col.DEFAULT_LENGTH
+    ,col.COLLATION	FROM sys.all_tab_columns col
 	INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER
 		AND col.table_name = t.table_name
 	WHERE col.OWNER = 'EDA_READONLY'
@@ -1401,7 +716,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1410,7 +725,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionPassword">
       <DTS:VariableValue
-        DTS:DataType="8">UyThf#6#7TYnhg</DTS:VariableValue>
+        DTS:DataType="8">KIu76#45#90YmnhG</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1524,6 +839,17 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{D0D40BE5-4FB9-4D33-BD29-776F5EC29DC2}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varDestinationFileDirectory] +  @[User::varTableName] + &quot;_table_info.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varMetadataPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\sttm_customer\sttm_customer_table_info.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{F725AA20-5FC5-4FA3-82CA-ADFE431DD4B5}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
@@ -1625,7 +951,7 @@ where table_name = 'DWH_STTM_CUSTOMER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variabl
       DTS:Namespace="User"
       DTS:ObjectName="varTnsOrServerName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -6523,6 +5849,492 @@ FROM            DWH_STTM_CUSTOMER</property>
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\load meta data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4732A81C-C049-424C-AF39-47C523A499AC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="load meta data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\load meta data\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load meta data\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[metadata]"
+                  connectionManagerRefId="Package.ConnectionManagers[metadata]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[OWNER]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="OWNER"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OWNER]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[OWNER]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[TABLE_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="TABLE_NAME"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TABLE_NAME]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[TABLE_NAME]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[COLUMN_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="COLUMN_NAME"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COLUMN_NAME]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLUMN_NAME]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DATA_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="DATA_TYPE"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_TYPE]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_TYPE]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DATA_LENGTH]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="DATA_LENGTH"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_LENGTH]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_LENGTH]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DATA_PRECISION]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="DATA_PRECISION"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_PRECISION]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_PRECISION]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DATA_SCALE]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="DATA_SCALE"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_SCALE]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_SCALE]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[NULLABLE]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="NULLABLE"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NULLABLE]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[NULLABLE]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[DEFAULT_LENGTH]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="DEFAULT_LENGTH"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DEFAULT_LENGTH]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DEFAULT_LENGTH]" />
+                    <inputColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].Columns[COLLATION]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="COLLATION"
+                      externalMetadataColumnId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COLLATION]"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLLATION]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OWNER]"
+                      dataType="wstr"
+                      length="128"
+                      name="OWNER" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TABLE_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      name="TABLE_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COLUMN_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      name="COLUMN_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_TYPE]"
+                      dataType="wstr"
+                      length="128"
+                      name="DATA_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_LENGTH" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_PRECISION]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_PRECISION" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DATA_SCALE]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_SCALE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NULLABLE]"
+                      dataType="wstr"
+                      length="1"
+                      name="NULLABLE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DEFAULT_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      name="DEFAULT_LENGTH" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[COLLATION]"
+                      dataType="wstr"
+                      length="100"
+                      name="COLLATION" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\load meta data\load meta data"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="load meta data"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::scrGetTableMetadata</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load meta data\load meta data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DynamicFlexcubeConnection]"
+                  connectionManagerRefId="Package.ConnectionManagers[DynamicFlexcubeConnection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[OWNER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[OWNER]"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[OWNER]"
+                      name="OWNER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[TABLE_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[TABLE_NAME]"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[TABLE_NAME]"
+                      name="TABLE_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLUMN_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[COLUMN_NAME]"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLUMN_NAME]"
+                      name="COLUMN_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_TYPE]"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_TYPE]"
+                      name="DATA_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_LENGTH]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_LENGTH]"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_LENGTH]"
+                      name="DATA_LENGTH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_PRECISION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_PRECISION]"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_PRECISION]"
+                      name="DATA_PRECISION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_SCALE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_SCALE]"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DATA_SCALE]"
+                      name="DATA_SCALE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[NULLABLE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[NULLABLE]"
+                      length="1"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[NULLABLE]"
+                      name="NULLABLE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DEFAULT_LENGTH]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DEFAULT_LENGTH]"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[DEFAULT_LENGTH]"
+                      name="DEFAULT_LENGTH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLLATION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[COLLATION]"
+                      length="100"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].Columns[COLLATION]"
+                      name="COLLATION"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[OWNER]"
+                      dataType="wstr"
+                      length="128"
+                      name="OWNER" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[TABLE_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      name="TABLE_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[COLUMN_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      name="COLUMN_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_TYPE]"
+                      dataType="wstr"
+                      length="128"
+                      name="DATA_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_LENGTH" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_PRECISION]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_PRECISION" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DATA_SCALE]"
+                      dataType="wstr"
+                      length="38"
+                      name="DATA_SCALE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[NULLABLE]"
+                      dataType="wstr"
+                      length="1"
+                      name="NULLABLE" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[DEFAULT_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      name="DEFAULT_LENGTH" />
+                    <externalMetadataColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Output].ExternalColumns[COLLATION]"
+                      dataType="wstr"
+                      length="100"
+                      name="COLLATION" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[OWNER]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[OWNER]"
+                      name="OWNER" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[TABLE_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[TABLE_NAME]"
+                      name="TABLE_NAME" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[COLUMN_NAME]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[COLUMN_NAME]"
+                      name="COLUMN_NAME" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_TYPE]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_TYPE]"
+                      name="DATA_TYPE" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_LENGTH]"
+                      name="DATA_LENGTH" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_PRECISION]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_PRECISION]"
+                      name="DATA_PRECISION" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_SCALE]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DATA_SCALE]"
+                      name="DATA_SCALE" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[NULLABLE]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[NULLABLE]"
+                      name="NULLABLE" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DEFAULT_LENGTH]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[DEFAULT_LENGTH]"
+                      name="DEFAULT_LENGTH" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[COLLATION]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[COLLATION]"
+                      name="COLLATION" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load meta data\load meta data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\load meta data.Paths[OLE DB Source Output]"
+              endId="Package\load meta data\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\load meta data\load meta data.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -6533,6 +6345,14 @@ FROM            DWH_STTM_CUSTOMER</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Foreach Loop Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{3DCDB105-1D56-422B-B097-D4C314AF67FF}"
+      DTS:From="Package\Foreach Loop Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\load meta data" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -6798,6 +6618,44 @@ FROM            DWH_STTM_CUSTOMER</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="152,42"
+          Id="Package\load meta data"
+          TopLeft="509,1258" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="700.5,1178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-115.5,80"
+              Start="0,0"
+              End="-115.5,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36"
+                    Point2="0,40"
+                    Point3="-4,40" />
+                  <mssgle:LineSegment
+                    End="-111.5,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-111.5,40"
+                    Point2="-115.5,40"
+                    Point3="-115.5,44" />
+                  <mssgle:LineSegment
+                    End="-115.5,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -6805,7 +6663,7 @@ FROM            DWH_STTM_CUSTOMER</property>
     design-time-name="Package\Foreach Loop Container\data load\load data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="185,42"
           Id="Package\Foreach Loop Container\data load\load data\load data from source"
@@ -6853,7 +6711,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6887,7 +6747,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6921,7 +6783,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6929,6 +6793,64 @@ FROM            DWH_STTM_CUSTOMER</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach Loop Container\data load\load data\load data from source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\load meta data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\load meta data\load meta data"
+          TopLeft="229,213" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\load meta data\Flat File Destination"
+          TopLeft="298,314" />
+        <EdgeLayout
+          Id="Package\load meta data.Paths[OLE DB Source Output]"
+          TopLeft="305,255">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81,59"
+              Start="0,0"
+              End="81,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="77,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77,29.5"
+                    Point2="81,29.5"
+                    Point3="81,33.5" />
+                  <mssgle:LineSegment
+                    End="81,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\load meta data\load meta data">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
