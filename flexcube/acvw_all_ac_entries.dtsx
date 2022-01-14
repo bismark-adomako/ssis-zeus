@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="acvw_all_ac_entries"
   DTS:PackageType="5"
-  DTS:VersionBuild="101"
-  DTS:VersionGUID="{12657DE9-F022-4E05-9D0A-B85B1AD610A9}">
+  DTS:VersionBuild="102"
+  DTS:VersionGUID="{538D67CC-DC1C-49AB-957D-A704B889EEFD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -620,7 +620,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/fTMx3PZY51TR1jkGu+ixNCIL/qZ3R7R3WxZsYjWzjQAAAAAOgAAAAAIAACAAAACJbHZ4ucK+U1PeMfKW8MmyzraOgbayO3In6TEsFnRRnTAAAAC5MRhNXtvWdTRkte7qoitCuwW4BFX1tqYMNuz8Ul2UdCoZZneRqvyQzTybdry9Co9AAAAAIJpoPa2x+PVwYJM0nTIdgi3E6Wx9cbEkcVhs3PBWgmEfESe7u3yv6cwjnGhO0afeN2hops2n9nPJDGH/b3kCNg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAgEQEVNe62DoSp2LDdhtKzqbR+sT89VnvK2eJ2Y3VkXQAAAAAOgAAAAAIAACAAAACPKJ6LK55oXpqEO7i36tHQBoywVGOxanoO/NZt0o3NtzAAAAAjrU0n19GkRMKMpTtqEWlWmwTOiaLoKa2sjLaBxi+TMt95LSSfQPH53f4sffdz6J1AAAAAVI4/UNOBaVA3iyh9WfjGElony2mQ5RiVDn6Z04SrEuQ2m0mOiqPXOI1jv2+Kd9pF1ko0seFk63Z7rspzBjI1ug</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -637,7 +637,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAJ+6z6OAyOUk91G8xTL0j5xayVMEteKkuaCeMLyqyD3AAAAAAOgAAAAAIAACAAAADERWYsyHWy9DYiqVCCL29YSxzO3uSQn03MPVxcrr4pTTAAAADnnnT3ahi7NrkTsypfKFQYaV9SQCxhuU5A7x289RsHxC8EjfBeC6+Zd85u9IgGJ75AAAAAvDIpp9mVf12mPhxg58qQSRdVJlXKnZ1VbZfLhpG/lBYtPMdjP03BqK2Hqyt27TOTyiiwQ+Ec71tBiIugb8aTAg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADldqC+EFvd0cYd1UyBVd0FnUX6RXaNEs8X3QDHAVTGYQAAAAAOgAAAAAIAACAAAAD6yBVVv4txL3IiveykGY3M9wK0j1wH4B6KgLFrTq12EzAAAAD0NpZNR4UmFhZMyprAR9xz/YoEgLX6nXPwZTOwfD0Lujpwq3OSPPSWrKklB4l9aOFAAAAANGArApg9xkdGty1kvy49sBHi/pF3A/byR/Af5WxbIVnezs65JFu7qtQiePb6sTDuHr9+1ex0JYtWpQaQ/We03g</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -787,7 +787,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/13/2022 9:43:02 PM',
+		@ssis_exec_start_time =  '1/14/2022 10:30:12 AM',
 		@local_file_path =  'D:\Development\rawdatastore\acvw_all_ac_entries_AAA.csv',
 		@source_file_name =  'acvw_all_ac_entries_AAA.csv',
 		@destination_file_name = 'acvw_all_ac_entries_1111_11_11_AAA.csv',
@@ -3849,6 +3849,8 @@ FROM            DWH_STTM_CUSTOMER</property>
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
           DTS:DTSID="{495CF327-3C9A-4537-BEB4-26BCD4E6477B}"
+          DTS:EvalOp="1"
+          DTS:Expression="LEN( @[User::varApplicableDate]) != 0"
           DTS:From="Package\Foreach Loop Container\get applicable date"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
@@ -4656,7 +4658,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
@@ -4670,6 +4674,10 @@ FROM            DWH_STTM_CUSTOMER</property>
           Size="191,42"
           Id="Package\get package meta data"
           TopLeft="443.636363636364,64.090909090909" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\load meta data"
+          TopLeft="408,1238" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="539.136363636364,106.090909090909">
@@ -4704,10 +4712,6 @@ FROM            DWH_STTM_CUSTOMER</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\load meta data"
-          TopLeft="408,1238" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="700.5,1178">

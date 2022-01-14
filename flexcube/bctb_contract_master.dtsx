@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bctb_contract_master"
   DTS:PackageType="5"
-  DTS:VersionBuild="99"
-  DTS:VersionGUID="{928979C6-55D3-4F42-99B2-6A505BF28CA5}">
+  DTS:VersionBuild="109"
+  DTS:VersionGUID="{ECC2EBD0-6E41-491E-B89E-D0720903CB9F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1509,7 +1509,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAMc/ALoT+u48nCZhEg5TeduNrqe6b6ZVVBO8c7oqS+sQAAAAAOgAAAAAIAACAAAAB4DSRzyHZT/di5+C2HB3DUQlb8pCCTFXQ+4ORbiafvezAAAACVeYYzuOmevSviXM3Q21cwoRAAaKkTAY+U8HLEpUvXkLxXmFoAgP7E9WG7e4/PA+FAAAAAW0B+tlroPY4Bd3W4b+mrg8pQLnxM4NFGm2QJ4ElZeArTJXYFBuxnHDqbBMhR7NeJDLLvWdvBYj2/xCs9ChHw6Q</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABx60n37auyVtFE8auXm1LSpZ2MnujHjSBoNYskdsaiZgAAAAAOgAAAAAIAACAAAAAHIjGSlEGnVrVHZ0+Me6B2uFZJRl2lVvT18GUkLQebljAAAABSNPBATt6513PYg//MW/Fdyxfb7JNmo9zEs3yqytFJdorsA/yXnYpibMvkQ3wTHaFAAAAASfo5ijE2fiplCs0ee7HNDKbRF4wCX2RlUUKr/0njGx9qhbL2A9SSCZkgj6w+d+7Oz/L/WUnqhLMFHaZ4TR0K7Q</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1526,7 +1526,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAwdgVn2ANMp0cyaXEg/ZvnHCOo2XfxkYWKQ6JzdaN8xQAAAAAOgAAAAAIAACAAAABvW4mv16FFuQxc+9HFRupQ8hLOhNzDfUDWrnrRAv//szAAAAAWaoaurqpcs5cO4A9UjD+sRQHxYXuvHJWYJd9YoIkzF64l6aQKyz+Qn82snm9zub1AAAAAObOy9OxsyaupBSF2y9Y795RfjqkQ1zwQad+/WcPzyzl+8aitNGN1hGTCDjuLN+vLj8+/jP56A2Ci7xs/2TBdxg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADX4sAC8vALlbpWKOUuSTwFru5c41JZWc27wDo3PM2TbwAAAAAOgAAAAAIAACAAAAAzfpGfHhlX6W4Mz8X27WhqDG4KjHIKI+buhn7sa2FfdjAAAADm8UQmLo+5zJus/jWC8NLzItcw5Kzjg0BO8sknzn5KmyBJKjoWFdK4+UDJxLFv8UdAAAAAJA5FUEas679bnWPv7LPoPWXuyV81DazYqrGmcCJVxqRXVMGIEJ3JR1lAAvJjJv6mUGD0nuUUSLmjMl9UvTe6rA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1676,7 +1676,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/13/2022 11:23:48 PM',
+		@ssis_exec_start_time =  '1/13/2022 11:31:30 PM',
 		@local_file_path =  'D:\Development\rawdatastore\bctb_contract_master_AAA.csv',
 		@source_file_name =  'bctb_contract_master_AAA.csv',
 		@destination_file_name = 'bctb_contract_master_1111_11_11_AAA.csv',
@@ -1713,13 +1713,12 @@ GO</DTS:VariableValue>
       DTS:CreationName=""
       DTS:DTSID="{7C1CE641-7970-423F-824A-DDD38D9B9002}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;SELECT &#xA;TO_CHAR(MAX(DEXEC_DATE), 'DD MON YYYY') applicable_date, &#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number&#xA; FROM &quot; + @[User::varSchemaName]  +&quot;.DWH_&quot; +  UPPER(@[System::PackageName])"
+      DTS:Expression="&quot;SELECT TO_CHAR(MAX(DEXEC_DATE), 'DD MON YYYY') applicable_date, &#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number&#xA; FROM &quot; + @[User::varSchemaName]  +&quot;.DWH_&quot; +  UPPER(@[System::PackageName])"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="scrApplicableDate">
       <DTS:VariableValue
-        DTS:DataType="8">SELECT 
-TO_CHAR(MAX(DEXEC_DATE), 'DD MON YYYY') applicable_date, 
+        DTS:DataType="8">SELECT TO_CHAR(MAX(DEXEC_DATE), 'DD MON YYYY') applicable_date, 
 TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,
 TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,
 TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,
@@ -8025,6 +8024,8 @@ FROM            DWH_STTM_CUSTOMER</property>
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
           DTS:DTSID="{984E6AA1-AFAF-48ED-BA8C-F62453730E28}"
+          DTS:EvalOp="1"
+          DTS:Expression="LEN( @[User::varApplicableDate]) != 0"
           DTS:From="Package\Foreach Loop Container\get applicable date"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
@@ -8832,7 +8833,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
@@ -8931,6 +8934,10 @@ FROM            DWH_STTM_CUSTOMER</property>
           Id="Package\Foreach Loop Container\data load\load data\load data from source"
           TopLeft="219,94" />
         <NodeLayout
+          Size="176,42"
+          Id="Package\Foreach Loop Container\data load\load data\Flat File Destination"
+          TopLeft="541,379" />
+        <NodeLayout
           Size="158,42"
           Id="Package\Foreach Loop Container\data load\load data\Derived Column"
           TopLeft="331,176" />
@@ -9006,10 +9013,6 @@ FROM            DWH_STTM_CUSTOMER</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Foreach Loop Container\data load\load data\Flat File Destination"
-          TopLeft="541,379" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\data load\load data.Paths[Row Count Output 1]"
           TopLeft="506.5,307">
@@ -9059,7 +9062,7 @@ FROM            DWH_STTM_CUSTOMER</property>
     design-time-name="Package\load meta data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="176,42"
           Id="Package\load meta data\Flat File Destination"
@@ -9099,7 +9102,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

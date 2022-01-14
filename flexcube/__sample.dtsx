@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sample"
   DTS:PackageType="5"
-  DTS:VersionBuild="89"
-  DTS:VersionGUID="{281DA059-46E9-4707-A5F1-F65C63BE2E5A}">
+  DTS:VersionBuild="90"
+  DTS:VersionGUID="{F4A4D6DE-99AB-45DE-B72B-71E098EED506}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -35,7 +35,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABnqbdKgMmZkG5drC2pIKPzS+1IwnCexxyquBxfyyXkmQAAAAAOgAAAAAIAACAAAACIUJFGre+0nRZ4Zpho19MDyMq7oUItGSyuiWCyI1GNNzAAAADEgc21S1ptUSHsbQh/gm8reCETRBc15YqbzTl45yNoj5Bi6ojqTCLEbHZuLwokeYBAAAAAPghAxYd/+q9jI8VLgcXhWeLTjIUFWs2+qoveouvEFOd4pH0XImuf2NI1xqXvYZ0QH1Xi1qYa1D85+nSi1awMfQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADlH+SLTp1PbZb0PhRFhkPVBY3/O77r5xRTavg7nJHhLgAAAAAOgAAAAAIAACAAAACOLzvxPRcNbI0M+lrxgZo3xp5za06+pWs/sd+fPUn+izAAAABbNGOtlBgknWf6eOPQhfoeePmTkkwhijK2ToyJf9IYBBt3vpeKJccE9LYZO8PoGIJAAAAAR7rCjRvCNulpwCgnVZl3cyak0lDXhTqfqSyiOoaWU/LIrVqLmkoB909pHSjprwKVjN2wNGWKOSIs/BPLp8VGUQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1239,7 +1239,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/1/2022 12:30:28 PM',
+		@ssis_exec_start_time =  '1/14/2022 10:31:03 AM',
 		@local_file_path =  'D:\Development\rawdatastore\sample_AAA.csv',
 		@source_file_name =  'sample_AAA.csv',
 		@destination_file_name = 'sample_1111_11_11_AAA.csv',
@@ -6420,6 +6420,8 @@ FROM            DWH_STTM_CUSTOMER</property>
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
           DTS:DTSID="{6873F101-63CD-4687-82BE-D69015CF3FAA}"
+          DTS:EvalOp="1"
+          DTS:Expression="LEN( @[User::varApplicableDate]) != 0"
           DTS:From="Package\Foreach Loop Container\get applicable date"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
@@ -6733,7 +6735,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sttm_customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="99"
-  DTS:VersionGUID="{0A2FFEEE-C742-4F16-A8E9-BBF2453CEA28}">
+  DTS:VersionBuild="103"
+  DTS:VersionGUID="{D1BCFCFC-84DD-4009-BD7C-B7E0F055CC0C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -35,7 +35,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADkDea0gf9+tFSQYeIMmMTc2heW3ZQTtiPGRMcQ+u5t5QAAAAAOgAAAAAIAACAAAAAkQqbfH+KuiNv+bgKsyfSAotXzG2bdowcJQGZS7NCkUjAAAADQdubHDKbB1KPEAy6/qwC/5oCY2M4s3qIRpNXjbMAezwI+QvxamnaSlV4cubya5ahAAAAAazpSsIbhL5dTZEDkTZJBFTDYpqZPvzAiRxNClxMyL5SY75WU6o7qKz9CtS6YAzJTk0A+Sl5a934xKaNgRPWXDg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAoL6nd4YX3iGjNdwWHK6CRlA70EYNdiVGe0jLcmnX0qwAAAAAOgAAAAAIAACAAAABMSt8LKVNQswSlbzRAmNm9gHDiv4QJn3cIAtcDjXAfajAAAAALP10rLWpuATru3QKrFSQShvm9wN06OKlarS8zpCGVDbepTb15nSFNF8sqGw5hXMxAAAAAkGt2kJdVY92K9hWoKJjSd6RoU4fa6gHoK3MLupksJ4drnMpW7xRyVdSL32YYeVASyb6oVzwpjN1/GDnKmUYPzA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -52,7 +52,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABbWHgYQGBGfGmPLVjCMudCsRb9W5R3+y5vrLK+7AgDKQAAAAAOgAAAAAIAACAAAACv/+2V5Pq621TYMzjkzIUhRbpFcV88Cz7YwajHZk6jPDAAAACwA2H/Bqe3QZW+t3BGgEKVK1O2HFw1hWKetKy7sBwQ/OatN8sSJV96qCSQ8cThlWhAAAAA0VR4bIDJ90faMnejAfUkLBiw7fzswTewhy7fBPA+/6MzjiNJOEgZmg5DkpU2vkO8c2mEh5hfRGWS5fZQke0cpg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABPlpHfkpiAb03zpn+KNvNnLbb8AyuyEUCEiSfN4USvNwAAAAAOgAAAAAIAACAAAAAieC46wh8mCrBHlqnLhJcKQHXBaostwDEzoZAfztL23TAAAACAEmiqJuA0oBDvdOc4dg/9diU4klNx5JIQNZR7ztvB1gxkZMc4zOjkMwc61O1INAVAAAAAr+r4pCm3cvWt1vDlaY1l8rp7YkYMMmmBkqErYHCoX86XNlayKzbnBuXFagenLTGNhGZ5qIu9mmY3GR+fF3endA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -563,7 +563,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/13/2022 11:08:40 PM',
+		@ssis_exec_start_time =  '1/13/2022 11:53:06 PM',
 		@local_file_path =  'D:\Development\rawdatastore\sttm_customer_AAA.csv',
 		@source_file_name =  'sttm_customer_AAA.csv',
 		@destination_file_name = 'sttm_customer_1111_11_11_AAA.csv',
@@ -5763,6 +5763,8 @@ FROM            DWH_STTM_CUSTOMER</property>
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
           DTS:DTSID="{490FBF16-9B12-459F-AFFF-8E0C58D409A0}"
+          DTS:EvalOp="1"
+          DTS:Expression="LEN( @[User::varApplicableDate]) != 0"
           DTS:From="Package\Foreach Loop Container\get applicable date"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
@@ -6570,7 +6572,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
@@ -6803,7 +6807,7 @@ FROM            DWH_STTM_CUSTOMER</property>
     design-time-name="Package\load meta data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="176,42"
           Id="Package\load meta data\Flat File Destination"
@@ -6843,7 +6847,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
