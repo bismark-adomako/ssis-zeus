@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bctb_contract_master"
   DTS:PackageType="5"
-  DTS:VersionBuild="109"
-  DTS:VersionGUID="{ECC2EBD0-6E41-491E-B89E-D0720903CB9F}">
+  DTS:VersionBuild="110"
+  DTS:VersionGUID="{49BFB8C6-C90E-4D23-983F-ECC6D73198A5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1505,11 +1505,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=COMOROS_FCUBE_UAT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
+          DTS:ConnectionString="Data Source=COMOROS_FCUBE_RPT;User ID=EDA_READONLY;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABx60n37auyVtFE8auXm1LSpZ2MnujHjSBoNYskdsaiZgAAAAAOgAAAAAIAACAAAAAHIjGSlEGnVrVHZ0+Me6B2uFZJRl2lVvT18GUkLQebljAAAABSNPBATt6513PYg//MW/Fdyxfb7JNmo9zEs3yqytFJdorsA/yXnYpibMvkQ3wTHaFAAAAASfo5ijE2fiplCs0ee7HNDKbRF4wCX2RlUUKr/0njGx9qhbL2A9SSCZkgj6w+d+7Oz/L/WUnqhLMFHaZ4TR0K7Q</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADrLdI/31x5NMxQ0eNDlrNjBONyDR3AiwjddC9lebHkjgAAAAAOgAAAAAIAACAAAABo5jv6etl2dQdi9dOLYoY4aNiKI4vf+DaLMj1Cm+l0ISAAAABW8Dm/jqZ7DTyMF+FE6fSGozY8NtAV5cY1S93tyTLHMEAAAAC6y9QxY3Ln74ols2t5Y29AmJbjGL1b/e7+E0e1k3Ed4geyFO/kna3Zh/cPhsDSkmyofTQqP6j6PTZE2FfITh1P</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1522,11 +1522,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=GBLO02UAT0CAEXD\EDA_DEV;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADX4sAC8vALlbpWKOUuSTwFru5c41JZWc27wDo3PM2TbwAAAAAOgAAAAAIAACAAAAAzfpGfHhlX6W4Mz8X27WhqDG4KjHIKI+buhn7sa2FfdjAAAADm8UQmLo+5zJus/jWC8NLzItcw5Kzjg0BO8sknzn5KmyBJKjoWFdK4+UDJxLFv8UdAAAAAJA5FUEas679bnWPv7LPoPWXuyV81DazYqrGmcCJVxqRXVMGIEJ3JR1lAAvJjJv6mUGD0nuUUSLmjMl9UvTe6rA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABOqcaiz76fpV5jH5I+KWkvAK51BPA2LWO11E9NqVKYFwAAAAAOgAAAAAIAACAAAADrEqViaEKeytH00qKdp877UPVggKuZLhpyP/5vc1eA2yAAAADoHZgp0u627bAO9Riv2GU/c4aQnnUz56ICKJf/CDchF0AAAAAMTS+GtMC0nyfMTAN0cu8aeauWNG6kCR9JYePL6reine1b5wXoDPzbbqi1I14eBvj3WaVmnkCOf8kZdIHsPGib</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1676,7 +1676,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/13/2022 11:31:30 PM',
+		@ssis_exec_start_time =  '1/14/2022 12:29:07 PM',
 		@local_file_path =  'D:\Development\rawdatastore\bctb_contract_master_AAA.csv',
 		@source_file_name =  'bctb_contract_master_AAA.csv',
 		@destination_file_name = 'bctb_contract_master_1111_11_11_AAA.csv',
@@ -1828,7 +1828,7 @@ where table_name = 'DWH_BCTB_CONTRACT_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1837,7 +1837,7 @@ where table_name = 'DWH_BCTB_CONTRACT_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionPassword">
       <DTS:VariableValue
-        DTS:DataType="8">KIu76#45#90YmnhG</DTS:VariableValue>
+        DTS:DataType="8">UyThf#6#7TYnhg</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -2063,7 +2063,7 @@ where table_name = 'DWH_BCTB_CONTRACT_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:
       DTS:Namespace="User"
       DTS:ObjectName="varTnsOrServerName">
       <DTS:VariableValue
-        DTS:DataType="8">COMOROS_FCUBE_UAT</DTS:VariableValue>
+        DTS:DataType="8">COMOROS_FCUBE_RPT</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -8934,10 +8934,6 @@ FROM            DWH_STTM_CUSTOMER</property>
           Id="Package\Foreach Loop Container\data load\load data\load data from source"
           TopLeft="219,94" />
         <NodeLayout
-          Size="176,42"
-          Id="Package\Foreach Loop Container\data load\load data\Flat File Destination"
-          TopLeft="541,379" />
-        <NodeLayout
           Size="158,42"
           Id="Package\Foreach Loop Container\data load\load data\Derived Column"
           TopLeft="331,176" />
@@ -9013,6 +9009,10 @@ FROM            DWH_STTM_CUSTOMER</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Foreach Loop Container\data load\load data\Flat File Destination"
+          TopLeft="541,379" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\data load\load data.Paths[Row Count Output 1]"
           TopLeft="506.5,307">
