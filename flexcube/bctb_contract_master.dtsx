@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bctb_contract_master"
   DTS:PackageType="5"
-  DTS:VersionBuild="110"
-  DTS:VersionGUID="{49BFB8C6-C90E-4D23-983F-ECC6D73198A5}">
+  DTS:VersionBuild="111"
+  DTS:VersionGUID="{39769E59-88EF-48F0-BD7A-86DAE10E2238}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1509,7 +1509,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADrLdI/31x5NMxQ0eNDlrNjBONyDR3AiwjddC9lebHkjgAAAAAOgAAAAAIAACAAAABo5jv6etl2dQdi9dOLYoY4aNiKI4vf+DaLMj1Cm+l0ISAAAABW8Dm/jqZ7DTyMF+FE6fSGozY8NtAV5cY1S93tyTLHMEAAAAC6y9QxY3Ln74ols2t5Y29AmJbjGL1b/e7+E0e1k3Ed4geyFO/kna3Zh/cPhsDSkmyofTQqP6j6PTZE2FfITh1P</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAxMi50sDsHUi/NuE21R+Qj3izi0H2eWI/9WXlD0dehLwAAAAAOgAAAAAIAACAAAABxdvFUp9yR2iN85kGjrc59gW+YcCubPa02Eq2oJHPFEyAAAABBPxfigEjC+qwq79+3C1psCfulYdGDjADk02KAecZfYEAAAACq5ZAg0lmH9uSX/S2CCRW8MVW4XA1TG1dhtKPsJzyj3RCZZx0mVxJ+qUr+l662wEDyFtTpGPL57A3C5LJRshWi</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1526,7 +1526,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABOqcaiz76fpV5jH5I+KWkvAK51BPA2LWO11E9NqVKYFwAAAAAOgAAAAAIAACAAAADrEqViaEKeytH00qKdp877UPVggKuZLhpyP/5vc1eA2yAAAADoHZgp0u627bAO9Riv2GU/c4aQnnUz56ICKJf/CDchF0AAAAAMTS+GtMC0nyfMTAN0cu8aeauWNG6kCR9JYePL6reine1b5wXoDPzbbqi1I14eBvj3WaVmnkCOf8kZdIHsPGib</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB0oLrp6Gkknv9rooxrAUofYI+YdG9Xr2qioLeFjlBrOQAAAAAOgAAAAAIAACAAAACqsaNnVdC4zSERSwqfJvt/iVD3ViCzUsJyqqHJkNg9EiAAAAARQGB3/W1qIYoZTg8lf1yc1ILLVGARXx4aXln6WZQIrUAAAAA8M39C4fngj6ocOdlJqahVTEoiPpI2BHvJil0x+eM6D+bxl/4BthdX50Kgt6PASIByXc7ldezFWJnWtpF6i5DZ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1676,7 +1676,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/14/2022 12:29:07 PM',
+		@ssis_exec_start_time =  '1/14/2022 1:20:15 PM',
 		@local_file_path =  'D:\Development\rawdatastore\bctb_contract_master_AAA.csv',
 		@source_file_name =  'bctb_contract_master_AAA.csv',
 		@destination_file_name = 'bctb_contract_master_1111_11_11_AAA.csv',
@@ -1723,7 +1723,7 @@ TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,
 TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,
 TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,
 TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number
- FROM EDA_READONLY.DWH_BCTB_CONTRACT_MASTER</DTS:VariableValue>
+ FROM FCUBSKM_PROD.DWH_BCTB_CONTRACT_MASTER</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1754,7 +1754,7 @@ ELSE
       DTS:Namespace="User"
       DTS:ObjectName="scrDataLoad">
       <DTS:VariableValue
-        DTS:DataType="8">SELECT * FROM EDA_READONLY.DWH_BCTB_CONTRACT_MASTER</DTS:VariableValue>
+        DTS:DataType="8">SELECT * FROM FCUBSKM_PROD.DWH_BCTB_CONTRACT_MASTER</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1789,7 +1789,7 @@ where table_name = 'DWH_BCTB_CONTRACT_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:
     ,col.COLLATION	FROM sys.all_tab_columns col
 	INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER
 		AND col.table_name = t.table_name
-	WHERE col.OWNER = 'EDA_READONLY'
+	WHERE col.OWNER = 'FCUBSKM_PROD'
 		AND col.table_name = 'DWH_BCTB_CONTRACT_MASTER'</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -2003,7 +2003,7 @@ where table_name = 'DWH_BCTB_CONTRACT_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:
       DTS:Namespace="User"
       DTS:ObjectName="varSchemaName">
       <DTS:VariableValue
-        DTS:DataType="8">EDA_READONLY</DTS:VariableValue>
+        DTS:DataType="8">FCUBSKM_PROD</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -8928,11 +8928,15 @@ FROM            DWH_STTM_CUSTOMER</property>
     design-time-name="Package\Foreach Loop Container\data load\load data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="185,42"
           Id="Package\Foreach Loop Container\data load\load data\load data from source"
           TopLeft="219,94" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Foreach Loop Container\data load\load data\Flat File Destination"
+          TopLeft="541,379" />
         <NodeLayout
           Size="158,42"
           Id="Package\Foreach Loop Container\data load\load data\Derived Column"
@@ -8972,7 +8976,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9006,13 +9012,11 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Foreach Loop Container\data load\load data\Flat File Destination"
-          TopLeft="541,379" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\data load\load data.Paths[Row Count Output 1]"
           TopLeft="506.5,307">
@@ -9044,7 +9048,9 @@ FROM            DWH_STTM_CUSTOMER</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

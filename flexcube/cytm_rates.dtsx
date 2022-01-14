@@ -5,28 +5,24 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="GBLO02UAT0CAEXD"
   DTS:CreatorName="GBLO02UAT0CAEXD\opc"
-  DTS:DTSID="{90E2D23E-BE57-4C1C-A8C0-D9838A9D2FF6}"
+  DTS:DTSID="{10BA3FC3-82BD-4E47-BCD1-7F751115F067}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="actb_recon_master"
+  DTS:ObjectName="cytm_rates"
   DTS:PackageType="5"
-  DTS:VersionBuild="98"
-  DTS:VersionGUID="{378B18BB-6C07-49C0-A1B0-2B25435D715D}">
+  DTS:VersionBuild="106"
+  DTS:VersionGUID="{C80719CC-E1AA-4E50-922A-7DDE34DC6A35}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[actb_recon_master]"
+      DTS:refId="Package.ConnectionManagers[cytm_rates]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{BF1EDD53-0538-4574-9D00-9410AFEA6F46}"
-      DTS:ObjectName="actb_recon_master">
-      <DTS:PropertyExpression
-        DTS:Name="ColumnNamesInFirstDataRow">1</DTS:PropertyExpression>
+      DTS:DTSID="{85D11075-FDF7-4FF0-AC88-16DA34B90957}"
+      DTS:ObjectName="cytm_rates">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::varSourceFilePath]</DTS:PropertyExpression>
-      <DTS:PropertyExpression
-        DTS:Name="DataRowsToSkip">0</DTS:PropertyExpression>
       <DTS:PropertyExpression
         DTS:Name="Name">@[User::varTableName]</DTS:PropertyExpression>
       <DTS:ObjectData>
@@ -38,7 +34,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Development\rawdatastore\actb_recon_master_AAA.csv">
+          DTS:ConnectionString="D:\Development\rawdatastore\cytm_rates_AAA.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -46,7 +42,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="DEXEC_DATE"
-              DTS:DTSID="{7607FF50-0687-44F6-A58E-99609012C466}"
+              DTS:DTSID="{603B6DD1-40AD-4E51-88D5-03048BF7CD89}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -54,17 +50,8 @@
               DTS:MaximumWidth="3"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="BRANCH"
-              DTS:DTSID="{2FE501F3-383B-449A-A09C-405A82F15448}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ACCOUNT"
-              DTS:DTSID="{CE915823-355D-4BEC-A9AB-6C7B82E40A9B}"
+              DTS:ObjectName="BRANCH_CODE"
+              DTS:DTSID="{F589E5FB-97AB-4A8B-A237-C6A926EED096}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -72,26 +59,36 @@
               DTS:MaximumWidth="3"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="CCY"
-              DTS:DTSID="{AE09E8B7-BF78-4A7F-85A8-582E785330E7}"
+              DTS:ObjectName="CCY1"
+              DTS:DTSID="{EFA74589-1657-4424-BB0A-2E0AB4249731}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="16"
+              DTS:MaximumWidth="3"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="RECONNO"
-              DTS:DTSID="{7702C18B-FF36-40B6-B504-D1F5923F4B50}"
+              DTS:ObjectName="CCY2"
+              DTS:DTSID="{2F0B0C78-36D4-47F3-8C48-4CF2A774ECA2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="16"
+              DTS:MaximumWidth="8"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="REF_NO"
-              DTS:DTSID="{53F1F51C-499E-4B63-AE76-912221F935C7}"
+              DTS:ObjectName="RATE_TYPE"
+              DTS:DTSID="{59A9F61D-FF3E-4EEA-A026-A67049483428}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="24"
+              DTS:DataScale="12"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MID_RATE"
+              DTS:DTSID="{76D2DF3D-E384-42CD-98C1-F9128203F512}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -99,45 +96,128 @@
               DTS:MaximumWidth="38"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="EVENT_SEQ_NO"
-              DTS:DTSID="{73D795F9-2120-4477-B77A-A8F1EF3F2C64}"
+              DTS:ObjectName="BUY_SPREAD"
+              DTS:DTSID="{3DEBCA33-6C45-4777-BF04-3CCCB0AB5E38}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALE_SPREAD"
+              DTS:DTSID="{23277F19-EEBE-4D8E-84D1-F9D7B423C931}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
               DTS:DataType="131"
-              DTS:DataPrecision="22"
-              DTS:DataScale="3"
+              DTS:DataPrecision="24"
+              DTS:DataScale="12"
               DTS:TextQualified="True"
-              DTS:ObjectName="AMOUNT"
-              DTS:DTSID="{2254A9F2-AC7D-4315-AEFC-28CFD8012728}"
+              DTS:ObjectName="BUY_RATE"
+              DTS:DTSID="{BD90F8E4-38CA-48C8-9B00-C2EE24A5785C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
               DTS:DataType="131"
-              DTS:DataPrecision="22"
-              DTS:DataScale="3"
+              DTS:DataPrecision="24"
+              DTS:DataScale="12"
               DTS:TextQualified="True"
-              DTS:ObjectName="AMOUNT_TO_RECON"
-              DTS:DTSID="{F87959D7-969A-4917-A857-C72F2BF2064E}"
+              DTS:ObjectName="SALE_RATE"
+              DTS:DTSID="{86BB6020-0C6C-4E6C-A093-BE61CCE80CD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="24"
+              DTS:DataScale="12"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNAUTH_MID_RATE"
+              DTS:DTSID="{48530505-C818-4D1E-B324-A21FE24B53FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNAUTH_BUY_SPREAD"
+              DTS:DTSID="{81EFC304-CC97-4D6D-9B6E-ED93BB4BA6B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNAUTH_SALE_SPREAD"
+              DTS:DTSID="{18E80882-CF59-48EF-9612-9DD0DF6A06EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="24"
+              DTS:DataScale="12"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNAUTH_BUY_RATE"
+              DTS:DTSID="{5B9C384C-F83F-4DE3-B79B-3EBC21EA4CC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="24"
+              DTS:DataScale="12"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNAUTH_SALE_RATE"
+              DTS:DTSID="{01AACC18-3169-420A-82F9-215AF4FDA080}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INT_AUTH_STAT"
+              DTS:DTSID="{BD8C2BBB-F718-415F-A6FE-07471F0E6966}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
               DTS:DataType="135"
               DTS:TextQualified="True"
-              DTS:ObjectName="ENTRYDATE"
-              DTS:DTSID="{4C859411-F953-43F0-88E2-CCFE0BF4BBE1}"
+              DTS:ObjectName="RATE_DATE"
+              DTS:DTSID="{283670E8-A8DF-4C04-A4A5-E66320BBD880}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
-              DTS:MaximumWidth="4"
-              DTS:DataType="130"
+              DTS:DataType="131"
+              DTS:DataPrecision="4"
               DTS:TextQualified="True"
-              DTS:ObjectName="STATUS"
-              DTS:DTSID="{D1C2A130-98F1-49A7-81AC-6FC03D2AEC8D}"
+              DTS:ObjectName="RATE_SERIAL"
+              DTS:DTSID="{6DD1AD2E-3B21-4F61-A732-919C492514C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNAUTH_RATE_DATE"
+              DTS:DTSID="{E6732C93-CBA7-4039-B240-139A4B0F0B3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_:_x007C__x007C_:_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNAUTH_RATE_SERIAL"
+              DTS:DTSID="{C490D838-F80E-4FFB-95C5-541917ED7CE2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +226,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="applicable_datekey"
-              DTS:DTSID="{0CE023D9-7CC5-4975-B4FF-1FC8E64DFCFE}"
+              DTS:DTSID="{23CED5C1-CD55-4157-BE3D-24DCB0B3D966}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -155,7 +235,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="load_datekey"
-              DTS:DTSID="{5C7664A9-C4F5-4B6B-8C6B-660BE71F97E7}"
+              DTS:DTSID="{6597036E-1210-49DE-94AE-B2A16D841521}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +244,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="country_code"
-              DTS:DTSID="{DD1B40EF-D9D1-48C0-8D02-DF0A2181D3C7}"
+              DTS:DTSID="{C3FACF5B-BD84-4358-9DF6-F99712D500C2}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -173,7 +253,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DynamicFlexcubeConnection]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{22715A13-09A1-4627-8FCA-944F19739C1C}"
+      DTS:DTSID="{F6A3D593-3E66-4F7E-B4F9-0E54F0D8547F}"
       DTS:ObjectName="DynamicFlexcubeConnection">
       <DTS:PropertyExpression
         DTS:Name="Password">@[User::varConnectionPassword]</DTS:PropertyExpression>
@@ -189,26 +269,31 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADWo+6Iu/Jxbft/a5aV35SnrdjxpDgucMfF1nDFb7mukwAAAAAOgAAAAAIAACAAAAB0BlQNFCe18SOgQwou7QUjNBgaUOrIz3A/Y+rlPGCw+TAAAADoP0VBSxG2ejX/39gJV9HacmbGG+t3SAaNHTa9rXsRTc0L4BOP+Sof/yB+kHkaSRBAAAAA+id7wSvk0zQb0WgPEIREDdg7brUlnIshf0eMpwJh9BsWju9b2rpuEnr3fj0PyiCyTUBFc+MhlHk3La52HDm1aQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC9DrbqzAhahXAlFnoo+lEaC6M7bZTIuXTGFzHt2L+hEAAAAAAOgAAAAAIAACAAAAB+wOkCCxUb/UpcVazLzCLZAMPgqeNuPRQ80jh9Zo2olSAAAAAszhwmx+kcImPro+NvPVy3vnioQLT00BXq4/T1G6URMUAAAAABtH1FnjJOVqQ/ujmdDE7nueWstXrJ3EZxtPMmILBIUV72fuii53rWGZiGCua3C4d9vqpOa0FZH5ZQ/zXwCdS9</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[EDADataRegistry]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{0B40F252-191E-44A9-B543-94B74D62A699}"
+      DTS:DTSID="{2032D873-FEB8-45B1-8F0E-0A1D25408295}"
       DTS:ObjectName="EDADataRegistry">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=GBLO02UAT0CAEXD\EDA_DEV;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAChEr7SfujE4Psj3gCdeaDwIjHzohaDd7+2uFAr+fDdwQAAAAAOgAAAAAIAACAAAADw5Em5VpTdHwV3g0ypWBVy7FY8jfjAAI5Kexf0MHxLOSAAAACQD8/tUfmr1hqq7tgHoKoKV7hX268svJtnwHwP93pBfUAAAABmQrjZMkCFfL2JYhIzgWle9045QDRqTZ0mP5xUEYUKrbjhTXEEqIA1Z1UA4NEKEJma6al7kAHCCTvzcLu/Wr2I</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[metadata]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{B3127F5E-EC20-4322-9E14-EDE5BF52715E}"
+      DTS:DTSID="{3FB6C6A4-66A8-462E-95A4-FAAB6CE7FF13}"
       DTS:ObjectName="metadata">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::varMetadataPath]</DTS:PropertyExpression>
@@ -221,7 +306,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Development\rawdatastore\dummy\actb_recon_master\actb_recon_master_table_info.csv">
+          DTS:ConnectionString="D:\Development\rawdatastore\dummy\cytm_rates\cytm_rates_table_info.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -230,7 +315,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="OWNER"
-              DTS:DTSID="{8A056750-6C20-4586-841E-A8F107D02144}"
+              DTS:DTSID="{255866A9-74CC-4DB3-ABD0-61E7469262C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -239,7 +324,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="TABLE_NAME"
-              DTS:DTSID="{ED84BC69-8F0D-429D-856E-7E8C04947E79}"
+              DTS:DTSID="{90F7FC5C-0158-4554-AC10-C05786569FB9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -248,7 +333,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="COLUMN_NAME"
-              DTS:DTSID="{7D6FB682-5534-4A8E-9879-A0C446661FDC}"
+              DTS:DTSID="{0F7E6581-48D0-4D9C-A044-51FF9193F96E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -257,7 +342,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DATA_TYPE"
-              DTS:DTSID="{16578BA4-9F53-456B-A843-4C50616F5B52}"
+              DTS:DTSID="{7A290D36-C063-40CB-820C-33939D59A0E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -266,7 +351,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DATA_LENGTH"
-              DTS:DTSID="{824BC4EA-62B7-492C-8F04-3E6EC809864A}"
+              DTS:DTSID="{8B0DC9FC-2426-4A32-B7E4-AAF179FAF163}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -275,7 +360,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DATA_PRECISION"
-              DTS:DTSID="{597AD58F-710A-4302-B577-3561BCA8006E}"
+              DTS:DTSID="{2089064A-8500-4B26-88D3-2D3A30056183}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -284,7 +369,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DATA_SCALE"
-              DTS:DTSID="{4901298D-033E-4B5E-A1F0-E30AC4034D24}"
+              DTS:DTSID="{4B9A8440-8472-4F4E-82DC-283843AB19F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -293,7 +378,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="NULLABLE"
-              DTS:DTSID="{855903D4-3BA5-4A47-90E1-563C15AAF78D}"
+              DTS:DTSID="{44078EE7-0256-442F-80F2-9961016C1267}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -302,7 +387,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DEFAULT_LENGTH"
-              DTS:DTSID="{888EFB09-A455-4CDD-B410-41747732190D}"
+              DTS:DTSID="{5F3AB9F1-C68F-46F9-95AF-169B2DCBFFCD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -311,7 +396,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="COLLATION"
-              DTS:DTSID="{C1B1586F-AF97-4181-A7EF-B4DC13D976DD}"
+              DTS:DTSID="{5D025B7B-8504-46F3-8537-9B393562CD1B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -321,7 +406,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{56E0BDC0-FB81-4C8E-992C-B5C368F50302}"
+      DTS:DTSID="{81AFAFED-AC9E-4681-8BE5-4A3792FF50E1}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;&#xA;&#xA;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_GetPackageMetadata]&#xA;&#x9;&#x9;@ssis_package_name = '&quot; + @[System::PackageName]  + &quot;'&#xA;&#xA;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -333,14 +418,14 @@
 DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
-		@ssis_package_name = 'actb_recon_master'
+		@ssis_package_name = 'cytm_rates'
 
 
 </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{4F2DC599-622A-4A2A-B77D-C67E686DFB99}"
+      DTS:DTSID="{2ACB7C19-AA29-4F79-B38C-95A415937731}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]&#xA;&#x9;&#x9;@ssis_load_datekey = &quot; + @[User::varLoadDate]  + &quot;,&#xA;&#x9;&#x9;@ssis_exec_start_time =  '&quot; + (DT_WSTR, 50) @[System::StartTime] + &quot;',&#xA;&#x9;&#x9;@local_file_path =  '&quot; +  @[User::varSourceFilePath]  + &quot;',&#xA;&#x9;&#x9;@source_file_name =  '&quot; + @[User::varSourceFileName]   + &quot;',&#xA;&#x9;&#x9;@destination_file_name = '&quot;+ @[User::varDestinationFileName]  +&quot;',&#xA;&#x9;&#x9;@table_id =  &quot; + (DT_WSTR, 50) @[User::varTableID]  + &quot;,&#xA;&#x9;&#x9;@applicable_datakey =  &quot; + @[User::varApplicableDatekey]  + &quot;&#xA;&#xA;SELECT&#x9;'Return Value' = @return_value&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -351,10 +436,10 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/14/2022 5:09:55 PM',
-		@local_file_path =  'D:\Development\rawdatastore\actb_recon_master_AAA.csv',
-		@source_file_name =  'actb_recon_master_AAA.csv',
-		@destination_file_name = 'actb_recon_master_1111_11_11_AAA.csv',
+		@ssis_exec_start_time =  '1/14/2022 5:41:38 PM',
+		@local_file_path =  'D:\Development\rawdatastore\cytm_rates_AAA.csv',
+		@source_file_name =  'cytm_rates_AAA.csv',
+		@destination_file_name = 'cytm_rates_1111_11_11_AAA.csv',
 		@table_id =  0,
 		@applicable_datakey =  11111111
 
@@ -362,7 +447,7 @@ SELECT	'Return Value' = @return_value</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{DA3B5E4B-6C1A-474F-BC7A-00C974F3813E}"
+      DTS:DTSID="{E699319F-7467-460C-A274-C6B07F31FA49}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;USE [EDADataRegistry]&#xA;GO&#xA;&#xA;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_UpdateExecutionRegistry]&#xA;&#x9;&#x9;@ssis_row_count = &quot; + (DT_WSTR, 1000)  @[User::varRowCount] + &quot;,&#xA;&#x9;&#x9;@destination_file_path = '&quot; + @[User::varDestinationFilePath]  + &quot;',&#xA;&#x9;&#x9;@destination_file_name = '&quot; + @[User::varDestinationFileName]  + &quot;',&#xA;&#x9;&#x9;@source_file_name = '&quot; +  @[User::varSourceFileName] + &quot;'&#xA;&#xA;SELECT&#x9;'Return Value' = @return_value&#xA;&#xA;GO&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -376,9 +461,9 @@ DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_UpdateExecutionRegistry]
 		@ssis_row_count = 0,
-		@destination_file_path = 'D:\Development\rawdatastore\dummy\actb_recon_master\actb_recon_master_1111_11_11_AAA.csv',
-		@destination_file_name = 'actb_recon_master_1111_11_11_AAA.csv',
-		@source_file_name = 'actb_recon_master_AAA.csv'
+		@destination_file_path = 'D:\Development\rawdatastore\dummy\cytm_rates\cytm_rates_1111_11_11_AAA.csv',
+		@destination_file_name = 'cytm_rates_1111_11_11_AAA.csv',
+		@source_file_name = 'cytm_rates_AAA.csv'
 
 SELECT	'Return Value' = @return_value
 
@@ -386,7 +471,7 @@ GO</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{01CBCDE7-CB10-4168-9887-E6033A41BFAD}"
+      DTS:DTSID="{ACAFAA64-AAB8-4923-8151-27EB05E369EC}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;SELECT &#xA;TO_CHAR(MAX(DEXEC_DATE), 'DD MON YYYY') applicable_date, &#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,&#xA;TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number&#xA; FROM &quot; + @[User::varSchemaName]  +&quot;.DWH_&quot; +  UPPER(@[System::PackageName])"
       DTS:IncludeInDebugDump="2345"
@@ -399,11 +484,11 @@ TO_CHAR(MAX(DEXEC_DATE), 'YYYYMMDD') applicable_datekey,
 TO_CHAR(MAX(DEXEC_DATE), 'YYYY') year_number,
 TO_CHAR(MAX(DEXEC_DATE), 'MM') month_number,
 TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number
- FROM FCUBSKM_PROD.DWH_ACTB_RECON_MASTER</DTS:VariableValue>
+ FROM FCUBSKM_PROD.DWH_CYTM_RATES</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{5648FE54-1034-451A-890F-67F9B4D635B2}"
+      DTS:DTSID="{3B854AE5-F923-4017-BA53-02E95965BD3E}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;&#xA;IF EXISTS (&#xA;&#x9;&#x9;SELECT [ssis_exec_status_id]&#xA;&#x9;&#x9;FROM [EDADataRegistry].[dbo].[ExecutionRegistry]&#xA;&#x9;&#x9;WHERE [file_name] = '&quot; + @[User::varDestinationFileName] + &quot;'&#xA;&#x9;&#x9;&#x9;AND [ssis_exec_status_id] = 1&#xA;&#x9;&#x9;)&#xA;&#x9;SELECT 1 AS ExecutionStatus&#xA;ELSE&#xA;&#x9;SELECT 0 AS ExecutionStatus&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -414,7 +499,7 @@ TO_CHAR(MAX(DEXEC_DATE), 'DD') day_number
 IF EXISTS (
 		SELECT [ssis_exec_status_id]
 		FROM [EDADataRegistry].[dbo].[ExecutionRegistry]
-		WHERE [file_name] = 'actb_recon_master_1111_11_11_AAA.csv'
+		WHERE [file_name] = 'cytm_rates_1111_11_11_AAA.csv'
 			AND [ssis_exec_status_id] = 1
 		)
 	SELECT 1 AS ExecutionStatus
@@ -423,18 +508,18 @@ ELSE
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{6CBCEB7E-CBFA-4541-B519-30981F3B23DC}"
+      DTS:DTSID="{603D548E-E9E8-4E0B-8B00-46EA867397ED}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;SELECT * FROM &quot; + @[User::varSchemaName] + &quot;.DWH_&quot; +  UPPER( @[User::varTableName] )"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="scrDataLoad">
       <DTS:VariableValue
-        DTS:DataType="8">SELECT * FROM FCUBSKM_PROD.DWH_ACTB_RECON_MASTER</DTS:VariableValue>
+        DTS:DataType="8">SELECT * FROM FCUBSKM_PROD.DWH_CYTM_RATES</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{E403CD8B-DA5E-44A8-B814-765D61941153}"
+      DTS:DTSID="{E23D70B5-CA22-4BD6-9841-2C6986249E8C}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;select OWNER as schema_name from all_tables &#xA;where table_name = 'DWH_&quot; + UPPER( @[User::varTableName]  )  + &quot;' and OWNER &lt;&gt; 'BICCSIT'&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -442,11 +527,11 @@ ELSE
       DTS:ObjectName="scrGetSourceSchemaName">
       <DTS:VariableValue
         DTS:DataType="8">select OWNER as schema_name from all_tables 
-where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:VariableValue>
+where table_name = 'DWH_CYTM_RATES' and OWNER &lt;&gt; 'BICCSIT'</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{7E21A5F4-C86F-4D6B-BBA8-CCF867385F06}"
+      DTS:DTSID="{26342B24-3BA6-4D50-B5B2-47EC221D5A08}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;&#x9;SELECT     col.OWNER&#xA;    ,col.TABLE_NAME&#xA;    ,col.COLUMN_NAME&#xA;    ,col.DATA_TYPE&#xA;    ,col.DATA_LENGTH&#xA;    ,col.DATA_PRECISION&#xA;    ,col.DATA_SCALE&#xA;    ,col.NULLABLE&#xA;    ,col.DEFAULT_LENGTH&#xA;    ,col.COLLATION&#x9;FROM sys.all_tab_columns col&#xA;&#x9;INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER&#xA;&#x9;&#x9;AND col.table_name = t.table_name&#xA;&#x9;WHERE col.OWNER = '&quot; +  @[User::varSchemaName]  + &quot;'&#xA;&#x9;&#x9;AND col.table_name = 'DWH_&quot; + UPPER( @[User::varTableName])  +&quot;'&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -466,11 +551,11 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
 	INNER JOIN sys.all_tables t ON col.OWNER = t.OWNER
 		AND col.table_name = t.table_name
 	WHERE col.OWNER = 'FCUBSKM_PROD'
-		AND col.table_name = 'DWH_ACTB_RECON_MASTER'</DTS:VariableValue>
+		AND col.table_name = 'DWH_CYTM_RATES'</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{259CBCDF-04CD-49E9-A3FD-49A6F077897E}"
+      DTS:DTSID="{B350FFDA-D04C-4EF3-80B9-A1DDCBD829CE}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varApplicableDate">
@@ -479,7 +564,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{DD927E3B-EF79-4F92-ABFC-899D4933319C}"
+      DTS:DTSID="{6F3A3871-6992-41F6-8EC8-5A56F68E1104}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varApplicableDatekey">
@@ -488,7 +573,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{11ABB7EF-EB6B-4E5D-89B3-A53711B27AB6}"
+      DTS:DTSID="{A58842F6-62F7-4DCE-9812-43F62FAF5D0F}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varApplicationName">
@@ -497,7 +582,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{82FE937E-BC22-4938-913A-8E258B8CCCA0}"
+      DTS:DTSID="{C733F5C9-AEB2-4E51-ADD2-F9E0C8FED999}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varTnsOrServerName]"
       DTS:IncludeInDebugDump="2345"
@@ -508,16 +593,16 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{2E1B2677-18A4-4BAB-8074-D72DAFA3FE3D}"
+      DTS:DTSID="{51E6C89D-DE5C-4DB1-84E1-F5E57013AED9}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionPassword">
       <DTS:VariableValue
-        DTS:DataType="8">KIu76#45#90YmnhG</DTS:VariableValue>
+        DTS:DataType="8">UyThf#6#7TYnhg</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{6F10D8F3-B6E2-47C5-98EF-79D01EF6FA99}"
+      DTS:DTSID="{46BC876F-3165-4093-93EB-0DFFA7A2D080}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varConnectionString">
@@ -527,7 +612,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{93B284FF-2790-436D-A3B5-8E0B996BDF77}"
+      DTS:DTSID="{D6B46610-189F-4A94-AE0F-A05AFC367315}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varCountryCode">
@@ -536,7 +621,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{66B4A7B0-0F32-4763-8283-565F0776DAC2}"
+      DTS:DTSID="{C70FA43D-5D8A-4A88-B398-2E9A6822E88F}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDayNumber">
@@ -545,40 +630,40 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{E5C680AF-B713-40EF-8BFC-1E95D0E979C8}"
+      DTS:DTSID="{CF6F887C-0B27-42B9-9B72-C1C486CCFDFE}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varLandingPath] +   @[User::varApplicationName] + &quot;\\&quot; + @[User::varTableName] + &quot;\\&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileDirectory">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\actb_recon_master\</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\cytm_rates\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{02B6D194-5325-4812-BE4E-5DBC4448C92D}"
+      DTS:DTSID="{B95CE2B1-A486-4EBF-BEDB-8252ACD28D76}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varTableName] + &quot;_&quot; +  @[User::varYearNumber]  + &quot;_&quot; +  @[User::varMonthNumber] + &quot;_&quot; +  @[User::varDayNumber] + &quot;_&quot; + @[User::varCountryCode]  +  @[User::varFileExtension]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileName">
       <DTS:VariableValue
-        DTS:DataType="8">actb_recon_master_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">cytm_rates_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{560FCE83-CBB9-452E-A842-CA62D4C857C9}"
+      DTS:DTSID="{6C9F5808-BE17-4D14-B36F-AC850C9096C2}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varLandingPath] +   @[User::varApplicationName] + &quot;\\&quot; + @[User::varTableName] + &quot;\\&quot; +  @[User::varDestinationFileName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\actb_recon_master\actb_recon_master_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\cytm_rates\cytm_rates_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{171633E0-4658-4D78-8183-A6FB0D35EAAB}"
+      DTS:DTSID="{F48680ED-3161-451A-ABDE-E16FE7DAB983}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFileExecStatus">
@@ -587,7 +672,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{80DB2120-3741-492F-AC3C-1C2AB1AA0C7B}"
+      DTS:DTSID="{136701DD-6F98-4598-98D7-C3C4F9A6D2BB}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFileExtension">
@@ -596,18 +681,18 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{A6601090-2B19-4C93-B9E8-14B8FA28BD2E}"
+      DTS:DTSID="{3B60BDE6-BEEC-40B5-B993-E2D8DD04732B}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;D:\\Development\\rawdatastore\\&quot; +   @[User::varApplicationName] + &quot;\\&quot; + @[User::varTableName] + &quot;\\&quot; + @[User::varDestinationFileName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFinalFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\actb_recon_master\actb_recon_master_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\cytm_rates\cytm_rates_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{4C62732E-8008-4567-8569-5EE8FF84D980}"
+      DTS:DTSID="{8B33C6D8-7FCC-461E-B012-393E64A37E9E}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;D:\\Development\\rawdatastore\\&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -618,7 +703,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{4B87BC8B-685A-47FF-827D-6DB94EF167E3}"
+      DTS:DTSID="{2FA428EF-A3AE-4B45-A310-14782E28FECB}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varLoadDate">
@@ -627,18 +712,18 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{712EDE78-9B67-4025-8F68-DC23E9467479}"
+      DTS:DTSID="{6660D0E4-3C9E-4755-94D0-FB6E1E76CF71}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varDestinationFileDirectory] +  @[User::varTableName] + &quot;_table_info.csv&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varMetadataPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\actb_recon_master\actb_recon_master_table_info.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\dummy\cytm_rates\cytm_rates_table_info.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C81337BC-9484-4CC7-9776-7175C9EE0511}"
+      DTS:DTSID="{6CF36EDD-3630-48EE-A62C-D62D389F5309}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varMonthNumber">
@@ -647,7 +732,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{29125A8D-0777-4501-9633-DFD007A2D7A1}"
+      DTS:DTSID="{AC12E53B-AF38-48F8-9616-567D2349D6A6}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varPackageMetadata">
@@ -665,7 +750,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{09E2C7C1-0BD7-416F-B3D4-F0855734941B}"
+      DTS:DTSID="{DFC6F485-AB7E-4C30-9772-DAF1EB0A2A5D}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varRowCount">
@@ -674,7 +759,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{671B91DC-2785-4DAD-AF45-09CCA52C359A}"
+      DTS:DTSID="{2506CBC4-A472-4B6C-82DC-E5D2BF2B8329}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSchemaName">
@@ -683,7 +768,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{9DE6F827-A41C-4A66-9207-D60E4B10F9B2}"
+      DTS:DTSID="{327A1543-9F25-4C86-86FC-3B98B2B46CA4}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSchemaOrUserName">
@@ -692,29 +777,29 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{56A0C55E-823B-4EB3-93F8-2DC89C5F4860}"
+      DTS:DTSID="{C6C2B3D1-6F1B-4109-A94A-AFB0B90D11F3}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varTableName] + &quot;_&quot; + @[User::varCountryCode] +  @[User::varFileExtension]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSourceFileName">
       <DTS:VariableValue
-        DTS:DataType="8">actb_recon_master_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">cytm_rates_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{BAE21C65-803D-49E6-9835-69C1F0519DBD}"
+      DTS:DTSID="{A5BC517D-14D5-454C-8E39-92B2D31377C2}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varLandingPath] +  @[User::varSourceFileName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSourceFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\actb_recon_master_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\cytm_rates_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{A58FCEE4-C549-4379-9DFB-AD0CBAA353CA}"
+      DTS:DTSID="{B4A8EBB5-E9E4-447C-A95C-AB3352DFA80A}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varTableID">
@@ -723,18 +808,18 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{839BF15C-A184-4D40-8D3F-BA43BBC901B8}"
+      DTS:DTSID="{0512BBCE-26F1-4AE3-98AE-D93BF299843D}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[System::PackageName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varTableName">
       <DTS:VariableValue
-        DTS:DataType="8">actb_recon_master</DTS:VariableValue>
+        DTS:DataType="8">cytm_rates</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{4A15FECA-2D40-4A64-B8BB-FAEFD3D0C509}"
+      DTS:DTSID="{600C2A1E-91C0-467B-B5C0-BE319F6222FF}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varTnsOrServerName">
@@ -743,7 +828,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{ADAC1DBB-92AE-4C2B-B58E-C232F555B6AB}"
+      DTS:DTSID="{86AD4BF3-2B60-438F-99B1-1730CE2CF082}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varYearNumber">
@@ -756,14 +841,14 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
       DTS:refId="Package\Foreach Loop Container"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{0C6C6E82-0EB6-4BB9-A9B0-62B5A774DB7C}"
+      DTS:DTSID="{D7ED2057-149B-4D1A-971C-71C717DE4E75}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Foreach Loop Container">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachADOEnumerator"
-        DTS:DTSID="{3181D566-1083-4E27-B0E9-7EB5E73A2ED8}"
-        DTS:ObjectName="{3181D566-1083-4E27-B0E9-7EB5E73A2ED8}">
+        DTS:DTSID="{280F3695-35D3-489A-A57B-B865B79EDC5F}"
+        DTS:ObjectName="{280F3695-35D3-489A-A57B-B865B79EDC5F}">
         <DTS:ObjectData>
           <FEEADO
             EnumType="EnumerateAllRows"
@@ -776,7 +861,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
           DTS:refId="Package\Foreach Loop Container\data load"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Sequence Container"
-          DTS:DTSID="{74DD30EF-54A6-443B-8A85-7077A115286E}"
+          DTS:DTSID="{8D35864A-9500-4AAA-A7DB-0F9BD62B5F56}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
           DTS:ObjectName="data load">
@@ -786,7 +871,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
               DTS:refId="Package\Foreach Loop Container\data load\check file execution status"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Execute SQL Task"
-              DTS:DTSID="{F983B37F-F223-4498-B9F3-4AD6EE8034E2}"
+              DTS:DTSID="{E5E3FA17-A159-4A12-AD7B-6EC46A5FFCB4}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="check file execution status"
@@ -795,7 +880,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{0B40F252-191E-44A9-B543-94B74D62A699}"
+                  SQLTask:Connection="{2032D873-FEB8-45B1-8F0E-0A1D25408295}"
                   SQLTask:BypassPrepare="False"
                   SQLTask:SqlStmtSourceType="Variable"
                   SQLTask:SqlStatementSource="User::scrCheckFileStatus"
@@ -810,7 +895,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
               DTS:refId="Package\Foreach Loop Container\data load\create directory if not exist"
               DTS:CreationName="Microsoft.FileSystemTask"
               DTS:Description="File System Task"
-              DTS:DTSID="{8D9D8195-B787-4EBD-A265-32A0DB7B6F14}"
+              DTS:DTSID="{D0734205-FE8D-4352-B99E-143312CF8E21}"
               DTS:ExecutableType="Microsoft.FileSystemTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="create directory if not exist"
@@ -829,7 +914,7 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
               DTS:refId="Package\Foreach Loop Container\data load\load data"
               DTS:CreationName="Microsoft.Pipeline"
               DTS:Description="Data Flow Task"
-              DTS:DTSID="{DEE4F062-54EC-40EE-8875-A44CD38C0CB1}"
+              DTS:DTSID="{5D526971-408B-4A56-BF12-B46DAECD7C9C}"
               DTS:ExecutableType="Microsoft.Pipeline"
               DTS:LocaleID="-1"
               DTS:ObjectName="load data"
@@ -986,8 +1071,8 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
                       <connections>
                         <connection
                           refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Connections[FlatFileConnection]"
-                          connectionManagerID="Package.ConnectionManagers[actb_recon_master]"
-                          connectionManagerRefId="Package.ConnectionManagers[actb_recon_master]"
+                          connectionManagerID="Package.ConnectionManagers[cytm_rates]"
+                          connectionManagerRefId="Package.ConnectionManagers[cytm_rates]"
                           name="FlatFileConnection" />
                       </connections>
                       <inputs>
@@ -1003,76 +1088,142 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
                               externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DEXEC_DATE]"
                               lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[DEXEC_DATE]" />
                             <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[BRANCH]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[BRANCH_CODE]"
                               cachedDataType="wstr"
                               cachedLength="3"
-                              cachedName="BRANCH"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BRANCH]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BRANCH]" />
+                              cachedName="BRANCH_CODE"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BRANCH_CODE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BRANCH_CODE]" />
                             <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[ACCOUNT]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="ACCOUNT"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ACCOUNT]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[ACCOUNT]" />
-                            <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[CCY]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[CCY1]"
                               cachedDataType="wstr"
                               cachedLength="3"
-                              cachedName="CCY"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CCY]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[CCY]" />
+                              cachedName="CCY1"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CCY1]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[CCY1]" />
                             <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[RECONNO]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[CCY2]"
                               cachedDataType="wstr"
-                              cachedLength="16"
-                              cachedName="RECONNO"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RECONNO]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RECONNO]" />
+                              cachedLength="3"
+                              cachedName="CCY2"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CCY2]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[CCY2]" />
                             <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[REF_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[RATE_TYPE]"
                               cachedDataType="wstr"
-                              cachedLength="16"
-                              cachedName="REF_NO"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[REF_NO]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[REF_NO]" />
+                              cachedLength="8"
+                              cachedName="RATE_TYPE"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RATE_TYPE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RATE_TYPE]" />
                             <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[EVENT_SEQ_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[MID_RATE]"
+                              cachedDataType="numeric"
+                              cachedName="MID_RATE"
+                              cachedPrecision="24"
+                              cachedScale="12"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MID_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[MID_RATE]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[BUY_SPREAD]"
                               cachedDataType="wstr"
                               cachedLength="38"
-                              cachedName="EVENT_SEQ_NO"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EVENT_SEQ_NO]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[EVENT_SEQ_NO]" />
+                              cachedName="BUY_SPREAD"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BUY_SPREAD]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BUY_SPREAD]" />
                             <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[AMOUNT]"
-                              cachedDataType="numeric"
-                              cachedName="AMOUNT"
-                              cachedPrecision="22"
-                              cachedScale="3"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AMOUNT]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[AMOUNT]" />
-                            <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[AMOUNT_TO_RECON]"
-                              cachedDataType="numeric"
-                              cachedName="AMOUNT_TO_RECON"
-                              cachedPrecision="22"
-                              cachedScale="3"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AMOUNT_TO_RECON]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[AMOUNT_TO_RECON]" />
-                            <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[ENTRYDATE]"
-                              cachedDataType="dbTimeStamp"
-                              cachedName="ENTRYDATE"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ENTRYDATE]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[ENTRYDATE]" />
-                            <inputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[STATUS]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[SALE_SPREAD]"
                               cachedDataType="wstr"
-                              cachedLength="4"
-                              cachedName="STATUS"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[STATUS]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[STATUS]" />
+                              cachedLength="38"
+                              cachedName="SALE_SPREAD"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SALE_SPREAD]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[SALE_SPREAD]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[BUY_RATE]"
+                              cachedDataType="numeric"
+                              cachedName="BUY_RATE"
+                              cachedPrecision="24"
+                              cachedScale="12"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BUY_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BUY_RATE]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[SALE_RATE]"
+                              cachedDataType="numeric"
+                              cachedName="SALE_RATE"
+                              cachedPrecision="24"
+                              cachedScale="12"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SALE_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[SALE_RATE]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[UNAUTH_MID_RATE]"
+                              cachedDataType="numeric"
+                              cachedName="UNAUTH_MID_RATE"
+                              cachedPrecision="24"
+                              cachedScale="12"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_MID_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_MID_RATE]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[UNAUTH_BUY_SPREAD]"
+                              cachedDataType="wstr"
+                              cachedLength="38"
+                              cachedName="UNAUTH_BUY_SPREAD"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_BUY_SPREAD]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_BUY_SPREAD]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[UNAUTH_SALE_SPREAD]"
+                              cachedDataType="wstr"
+                              cachedLength="38"
+                              cachedName="UNAUTH_SALE_SPREAD"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_SALE_SPREAD]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_SALE_SPREAD]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[UNAUTH_BUY_RATE]"
+                              cachedDataType="numeric"
+                              cachedName="UNAUTH_BUY_RATE"
+                              cachedPrecision="24"
+                              cachedScale="12"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_BUY_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_BUY_RATE]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[UNAUTH_SALE_RATE]"
+                              cachedDataType="numeric"
+                              cachedName="UNAUTH_SALE_RATE"
+                              cachedPrecision="24"
+                              cachedScale="12"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_SALE_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_SALE_RATE]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[INT_AUTH_STAT]"
+                              cachedDataType="wstr"
+                              cachedLength="1"
+                              cachedName="INT_AUTH_STAT"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[INT_AUTH_STAT]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[INT_AUTH_STAT]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[RATE_DATE]"
+                              cachedDataType="dbTimeStamp"
+                              cachedName="RATE_DATE"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RATE_DATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RATE_DATE]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[RATE_SERIAL]"
+                              cachedDataType="numeric"
+                              cachedName="RATE_SERIAL"
+                              cachedPrecision="4"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RATE_SERIAL]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RATE_SERIAL]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[UNAUTH_RATE_DATE]"
+                              cachedDataType="dbTimeStamp"
+                              cachedName="UNAUTH_RATE_DATE"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_RATE_DATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_RATE_DATE]" />
+                            <inputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[UNAUTH_RATE_SERIAL]"
+                              cachedDataType="numeric"
+                              cachedName="UNAUTH_RATE_SERIAL"
+                              cachedPrecision="4"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_RATE_SERIAL]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_RATE_SERIAL]" />
                             <inputColumn
                               refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].Columns[applicable_datekey]"
                               cachedDataType="wstr"
@@ -1102,56 +1253,104 @@ where table_name = 'DWH_ACTB_RECON_MASTER' and OWNER &lt;&gt; 'BICCSIT'</DTS:Var
                               dataType="dbTimeStamp"
                               name="DEXEC_DATE" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BRANCH]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BRANCH_CODE]"
                               dataType="wstr"
                               length="3"
-                              name="BRANCH" />
+                              name="BRANCH_CODE" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ACCOUNT]"
-                              dataType="wstr"
-                              length="20"
-                              name="ACCOUNT" />
-                            <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CCY]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CCY1]"
                               dataType="wstr"
                               length="3"
-                              name="CCY" />
+                              name="CCY1" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RECONNO]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CCY2]"
                               dataType="wstr"
-                              length="16"
-                              name="RECONNO" />
+                              length="3"
+                              name="CCY2" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[REF_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RATE_TYPE]"
                               dataType="wstr"
-                              length="16"
-                              name="REF_NO" />
+                              length="8"
+                              name="RATE_TYPE" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EVENT_SEQ_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MID_RATE]"
+                              dataType="numeric"
+                              name="MID_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BUY_SPREAD]"
                               dataType="wstr"
                               length="38"
-                              name="EVENT_SEQ_NO" />
+                              name="BUY_SPREAD" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AMOUNT]"
-                              dataType="numeric"
-                              name="AMOUNT"
-                              precision="22"
-                              scale="3" />
-                            <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AMOUNT_TO_RECON]"
-                              dataType="numeric"
-                              name="AMOUNT_TO_RECON"
-                              precision="22"
-                              scale="3" />
-                            <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ENTRYDATE]"
-                              dataType="dbTimeStamp"
-                              name="ENTRYDATE" />
-                            <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[STATUS]"
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SALE_SPREAD]"
                               dataType="wstr"
-                              length="4"
-                              name="STATUS" />
+                              length="38"
+                              name="SALE_SPREAD" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BUY_RATE]"
+                              dataType="numeric"
+                              name="BUY_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SALE_RATE]"
+                              dataType="numeric"
+                              name="SALE_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_MID_RATE]"
+                              dataType="numeric"
+                              name="UNAUTH_MID_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_BUY_SPREAD]"
+                              dataType="wstr"
+                              length="38"
+                              name="UNAUTH_BUY_SPREAD" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_SALE_SPREAD]"
+                              dataType="wstr"
+                              length="38"
+                              name="UNAUTH_SALE_SPREAD" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_BUY_RATE]"
+                              dataType="numeric"
+                              name="UNAUTH_BUY_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_SALE_RATE]"
+                              dataType="numeric"
+                              name="UNAUTH_SALE_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[INT_AUTH_STAT]"
+                              dataType="wstr"
+                              length="1"
+                              name="INT_AUTH_STAT" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RATE_DATE]"
+                              dataType="dbTimeStamp"
+                              name="RATE_DATE" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RATE_SERIAL]"
+                              dataType="numeric"
+                              name="RATE_SERIAL"
+                              precision="4" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_RATE_DATE]"
+                              dataType="dbTimeStamp"
+                              name="UNAUTH_RATE_DATE" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[UNAUTH_RATE_SERIAL]"
+                              dataType="numeric"
+                              name="UNAUTH_RATE_SERIAL"
+                              precision="4" />
                             <externalMetadataColumn
                               refId="Package\Foreach Loop Container\data load\load data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[applicable_datekey]"
                               dataType="wstr"
@@ -1367,105 +1566,198 @@ FROM            DWH_STTM_CUSTOMER</property>
                               name="DEXEC_DATE"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BRANCH]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BRANCH_CODE]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[BRANCH]"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[BRANCH_CODE]"
                               length="3"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BRANCH]"
-                              name="BRANCH"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BRANCH_CODE]"
+                              name="BRANCH_CODE"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[ACCOUNT]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[CCY1]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[ACCOUNT]"
-                              length="20"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[ACCOUNT]"
-                              name="ACCOUNT"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[CCY]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[CCY]"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[CCY1]"
                               length="3"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[CCY]"
-                              name="CCY"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[CCY1]"
+                              name="CCY1"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RECONNO]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[CCY2]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[RECONNO]"
-                              length="16"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RECONNO]"
-                              name="RECONNO"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[CCY2]"
+                              length="3"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[CCY2]"
+                              name="CCY2"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[REF_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RATE_TYPE]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[REF_NO]"
-                              length="16"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[REF_NO]"
-                              name="REF_NO"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[RATE_TYPE]"
+                              length="8"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RATE_TYPE]"
+                              name="RATE_TYPE"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[EVENT_SEQ_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[MID_RATE]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[MID_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[MID_RATE]"
+                              name="MID_RATE"
+                              precision="24"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BUY_SPREAD]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[EVENT_SEQ_NO]"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[BUY_SPREAD]"
                               length="38"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[EVENT_SEQ_NO]"
-                              name="EVENT_SEQ_NO"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BUY_SPREAD]"
+                              name="BUY_SPREAD"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[AMOUNT]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[SALE_SPREAD]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[SALE_SPREAD]"
+                              length="38"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[SALE_SPREAD]"
+                              name="SALE_SPREAD"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BUY_RATE]"
                               dataType="numeric"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[AMOUNT]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[AMOUNT]"
-                              name="AMOUNT"
-                              precision="22"
-                              scale="3"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[BUY_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[BUY_RATE]"
+                              name="BUY_RATE"
+                              precision="24"
+                              scale="12"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[AMOUNT_TO_RECON]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[SALE_RATE]"
                               dataType="numeric"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[AMOUNT_TO_RECON]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[AMOUNT_TO_RECON]"
-                              name="AMOUNT_TO_RECON"
-                              precision="22"
-                              scale="3"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[SALE_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[SALE_RATE]"
+                              name="SALE_RATE"
+                              precision="24"
+                              scale="12"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[ENTRYDATE]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_MID_RATE]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_MID_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_MID_RATE]"
+                              name="UNAUTH_MID_RATE"
+                              precision="24"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_BUY_SPREAD]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_BUY_SPREAD]"
+                              length="38"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_BUY_SPREAD]"
+                              name="UNAUTH_BUY_SPREAD"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_SALE_SPREAD]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_SALE_SPREAD]"
+                              length="38"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_SALE_SPREAD]"
+                              name="UNAUTH_SALE_SPREAD"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_BUY_RATE]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_BUY_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_BUY_RATE]"
+                              name="UNAUTH_BUY_RATE"
+                              precision="24"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_SALE_RATE]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_SALE_RATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_SALE_RATE]"
+                              name="UNAUTH_SALE_RATE"
+                              precision="24"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[INT_AUTH_STAT]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[INT_AUTH_STAT]"
+                              length="1"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[INT_AUTH_STAT]"
+                              name="INT_AUTH_STAT"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RATE_DATE]"
                               dataType="dbTimeStamp"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[ENTRYDATE]"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[ENTRYDATE]"
-                              name="ENTRYDATE"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[RATE_DATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RATE_DATE]"
+                              name="RATE_DATE"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[STATUS]"
-                              dataType="wstr"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RATE_SERIAL]"
+                              dataType="numeric"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[STATUS]"
-                              length="4"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[STATUS]"
-                              name="STATUS"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[RATE_SERIAL]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[RATE_SERIAL]"
+                              name="RATE_SERIAL"
+                              precision="4"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_RATE_DATE]"
+                              dataType="dbTimeStamp"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_RATE_DATE]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_RATE_DATE]"
+                              name="UNAUTH_RATE_DATE"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_RATE_SERIAL]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_RATE_SERIAL]"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].Columns[UNAUTH_RATE_SERIAL]"
+                              name="UNAUTH_RATE_SERIAL"
+                              precision="4"
                               truncationRowDisposition="FailComponent" />
                           </outputColumns>
                           <externalMetadataColumns
@@ -1475,56 +1767,104 @@ FROM            DWH_STTM_CUSTOMER</property>
                               dataType="dbTimeStamp"
                               name="DEXEC_DATE" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[BRANCH]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[BRANCH_CODE]"
                               dataType="wstr"
                               length="3"
-                              name="BRANCH" />
+                              name="BRANCH_CODE" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[ACCOUNT]"
-                              dataType="wstr"
-                              length="20"
-                              name="ACCOUNT" />
-                            <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[CCY]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[CCY1]"
                               dataType="wstr"
                               length="3"
-                              name="CCY" />
+                              name="CCY1" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[RECONNO]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[CCY2]"
                               dataType="wstr"
-                              length="16"
-                              name="RECONNO" />
+                              length="3"
+                              name="CCY2" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[REF_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[RATE_TYPE]"
                               dataType="wstr"
-                              length="16"
-                              name="REF_NO" />
+                              length="8"
+                              name="RATE_TYPE" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[EVENT_SEQ_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[MID_RATE]"
+                              dataType="numeric"
+                              name="MID_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[BUY_SPREAD]"
                               dataType="wstr"
                               length="38"
-                              name="EVENT_SEQ_NO" />
+                              name="BUY_SPREAD" />
                             <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[AMOUNT]"
-                              dataType="numeric"
-                              name="AMOUNT"
-                              precision="22"
-                              scale="3" />
-                            <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[AMOUNT_TO_RECON]"
-                              dataType="numeric"
-                              name="AMOUNT_TO_RECON"
-                              precision="22"
-                              scale="3" />
-                            <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[ENTRYDATE]"
-                              dataType="dbTimeStamp"
-                              name="ENTRYDATE" />
-                            <externalMetadataColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[STATUS]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[SALE_SPREAD]"
                               dataType="wstr"
-                              length="4"
-                              name="STATUS" />
+                              length="38"
+                              name="SALE_SPREAD" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[BUY_RATE]"
+                              dataType="numeric"
+                              name="BUY_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[SALE_RATE]"
+                              dataType="numeric"
+                              name="SALE_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_MID_RATE]"
+                              dataType="numeric"
+                              name="UNAUTH_MID_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_BUY_SPREAD]"
+                              dataType="wstr"
+                              length="38"
+                              name="UNAUTH_BUY_SPREAD" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_SALE_SPREAD]"
+                              dataType="wstr"
+                              length="38"
+                              name="UNAUTH_SALE_SPREAD" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_BUY_RATE]"
+                              dataType="numeric"
+                              name="UNAUTH_BUY_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_SALE_RATE]"
+                              dataType="numeric"
+                              name="UNAUTH_SALE_RATE"
+                              precision="24"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[INT_AUTH_STAT]"
+                              dataType="wstr"
+                              length="1"
+                              name="INT_AUTH_STAT" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[RATE_DATE]"
+                              dataType="dbTimeStamp"
+                              name="RATE_DATE" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[RATE_SERIAL]"
+                              dataType="numeric"
+                              name="RATE_SERIAL"
+                              precision="4" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_RATE_DATE]"
+                              dataType="dbTimeStamp"
+                              name="UNAUTH_RATE_DATE" />
+                            <externalMetadataColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Output].ExternalColumns[UNAUTH_RATE_SERIAL]"
+                              dataType="numeric"
+                              name="UNAUTH_RATE_SERIAL"
+                              precision="4" />
                           </externalMetadataColumns>
                         </output>
                         <output
@@ -1538,66 +1878,123 @@ FROM            DWH_STTM_CUSTOMER</property>
                               lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[DEXEC_DATE]"
                               name="DEXEC_DATE" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[BRANCH]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[BRANCH_CODE]"
                               dataType="wstr"
                               length="3"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[BRANCH]"
-                              name="BRANCH" />
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[BRANCH_CODE]"
+                              name="BRANCH_CODE" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[ACCOUNT]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[ACCOUNT]"
-                              name="ACCOUNT" />
-                            <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[CCY]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[CCY1]"
                               dataType="wstr"
                               length="3"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[CCY]"
-                              name="CCY" />
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[CCY1]"
+                              name="CCY1" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[RECONNO]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[CCY2]"
                               dataType="wstr"
-                              length="16"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[RECONNO]"
-                              name="RECONNO" />
+                              length="3"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[CCY2]"
+                              name="CCY2" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[REF_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[RATE_TYPE]"
                               dataType="wstr"
-                              length="16"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[REF_NO]"
-                              name="REF_NO" />
+                              length="8"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[RATE_TYPE]"
+                              name="RATE_TYPE" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[EVENT_SEQ_NO]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[MID_RATE]"
+                              dataType="numeric"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[MID_RATE]"
+                              name="MID_RATE"
+                              precision="24"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[BUY_SPREAD]"
                               dataType="wstr"
                               length="38"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[EVENT_SEQ_NO]"
-                              name="EVENT_SEQ_NO" />
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[BUY_SPREAD]"
+                              name="BUY_SPREAD" />
                             <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[AMOUNT]"
-                              dataType="numeric"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[AMOUNT]"
-                              name="AMOUNT"
-                              precision="22"
-                              scale="3" />
-                            <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[AMOUNT_TO_RECON]"
-                              dataType="numeric"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[AMOUNT_TO_RECON]"
-                              name="AMOUNT_TO_RECON"
-                              precision="22"
-                              scale="3" />
-                            <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[ENTRYDATE]"
-                              dataType="dbTimeStamp"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[ENTRYDATE]"
-                              name="ENTRYDATE" />
-                            <outputColumn
-                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[STATUS]"
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[SALE_SPREAD]"
                               dataType="wstr"
-                              length="4"
-                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[STATUS]"
-                              name="STATUS" />
+                              length="38"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[SALE_SPREAD]"
+                              name="SALE_SPREAD" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[BUY_RATE]"
+                              dataType="numeric"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[BUY_RATE]"
+                              name="BUY_RATE"
+                              precision="24"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[SALE_RATE]"
+                              dataType="numeric"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[SALE_RATE]"
+                              name="SALE_RATE"
+                              precision="24"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_MID_RATE]"
+                              dataType="numeric"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_MID_RATE]"
+                              name="UNAUTH_MID_RATE"
+                              precision="24"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_BUY_SPREAD]"
+                              dataType="wstr"
+                              length="38"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_BUY_SPREAD]"
+                              name="UNAUTH_BUY_SPREAD" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_SALE_SPREAD]"
+                              dataType="wstr"
+                              length="38"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_SALE_SPREAD]"
+                              name="UNAUTH_SALE_SPREAD" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_BUY_RATE]"
+                              dataType="numeric"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_BUY_RATE]"
+                              name="UNAUTH_BUY_RATE"
+                              precision="24"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_SALE_RATE]"
+                              dataType="numeric"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_SALE_RATE]"
+                              name="UNAUTH_SALE_RATE"
+                              precision="24"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[INT_AUTH_STAT]"
+                              dataType="wstr"
+                              length="1"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[INT_AUTH_STAT]"
+                              name="INT_AUTH_STAT" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[RATE_DATE]"
+                              dataType="dbTimeStamp"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[RATE_DATE]"
+                              name="RATE_DATE" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[RATE_SERIAL]"
+                              dataType="numeric"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[RATE_SERIAL]"
+                              name="RATE_SERIAL"
+                              precision="4" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_RATE_DATE]"
+                              dataType="dbTimeStamp"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_RATE_DATE]"
+                              name="UNAUTH_RATE_DATE" />
+                            <outputColumn
+                              refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_RATE_SERIAL]"
+                              dataType="numeric"
+                              lineageId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[UNAUTH_RATE_SERIAL]"
+                              name="UNAUTH_RATE_SERIAL"
+                              precision="4" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\data load\load data\load data from source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                               dataType="i4"
@@ -1669,7 +2066,7 @@ FROM            DWH_STTM_CUSTOMER</property>
               DTS:refId="Package\Foreach Loop Container\data load\Move File"
               DTS:CreationName="Microsoft.FileSystemTask"
               DTS:Description="move file to final destination on local folder"
-              DTS:DTSID="{B543111D-E93F-4A17-899E-3A30BB5EE9BA}"
+              DTS:DTSID="{C400DBDC-4A86-4586-9D7A-29F4F0250DEC}"
               DTS:ExecutableType="Microsoft.FileSystemTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Move File"
@@ -1690,7 +2087,7 @@ FROM            DWH_STTM_CUSTOMER</property>
               DTS:refId="Package\Foreach Loop Container\data load\update or insert execution registry"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Execute SQL Task"
-              DTS:DTSID="{170432D8-9D20-4BF3-9834-30C1870E20C7}"
+              DTS:DTSID="{88A754DE-93AC-44C1-8B6E-235FB3077FB2}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="update or insert execution registry"
@@ -1699,7 +2096,7 @@ FROM            DWH_STTM_CUSTOMER</property>
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{0B40F252-191E-44A9-B543-94B74D62A699}"
+                  SQLTask:Connection="{2032D873-FEB8-45B1-8F0E-0A1D25408295}"
                   SQLTask:BypassPrepare="False"
                   SQLTask:SqlStmtSourceType="Variable"
                   SQLTask:SqlStatementSource="User::prcRegisterExecution" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
@@ -1709,7 +2106,7 @@ FROM            DWH_STTM_CUSTOMER</property>
               DTS:refId="Package\Foreach Loop Container\data load\update registry upon completion"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Execute SQL Task"
-              DTS:DTSID="{C5A957C6-5766-4966-B53C-B6FAD5B99ACA}"
+              DTS:DTSID="{0E706355-845A-4778-AEF1-67D25DAFBE43}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="update registry upon completion"
@@ -1718,7 +2115,7 @@ FROM            DWH_STTM_CUSTOMER</property>
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{0B40F252-191E-44A9-B543-94B74D62A699}"
+                  SQLTask:Connection="{2032D873-FEB8-45B1-8F0E-0A1D25408295}"
                   SQLTask:BypassPrepare="False"
                   SQLTask:SqlStmtSourceType="Variable"
                   SQLTask:SqlStatementSource="User::prcUpdateRegistry" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
@@ -1729,7 +2126,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint]"
               DTS:CreationName=""
-              DTS:DTSID="{E5BA745C-9C7D-40C3-8D6E-BE254ADAC398}"
+              DTS:DTSID="{C254734E-8AEE-4942-81EF-B657F4301D28}"
               DTS:EvalOp="1"
               DTS:Expression="@[User::varFileExecStatus] ==0"
               DTS:From="Package\Foreach Loop Container\data load\check file execution status"
@@ -1739,7 +2136,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint 1]"
               DTS:CreationName=""
-              DTS:DTSID="{8A54CEE2-AAAB-4881-9637-316CDCC0290E}"
+              DTS:DTSID="{4A6758E6-CA0F-4782-A6C9-D6368F00FCA7}"
               DTS:From="Package\Foreach Loop Container\data load\update or insert execution registry"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 1"
@@ -1747,7 +2144,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint 2]"
               DTS:CreationName=""
-              DTS:DTSID="{78E7CEB1-7CF6-4DF8-A42F-5890D0B8A300}"
+              DTS:DTSID="{19AF13CE-EE25-4F2C-B7DB-70CEDDA98CE3}"
               DTS:From="Package\Foreach Loop Container\data load\load data"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 2"
@@ -1755,7 +2152,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint 3]"
               DTS:CreationName=""
-              DTS:DTSID="{F01D7D97-0B97-46FE-B7D2-D71C96C53A8D}"
+              DTS:DTSID="{9976B311-E78F-4C77-8E0F-F8DA00F47602}"
               DTS:From="Package\Foreach Loop Container\data load\Move File"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 3"
@@ -1763,7 +2160,7 @@ FROM            DWH_STTM_CUSTOMER</property>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\data load.PrecedenceConstraints[Constraint 4]"
               DTS:CreationName=""
-              DTS:DTSID="{6B03393C-2670-4B0C-8A84-65801FA74CB9}"
+              DTS:DTSID="{09F809F7-6F96-4364-8994-F335C6B2CCC1}"
               DTS:From="Package\Foreach Loop Container\data load\create directory if not exist"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 4"
@@ -1774,7 +2171,7 @@ FROM            DWH_STTM_CUSTOMER</property>
           DTS:refId="Package\Foreach Loop Container\get applicable date"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{D057E151-9FBE-4DF5-A4FC-8A6530D8A7CD}"
+          DTS:DTSID="{19C12EEA-7432-45A0-95D0-7DAB245FBE01}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="get applicable date"
@@ -1783,7 +2180,7 @@ FROM            DWH_STTM_CUSTOMER</property>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{22715A13-09A1-4627-8FCA-944F19739C1C}"
+              SQLTask:Connection="{F6A3D593-3E66-4F7E-B4F9-0E54F0D8547F}"
               SQLTask:BypassPrepare="False"
               SQLTask:SqlStmtSourceType="Variable"
               SQLTask:SqlStatementSource="User::scrApplicableDate"
@@ -1810,7 +2207,7 @@ FROM            DWH_STTM_CUSTOMER</property>
           DTS:refId="Package\Foreach Loop Container\get source schema name"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{81989471-3741-4ABC-A126-2A8448925069}"
+          DTS:DTSID="{832965EE-1C4B-4DD4-A6CA-5C38A44B12AF}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="get source schema name"
@@ -1819,7 +2216,7 @@ FROM            DWH_STTM_CUSTOMER</property>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{22715A13-09A1-4627-8FCA-944F19739C1C}"
+              SQLTask:Connection="{F6A3D593-3E66-4F7E-B4F9-0E54F0D8547F}"
               SQLTask:BypassPrepare="False"
               SQLTask:SqlStmtSourceType="Variable"
               SQLTask:SqlStatementSource="User::scrGetSourceSchemaName"
@@ -1835,7 +2232,7 @@ FROM            DWH_STTM_CUSTOMER</property>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{E7A6963A-9C18-4D5A-9A6C-DD83C617B63A}"
+          DTS:DTSID="{297B396F-82A5-4509-BE15-CC55BDAEB02D}"
           DTS:From="Package\Foreach Loop Container\get source schema name"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
@@ -1843,7 +2240,7 @@ FROM            DWH_STTM_CUSTOMER</property>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
-          DTS:DTSID="{1756549B-DBFC-4CEA-87BE-DDB556DC1C65}"
+          DTS:DTSID="{980D9203-5098-4690-85B6-77CAAF219B79}"
           DTS:EvalOp="1"
           DTS:Expression="LEN( @[User::varApplicableDate]) != 0"
           DTS:From="Package\Foreach Loop Container\get applicable date"
@@ -1854,56 +2251,56 @@ FROM            DWH_STTM_CUSTOMER</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{016FFB35-A147-43EB-817E-084422051E25}"
-          DTS:ObjectName="{016FFB35-A147-43EB-817E-084422051E25}"
+          DTS:DTSID="{50D32969-2F4B-453D-9FB7-5B28F0A83CF4}"
+          DTS:ObjectName="{50D32969-2F4B-453D-9FB7-5B28F0A83CF4}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varTableID" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{80E5B18B-02E7-46DC-83AF-4DE28D23779B}"
-          DTS:ObjectName="{80E5B18B-02E7-46DC-83AF-4DE28D23779B}"
+          DTS:DTSID="{6D29292B-B997-45E4-A32C-A614815083B1}"
+          DTS:ObjectName="{6D29292B-B997-45E4-A32C-A614815083B1}"
           DTS:ValueIndex="1"
           DTS:VariableName="User::varTableName" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{C1346065-6D90-4F9D-83B4-254EAAE6499B}"
-          DTS:ObjectName="{C1346065-6D90-4F9D-83B4-254EAAE6499B}"
+          DTS:DTSID="{ED63CE00-B78A-490C-A313-2DEEE31F175C}"
+          DTS:ObjectName="{ED63CE00-B78A-490C-A313-2DEEE31F175C}"
           DTS:ValueIndex="2"
           DTS:VariableName="User::varApplicationName" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{DC779F95-E959-4305-9946-C63F004B235D}"
-          DTS:ObjectName="{DC779F95-E959-4305-9946-C63F004B235D}"
+          DTS:DTSID="{7F6235C5-5695-412D-A61C-442975F89301}"
+          DTS:ObjectName="{7F6235C5-5695-412D-A61C-442975F89301}"
           DTS:ValueIndex="3"
           DTS:VariableName="User::varConnectionString" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{52429BBD-5A8F-49DD-B499-06D446CD2ACD}"
-          DTS:ObjectName="{52429BBD-5A8F-49DD-B499-06D446CD2ACD}"
+          DTS:DTSID="{D6E7CD14-89A6-4918-B9CF-DB94E394707A}"
+          DTS:ObjectName="{D6E7CD14-89A6-4918-B9CF-DB94E394707A}"
           DTS:ValueIndex="4"
           DTS:VariableName="User::varTnsOrServerName" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{92BA17DA-09DC-4333-9822-105E9AA4960F}"
-          DTS:ObjectName="{92BA17DA-09DC-4333-9822-105E9AA4960F}"
+          DTS:DTSID="{468C1776-38A1-4F10-A1B8-FDD31687EC62}"
+          DTS:ObjectName="{468C1776-38A1-4F10-A1B8-FDD31687EC62}"
           DTS:ValueIndex="5"
           DTS:VariableName="User::varSchemaOrUserName" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{D4232493-501F-492A-B105-2589C47653B0}"
-          DTS:ObjectName="{D4232493-501F-492A-B105-2589C47653B0}"
+          DTS:DTSID="{B8476AB3-A101-42CD-97EB-A78723C7B83B}"
+          DTS:ObjectName="{B8476AB3-A101-42CD-97EB-A78723C7B83B}"
           DTS:ValueIndex="6"
           DTS:VariableName="User::varCountryCode" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{E2FEFBB2-5D62-4733-ADD9-77D6A0BDC75D}"
-          DTS:ObjectName="{E2FEFBB2-5D62-4733-ADD9-77D6A0BDC75D}"
+          DTS:DTSID="{655E788D-EE92-4324-B5C7-EC3F6AA7BD2E}"
+          DTS:ObjectName="{655E788D-EE92-4324-B5C7-EC3F6AA7BD2E}"
           DTS:ValueIndex="7"
           DTS:VariableName="User::varConnectionPassword" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{3E0BED48-2534-424E-9209-83CE6826BF7D}"
-          DTS:ObjectName="{3E0BED48-2534-424E-9209-83CE6826BF7D}"
+          DTS:DTSID="{703EB937-09DE-45C8-8671-A87807AFBA62}"
+          DTS:ObjectName="{703EB937-09DE-45C8-8671-A87807AFBA62}"
           DTS:ValueIndex="8"
           DTS:VariableName="User::varLoadDate" />
       </DTS:ForEachVariableMappings>
@@ -1912,7 +2309,7 @@ FROM            DWH_STTM_CUSTOMER</property>
       DTS:refId="Package\get package meta data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{7EF202E3-EDEE-4595-A08A-D88B68DAB6B2}"
+      DTS:DTSID="{A31A1C84-0B47-4421-A044-9A5ABAB7E72B}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="get package meta data"
@@ -1921,7 +2318,7 @@ FROM            DWH_STTM_CUSTOMER</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{0B40F252-191E-44A9-B543-94B74D62A699}"
+          SQLTask:Connection="{2032D873-FEB8-45B1-8F0E-0A1D25408295}"
           SQLTask:BypassPrepare="False"
           SQLTask:SqlStmtSourceType="Variable"
           SQLTask:SqlStatementSource="User::prcGetPackageMetaData"
@@ -1936,7 +2333,7 @@ FROM            DWH_STTM_CUSTOMER</property>
       DTS:refId="Package\load meta data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{3b10ed47-3314-4079-9d2c-c5f1ed300c38}"
+      DTS:DTSID="{DF427E22-3111-4A73-95BB-3B89CB6E45C5}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="load meta data"
@@ -2423,7 +2820,7 @@ FROM            DWH_STTM_CUSTOMER</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{1FDE04CD-E2A8-441D-8703-ADB9423AE452}"
+      DTS:DTSID="{F2011255-FD03-45D4-ACD5-FC2043A5C7D9}"
       DTS:From="Package\get package meta data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -2431,7 +2828,7 @@ FROM            DWH_STTM_CUSTOMER</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{E6E9026A-2EFE-491B-A2CC-43774380ABAA}"
+      DTS:DTSID="{E6DC6C00-24A3-4518-8884-68672AE4A6C2}"
       DTS:From="Package\Foreach Loop Container"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -2672,7 +3069,7 @@ FROM            DWH_STTM_CUSTOMER</property>
         <NodeLayout
           Size="152,42"
           Id="Package\load meta data"
-          TopLeft="635,1220" />
+          TopLeft="509,1258" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="539.136363636364,106.090909090909">
@@ -2713,26 +3110,26 @@ FROM            DWH_STTM_CUSTOMER</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.5,42"
+              EndConnector="-115.5,80"
               Start="0,0"
-              End="10.5,34.5">
+              End="-115.5,72.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17" />
+                    End="0,36" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="4,21" />
+                    Point1="0,36"
+                    Point2="0,40"
+                    Point3="-4,40" />
                   <mssgle:LineSegment
-                    End="6.5,21" />
+                    End="-111.5,40" />
                   <mssgle:CubicBezierSegment
-                    Point1="6.5,21"
-                    Point2="10.5,21"
-                    Point3="10.5,25" />
+                    Point1="-111.5,40"
+                    Point2="-115.5,40"
+                    Point3="-115.5,44" />
                   <mssgle:LineSegment
-                    End="10.5,34.5" />
+                    End="-115.5,72.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2754,13 +3151,13 @@ FROM            DWH_STTM_CUSTOMER</property>
           Id="Package\Foreach Loop Container\data load\load data\load data from source"
           TopLeft="219,94" />
         <NodeLayout
-          Size="133,42"
-          Id="Package\Foreach Loop Container\data load\load data\Row Count"
-          TopLeft="440,265" />
-        <NodeLayout
           Size="158,42"
           Id="Package\Foreach Loop Container\data load\load data\Derived Column"
           TopLeft="331,176" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Foreach Loop Container\data load\load data\Row Count"
+          TopLeft="440,265" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\data load\load data.Paths[OLE DB Source Output]"
           TopLeft="311.5,136">
@@ -2832,16 +3229,16 @@ FROM            DWH_STTM_CUSTOMER</property>
         <NodeLayout
           Size="176,42"
           Id="Package\Foreach Loop Container\data load\load data\Flat File Destination"
-          TopLeft="473,354" />
+          TopLeft="530,354" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\data load\load data.Paths[Row Count Output 1]"
           TopLeft="506.5,307">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="54.5,47"
+              EndConnector="111.5,47"
               Start="0,0"
-              End="54.5,39.5">
+              End="111.5,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2852,13 +3249,13 @@ FROM            DWH_STTM_CUSTOMER</property>
                     Point2="0,23.5"
                     Point3="4,23.5" />
                   <mssgle:LineSegment
-                    End="50.5,23.5" />
+                    End="107.5,23.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="50.5,23.5"
-                    Point2="54.5,23.5"
-                    Point3="54.5,27.5" />
+                    Point1="107.5,23.5"
+                    Point2="111.5,23.5"
+                    Point3="111.5,27.5" />
                   <mssgle:LineSegment
-                    End="54.5,39.5" />
+                    End="111.5,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
