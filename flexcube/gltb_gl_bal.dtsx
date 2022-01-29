@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="gltb_gl_bal"
   DTS:PackageType="5"
-  DTS:VersionBuild="106"
-  DTS:VersionGUID="{FD4FCDE4-05CB-4C80-A73A-E11EC07627B1}">
+  DTS:VersionBuild="107"
+  DTS:VersionGUID="{4C3C76FF-BF2D-4D5D-B945-222039B5FC12}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -35,7 +35,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADBe/6HLhiyFGw1ZEKJcuSZGCOuf674i9cl9W3YSFO5lAAAAAAOgAAAAAIAACAAAADU/DV+v9CzlqsrG9msRaVkuoQSaChFjtqcXlW5iqkBDiAAAABx8eNerIKRPt6kIx/sQNQBfskdPCKIoRUnDSvOJtYVE0AAAABdGyg0k3PARh7f89+atxRZxjkxhkLNoTvztsZSzktXsJ1yu8j5xOUKqEaiOAaraOwc8/VRQgevnfyCEul+RLr1</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADIJUvWFVc6yyWwn68wNcYOXTCmZ/6gnEA8YHntwbxffAAAAAAOgAAAAAIAACAAAAASJV2Z6HANHve6MxDzfrdhfSAg9IwDgwO06JAQjQXAZiAAAAAPEPb/R+Re8BXY45tNGpLpYXBcy6uQbKpOpKGidSAecEAAAABdAMHGO6F8BZjaIOy7mFyzVoqIMaijEEdjZXMP47GubFl4aL+a1If1bi1s5adnaUOtnss+DEfTP7AEm8arQfjc</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -48,12 +48,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABddMy/clMfNt+QjY7rEcZTD2PrHxR/B+sDNiY0oi4mCAAAAAAOgAAAAAIAACAAAAAz/nx0IDu9pO+DklSrboOuPZE1n9q5iwXxbj/Nf87rhCAAAACnYmVY/FRa5bTU7iNfjkpZFGRbZqD2oQ5TM6X07RNAlEAAAADocFSQjCA8+JW/OKoETcBoU/Ymyjn7tytYLKn1zmDroAqQPd9EP5gYHyPYzb5SoVA6A5esNXCkImG6TBUatxS4</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -458,7 +453,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Development\rawdatastore\dummy\gltb_gl_bal\gltb_gl_bal_table_info.csv">
+          DTS:ConnectionString="D:\Development\rawdatastore\flexcube\gltb_gl_bal\gltb_gl_bal_table_info.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -560,19 +555,16 @@
       DTS:CreationName=""
       DTS:DTSID="{11EA1C79-C920-4FF5-9A82-87EA1599DB08}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;&#xA;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_GetPackageMetadata]&#xA;&#x9;&#x9;@ssis_package_name = '&quot; + @[System::PackageName]  + &quot;'&#xA;&#xA;&#xA;&quot;"
+      DTS:Expression="&quot;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_GetPackageMetadata]&#xA;&#x9;&#x9;@ssis_package_name = '&quot; + @[System::PackageName]  + &quot;',&#xA;&#x9;&#x9;@application_name = '&quot; + @[User::varApplicationName]  + &quot;'&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="prcGetPackageMetaData">
       <DTS:VariableValue
-        DTS:DataType="8">
-
-DECLARE	@return_value int
+        DTS:DataType="8">DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
-		@ssis_package_name = 'gltb_gl_bal'
-
-
+		@ssis_package_name = 'gltb_gl_bal',
+		@application_name = 'flexcube'
 </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -588,7 +580,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/14/2022 5:36:04 PM',
+		@ssis_exec_start_time =  '1/29/2022 5:29:28 PM',
 		@local_file_path =  'D:\Development\rawdatastore\gltb_gl_bal_AAA.csv',
 		@source_file_name =  'gltb_gl_bal_AAA.csv',
 		@destination_file_name = 'gltb_gl_bal_1111_11_11_AAA.csv',
@@ -613,7 +605,7 @@ DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_UpdateExecutionRegistry]
 		@ssis_row_count = 0,
-		@destination_file_path = 'D:\Development\rawdatastore\dummy\gltb_gl_bal\gltb_gl_bal_1111_11_11_AAA.csv',
+		@destination_file_path = 'D:\Development\rawdatastore\flexcube\gltb_gl_bal\gltb_gl_bal_1111_11_11_AAA.csv',
 		@destination_file_name = 'gltb_gl_bal_1111_11_11_AAA.csv',
 		@source_file_name = 'gltb_gl_bal_AAA.csv'
 
@@ -730,7 +722,7 @@ where table_name = 'DWH_GLTB_GL_BAL' and OWNER &lt;&gt; 'BICCSIT'</DTS:VariableV
       DTS:Namespace="User"
       DTS:ObjectName="varApplicationName">
       <DTS:VariableValue
-        DTS:DataType="8">dummy</DTS:VariableValue>
+        DTS:DataType="8">flexcube</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -789,7 +781,7 @@ where table_name = 'DWH_GLTB_GL_BAL' and OWNER &lt;&gt; 'BICCSIT'</DTS:VariableV
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileDirectory">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\gltb_gl_bal\</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\gltb_gl_bal\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -811,7 +803,7 @@ where table_name = 'DWH_GLTB_GL_BAL' and OWNER &lt;&gt; 'BICCSIT'</DTS:VariableV
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\gltb_gl_bal\gltb_gl_bal_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\gltb_gl_bal\gltb_gl_bal_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -840,7 +832,7 @@ where table_name = 'DWH_GLTB_GL_BAL' and OWNER &lt;&gt; 'BICCSIT'</DTS:VariableV
       DTS:Namespace="User"
       DTS:ObjectName="varFinalFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\gltb_gl_bal\gltb_gl_bal_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\gltb_gl_bal\gltb_gl_bal_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -871,7 +863,7 @@ where table_name = 'DWH_GLTB_GL_BAL' and OWNER &lt;&gt; 'BICCSIT'</DTS:VariableV
       DTS:Namespace="User"
       DTS:ObjectName="varMetadataPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\gltb_gl_bal\gltb_gl_bal_table_info.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\gltb_gl_bal\gltb_gl_bal_table_info.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="actb_daily_log"
   DTS:PackageType="5"
-  DTS:VersionBuild="98"
-  DTS:VersionGUID="{6663A6AF-9B87-4EDC-B39D-7C517E072857}">
+  DTS:VersionBuild="99"
+  DTS:VersionGUID="{64D53ECF-D1D4-4F8C-82A3-61FFE110735E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -767,7 +767,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACjyYQAigBwkGCFzXTAG917kF4pdSDjFkizVeguHPUOQQAAAAAOgAAAAAIAACAAAABTW0TTRMwbrFtBvkRccBkhKK9B+n3MfpjZUPnjiUmDBDAAAAAcewvxKYIPnVX8drYELhROMkM0MQUEa82E+GrRNH7SKzgvZTnL7zAXE8wSGeRbpT9AAAAAxlPKO7ScTK+vHdJnwlweTo5VMdrOVf3c/G/4hwMLIvR7OdvMCIFofVUwjoXgcjA97g544FNv5Fv7W5fISl9Hkw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACH5N3HsdsXxWNpdR+/7tBtpEYbJ+lkyXDvbmCYtKzb0QAAAAAOgAAAAAIAACAAAABoX6BN+lHydbPw7GFwuGoALX8WP6X1cRNBvGdYLngCvzAAAACgZSCQaEz7GQRXoYD4M7gOnwW9TezC0TWMnVa2LhI7Ih1elTPsLGZHmk4A5PY7x2FAAAAAaTuD94leoZZG+NSREoLr1ckzPLPmxzYap5dGS+llXwzDACO8RZB/mGSouB6EpcwpvOwy1qDki/NnEhOtcU8SwQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -799,7 +799,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Development\rawdatastore\dummy\actb_daily_log\actb_daily_log_table_info.csv">
+          DTS:ConnectionString="D:\Development\rawdatastore\flexcube\actb_daily_log\actb_daily_log_table_info.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -901,19 +901,16 @@
       DTS:CreationName=""
       DTS:DTSID="{77B6FCCC-4B60-4BE6-9BA7-3B7DF01EB792}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;&#xA;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_GetPackageMetadata]&#xA;&#x9;&#x9;@ssis_package_name = '&quot; + @[System::PackageName]  + &quot;'&#xA;&#xA;&#xA;&quot;"
+      DTS:Expression="&quot;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_GetPackageMetadata]&#xA;&#x9;&#x9;@ssis_package_name = '&quot; + @[System::PackageName]  + &quot;',&#xA;&#x9;&#x9;@application_name = '&quot; + @[User::varApplicationName]  + &quot;'&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="prcGetPackageMetaData">
       <DTS:VariableValue
-        DTS:DataType="8">
-
-DECLARE	@return_value int
+        DTS:DataType="8">DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
-		@ssis_package_name = 'actb_daily_log'
-
-
+		@ssis_package_name = 'actb_daily_log',
+		@application_name = 'flexcube'
 </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -929,7 +926,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/14/2022 5:09:58 PM',
+		@ssis_exec_start_time =  '1/29/2022 5:40:22 PM',
 		@local_file_path =  'D:\Development\rawdatastore\actb_daily_log_AAA.csv',
 		@source_file_name =  'actb_daily_log_AAA.csv',
 		@destination_file_name = 'actb_daily_log_1111_11_11_AAA.csv',
@@ -954,7 +951,7 @@ DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_UpdateExecutionRegistry]
 		@ssis_row_count = 0,
-		@destination_file_path = 'D:\Development\rawdatastore\dummy\actb_daily_log\actb_daily_log_1111_11_11_AAA.csv',
+		@destination_file_path = 'D:\Development\rawdatastore\flexcube\actb_daily_log\actb_daily_log_1111_11_11_AAA.csv',
 		@destination_file_name = 'actb_daily_log_1111_11_11_AAA.csv',
 		@source_file_name = 'actb_daily_log_AAA.csv'
 
@@ -1072,7 +1069,7 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
       DTS:Namespace="User"
       DTS:ObjectName="varApplicationName">
       <DTS:VariableValue
-        DTS:DataType="8">dummy</DTS:VariableValue>
+        DTS:DataType="8">flexcube</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1131,7 +1128,7 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileDirectory">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\actb_daily_log\</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\actb_daily_log\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1153,7 +1150,7 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\actb_daily_log\actb_daily_log_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\actb_daily_log\actb_daily_log_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1182,7 +1179,7 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
       DTS:Namespace="User"
       DTS:ObjectName="varFinalFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\actb_daily_log\actb_daily_log_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\actb_daily_log\actb_daily_log_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1213,7 +1210,7 @@ where table_name = 'DWH_ACTB_DAILY_LOG' and OWNER &lt;&gt; 'BICCSIT'</DTS:Variab
       DTS:Namespace="User"
       DTS:ObjectName="varMetadataPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\actb_daily_log\actb_daily_log_table_info.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\actb_daily_log\actb_daily_log_table_info.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
