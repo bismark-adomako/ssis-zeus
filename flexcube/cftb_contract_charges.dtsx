@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="cftb_contract_charges"
   DTS:PackageType="5"
-  DTS:VersionBuild="106"
-  DTS:VersionGUID="{D934D660-8FCB-4A26-8EBF-CBB1DB2B40B1}">
+  DTS:VersionBuild="107"
+  DTS:VersionGUID="{718D311B-CC0C-4F4D-B873-3703D5519663}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -238,7 +238,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABflP3/LAmTKAduQ2nC7tNdMRnBC18JAvvVspNVhXU0xQAAAAAOgAAAAAIAACAAAACDxzBfTmUC1w4EtGWoQwmwM4TSX10TLgXWnpfDMr0FyCAAAACYSgnJGUFdyKm4guwdlXPxwsXy6/ZApB9xg++2VnOyO0AAAACREDpTOm5Md1NLtkaDjUk4kXnP/Y8wKCKii4GUyrT2T9JmIrJSOfx4pG1pTOpYEHym5OGhRp3THIETAQWSK6s6</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKgnJInYqmkyY6/yQPcPBGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACzWZ84R6f0PWS30a5mFin7RXpE7xhhZznoMLO8m1PF9gAAAAAOgAAAAAIAACAAAAASCbyCuV8KqFuoTpdnP/SWaFjZhRXjrwmY65bYAuBfYyAAAACnPfFv59eDbVlhv50dpttv5oqFxqPKesExJtDrCkQVyEAAAAArkHt835elIMBpwdoXezcgyDyr1WcrnLpP8FuAUpqTZ5loZUhV9ACf/+5/Enrith7b/76L1uBkt95Vf+yNjq3T</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -251,12 +251,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMwucohuU1U6OxFT7yeYrYQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAlpug0ReIhER+z1zf05jJSdVLuxCaZzSLvwS009pV7sQAAAAAOgAAAAAIAACAAAACO0jq2C9aK43OPUXQUe+oMSOgtO3vrjK2+cGe+MUn0GyAAAADqnNJrmIExapW2Z4Cv0tNL4mELYgeST/sDjPg9m0Q+KEAAAAAecIIwpxsl69daD7aNqxilg9JmbzA4D2usmrsn8eaoZmFmP4vs7Dh6mZZq5smF3QjZPyOSVCVSIiXhISSzWnci</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=GBLO02PRODCAEXD\EDA_PROD;User ID=sa;Initial Catalog=EDADataRegistry;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -275,7 +270,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Development\rawdatastore\dummy\cftb_contract_charges\cftb_contract_charges_table_info.csv">
+          DTS:ConnectionString="D:\Development\rawdatastore\flexcube\cftb_contract_charges\cftb_contract_charges_table_info.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -377,19 +372,16 @@
       DTS:CreationName=""
       DTS:DTSID="{75AA852A-87A7-40B2-829D-6F00A691627C}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;&#xA;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_GetPackageMetadata]&#xA;&#x9;&#x9;@ssis_package_name = '&quot; + @[System::PackageName]  + &quot;'&#xA;&#xA;&#xA;&quot;"
+      DTS:Expression="&quot;DECLARE&#x9;@return_value int&#xA;&#xA;EXEC&#x9;@return_value = [dbo].[prc_GetPackageMetadata]&#xA;&#x9;&#x9;@ssis_package_name = '&quot; + @[System::PackageName]  + &quot;',&#xA;&#x9;&#x9;@application_name = '&quot; + @[User::varApplicationName]  + &quot;'&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="prcGetPackageMetaData">
       <DTS:VariableValue
-        DTS:DataType="8">
-
-DECLARE	@return_value int
+        DTS:DataType="8">DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
-		@ssis_package_name = 'cftb_contract_charges'
-
-
+		@ssis_package_name = 'cftb_contract_charges',
+		@application_name = 'flexcube'
 </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -405,7 +397,7 @@ EXEC	@return_value = [dbo].[prc_GetPackageMetadata]
 
 EXEC	@return_value = [dbo].[prc_InsertUpdateExecutionRegistry]
 		@ssis_load_datekey = 11111111,
-		@ssis_exec_start_time =  '1/14/2022 5:08:51 PM',
+		@ssis_exec_start_time =  '1/29/2022 5:32:40 PM',
 		@local_file_path =  'D:\Development\rawdatastore\cftb_contract_charges_AAA.csv',
 		@source_file_name =  'cftb_contract_charges_AAA.csv',
 		@destination_file_name = 'cftb_contract_charges_1111_11_11_AAA.csv',
@@ -430,7 +422,7 @@ DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[prc_UpdateExecutionRegistry]
 		@ssis_row_count = 0,
-		@destination_file_path = 'D:\Development\rawdatastore\dummy\cftb_contract_charges\cftb_contract_charges_1111_11_11_AAA.csv',
+		@destination_file_path = 'D:\Development\rawdatastore\flexcube\cftb_contract_charges\cftb_contract_charges_1111_11_11_AAA.csv',
 		@destination_file_name = 'cftb_contract_charges_1111_11_11_AAA.csv',
 		@source_file_name = 'cftb_contract_charges_AAA.csv'
 
@@ -547,7 +539,7 @@ where table_name = 'DWH_CFTB_CONTRACT_CHARGES' and OWNER &lt;&gt; 'BICCSIT'</DTS
       DTS:Namespace="User"
       DTS:ObjectName="varApplicationName">
       <DTS:VariableValue
-        DTS:DataType="8">dummy</DTS:VariableValue>
+        DTS:DataType="8">flexcube</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -606,7 +598,7 @@ where table_name = 'DWH_CFTB_CONTRACT_CHARGES' and OWNER &lt;&gt; 'BICCSIT'</DTS
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileDirectory">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\cftb_contract_charges\</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\cftb_contract_charges\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -628,7 +620,7 @@ where table_name = 'DWH_CFTB_CONTRACT_CHARGES' and OWNER &lt;&gt; 'BICCSIT'</DTS
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\cftb_contract_charges\cftb_contract_charges_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\cftb_contract_charges\cftb_contract_charges_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -657,7 +649,7 @@ where table_name = 'DWH_CFTB_CONTRACT_CHARGES' and OWNER &lt;&gt; 'BICCSIT'</DTS
       DTS:Namespace="User"
       DTS:ObjectName="varFinalFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\cftb_contract_charges\cftb_contract_charges_1111_11_11_AAA.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\cftb_contract_charges\cftb_contract_charges_1111_11_11_AAA.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -688,7 +680,7 @@ where table_name = 'DWH_CFTB_CONTRACT_CHARGES' and OWNER &lt;&gt; 'BICCSIT'</DTS
       DTS:Namespace="User"
       DTS:ObjectName="varMetadataPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Development\rawdatastore\dummy\cftb_contract_charges\cftb_contract_charges_table_info.csv</DTS:VariableValue>
+        DTS:DataType="8">D:\Development\rawdatastore\flexcube\cftb_contract_charges\cftb_contract_charges_table_info.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
